@@ -1,0 +1,103 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dracula.css">
+  <script src="../assets/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+<body>
+
+  <main id="main">
+    <div class="document">
+      <h3 class="t_tit">애니메이션 효과 서클</h3>
+      <p class="t_desc2">
+        CSS 애니메이션 효과로 공 두개가 돌아가는 모습을 만들었습니다.
+      </p>
+      <h3 class="t_tit2">HTML</h3>
+      <p class="t_desc">
+        회전축이 될 loading 박스와 공 두개를 만듭니다.
+      </p>
+      <details>
+        <summary>코드 보기</summary>
+        <div class="t_code">
+<pre><code class="language-html">&lt;div class="loading">
+  &lt;div class="circle1">&lt;/div>
+  &lt;div class="circle2">&lt;/div>
+&lt;/div>
+</code></pre>
+        </div>
+      </details>
+
+      <h3 class="t_tit2">CSS</h3>
+      <p class="t_desc">
+        애니메이션 효과를 줍니다. <br>
+
+      </p>
+      <details>
+        <summary>코드 보기</summary>
+        <div class="t_code">
+<pre><code class="language-css">body{
+  height: 100vh;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  
+}
+.loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 150px;
+  animation: load 0.6s linear infinite;
+}
+.loading .circle1{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+.loading .circle2{
+  width: 20px;
+  height: 20px;
+  margin-top: 110px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@keyframes load{
+  0%{
+    transform:translate(-50%,-50%) rotate(0deg);
+  }
+  100%{
+    transform:translate(-50%,-50%) rotate(360deg);
+  }
+}
+</code></pre>
+        </div>
+      </details>
+
+
+
+
+
+
+      <h3 class="t_tit2">결과</h3>
+      <p class="t_desc">
+      <div class="t_iframe">
+        <iframe src="https://damin0842.github.io/coding/javascript/study/ani_circle.html" frameborder="0"></iframe>
+      </div>
+
+
+
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>

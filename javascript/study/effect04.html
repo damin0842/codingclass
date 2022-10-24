@@ -1,0 +1,78 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header --><main id="main">
+<p data-ke-size="size16">&nbsp;</p>
+<div class="document">
+<h2 class="t_tit" data-ke-size="size26">퀴즈</h2>
+<p class="t_desc2" data-ke-size="size16">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 객관식 문제 유형 입니다. <br />
+    보기에 체크된 상태인지 확인하기 위해 if문을 사용하고,<br>
+    체크된 번호가 정답과 일치하는지 확인하기 위해 다시 if문을 사용했습니다.
+</p>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://damin0842.github.io/coding/javascript/effect/quizEffect04.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/quizEffect04.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+<div class="t_code">
+<pre class="dart"><code class="language-js">//선택자 
+const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
+const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
+const quizView = document.querySelector(".quiz__view");                 //강아지
+const quizSelects = document.querySelector(".quiz__selects");           //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice");             //객관식 보기
+const quizSelect = quizSelects.querySelectorAll(".select");
+//객관식 보기
+//문제정보
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사(2013. 4. 14.)",
+        answerNum: "01. ",
+        answerAsk: "전통적인 셀 애니메이션의 특수한 기법으로 실제 장면을 촬영한 실사 필름 위에 특정 인물이나 사물을 투명 종이(셀)에 직접 그림을 그리고 채색하는 컴퓨터 애니메이션 기법은?",
+        answerChoice: ["로토스코핑(Rotoscoping)", "컬러 사이클링(Color cycling)", "모핑(Morphing)", "모션 트위닝(Motion Tweening)"],
+        answerResult: "1",
+        answerEx: "실제 장면을 촬영한 실사 필름 위에 특정 인물이나 사물을 투명 종이(셀)에 직접 그림을 그리고 채색하는 컴퓨터 애니메이션 기법을 로토스코핑이라고 합니다."
+    }
+];
+
+//문제출력
+function updateQuiz() {
+    quizType.textContent = quizInfo[0].answerType;
+    quizNumber.textContent = quizInfo[0].answerNum;
+    quizAsk.textContent = quizInfo[0].answerAsk;
+    quizResult.textContent = quizInfo[0].answerEx;
+    //보기출력
+    for (let i = 0; i &lt; 4; i++) {
+        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+    }
+    quizResult.style.display = "none";
+}
+updateQuiz();
+
+//정답 확인
+function answerQuiz(){
+    //사용자가 선택한 정답 == 문제 정답
+    //사용자가 클릭한 input --> checked
+    for(let i=0; i&lt;quizSelect.length; i++){
+        if(quizSelect[i].checked == true){ //보기에 체크가 된 상태
+            //체크된 번호 == 문제 번호
+            if(quizSelect[i].value == quizInfo[0].answerResult){
+                //alert("정답");
+                quizView.classList.add("like");
+            }else{
+                //alert("오답");
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+                quizConfirm.style.display = "none";
+            }
+        }
+    }
+}
+//정답 클릭
+quizConfirm.addEventListener("click",answerQuiz)
+</code></pre>
+</div>
+</div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

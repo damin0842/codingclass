@@ -1,0 +1,66 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header --><main id="main">
+<p data-ke-size="size16">&nbsp;</p>
+<div class="document">
+<h2 class="t_tit" data-ke-size="size26">퀴즈</h2>
+<p class="t_desc2" data-ke-size="size16">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 주관식 유형 입니다. <br />정답 CIP를 입력했을 때와 오답을 입력했을 때 반응이 달라집니다.</p>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://damin0842.github.io/coding/javascript/effect/quizEffect02.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/quizEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+<div class="t_code">
+<pre class="dart"><code>&lt;script&gt;
+//선택자 
+const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
+const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
+const quizInput = document.querySelector(".quiz__answer .input");       //사용자 정답
+const quizView = document.querySelector(".quiz__view");                 //강아지
+//문제 정보
+const answerType = "웹디자인기능사";
+const answerNum = "2. ";
+const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적,
+계획적으로 만들어내는 기업이미지 통합 전략은 무엇인가요?";
+let answerResult = "CIP";
+//문제 출력
+quizType.innerHTML = answerType;
+quizNumber.innerHTML = answerNum;
+quizAsk.innerHTML = answerAsk;
+quizResult.innerHTML = "정답은 : " + answerResult + " 입니다.";
+//정답 숨기기
+quizResult.style.display = "none";
+//정답 확인
+quizConfirm.addEventListener("click", () =&gt; {               //버튼을 클릭했을 때
+//사용자 정답
+    
+    quizInput.style.display = "none";
+    
+    quizResult.style.display = "block";
+    
+    //정답 확인하기 숨기기
+    quizConfirm.style.display = "none";
+    
+    const userWord = quizInput.value.toLowerCase().trim();  //소문자,여백
+    answerResult = answerResult.toLowerCase().trim();       //우변을 좌변으로 
+    // console.log(userWord)
+    // console.log(answerResult)
+    //사용자 정답 == 문제 정답
+    if (userWord == answerResult) {
+        //정답
+        quizView.classList.add("like");
+        //alert("정답입니다.")
+    } else {
+        //오답
+        quizView.classList.add("dislike");
+        //alert("오답입니다.")
+    }
+});   
+&lt;/script&gt;   
+</code></pre>
+</div>
+</div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* cardType */
+.card__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card__inner .card {
+  width: 24%;
+  position: relative;
+}
+
+.card__inner .card:first-child {
+  margin-bottom: 50px;
+}
+
+.card__inner .card img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* 한줄 효과 */
+.card__inner .card .tit {
+  font-size: 24px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 18px;
+}
+
+/* 세줄 효과 */
+.card__inner .card .desc {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card__inner .card .more {
+  width: 25px;
+  height: 25px;
+  background-color: #F9C94E;
+  background-image: url(../img/card_icon01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 960px) {
+  .card__inner {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 100%;
+  }
+  .card:nth-child(7) {
+    display: none;
+  }
+  .card:nth-child(8) {
+    display: none;
+  }
+  .card:nth-child(6) {
+    display: none;
+  }
+  .card:nth-child(5) {
+    display: none;
+  }
+}

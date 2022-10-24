@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 연산자</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+   
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">퀴즈</h2>
+            <p class="t_desc2">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 입니다.</p>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://damin0842.github.io/coding/javascript/effect/quizEffect01.html"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://damin0842.github.io/coding/javascript/effect/quizEffect01.html" target="_blank">원본 사이트
+                    보기</a>
+            </div>
+            <h3 class="t_tit2">스크립트</h3>
+            <div class="t_code">
+<pre><code>&lt;script>
+//선택자 
+const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
+const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
+const quizDog = document.querySelector(".quiz__view .dog");             //강아
+//문제 정보
+const answerType = "웹디자인기능사";
+const answerNum = 1;
+const answerAsk = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가 ? ";
+const answerResult = "연변대비";
+//정답 숨기기
+quizResult.style.display = "none";
+//문제 출력
+quizType.innerHTML = answerType;
+quizNumber.innerHTML = answerNum + ". ";
+quizAsk.innerHTML = answerAsk;
+quizResult.innerHTML = answerResult
+//정답 확인
+//정답 버튼을 클릭하면 확인버튼 안보이게... 숨겨진 정답은 보이게
+quizConfirm.addEventListener("click", function () {
+    quizConfirm.style.display = "none"
+    quizResult.style.display = "block"
+    quizDog.classList.add("like");
+});
+&lt;/script>   
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

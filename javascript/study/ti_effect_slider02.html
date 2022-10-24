@@ -1,0 +1,37 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">슬라이더 이펙트 02</h2>
+        <p class="t_desc2" data-ke-size="size16">슬라이더 이펙트 사진 흘러가기 입니다. <br />
+           5장의 이미지가 좌측 방향으로 흘러갑니다. <br>
+           하단 소스보기를 통해 GSAP, jQuery 로 구현한 코드를 볼 수 있습니다. <br>
+        </p>
+        <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                src="https://damin0842.github.io/coding/javascript/effect/sliderEffect02.html" frameborder="0"></iframe>
+        </div>
+        <div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/sliderEffect02.html"
+                target="_blank" rel="noopener">원본 사이트 보기</a></div>
+        <h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+        <div class="t_code">
+<pre class="dart"><code class="language-js">&lt;script>
+    const sliderInner = document.querySelector(".slider__inner");  
+    const slider = document.querySelectorAll(".slider"); 
+    let currentIndex = 0;
+    
+    sliderInner.style.transition = "all 0.6s";  
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slider.length;   
+
+        sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+    }, 2000);
+&lt;/script>
+</code></pre>
+        </div>
+    </div>
+</main><!-- //main -->

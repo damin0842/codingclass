@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형 01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img{
+            width: 100%;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 32%;
+            background: #f5f5f5;
+        }
+
+        .card__body {
+            padding: 24px;
+        }
+
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card__body .desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
+        }
+
+        .card__body .btn {}
+    </style>
+</head>
+
+<body>
+    <section id="cardType" class="card__wrap nexon section">
+        <h2>어린이 식물 관찰 교실</h2>
+        <p>다육식물정원, 아열대정원, 무늬정원, 사막정원 등 체험하고 관찰</p>
+        <div class="card__inner container">
+
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">식물클리닉 교실</h3>
+                    <p class="desc">가정에서 식물 키우기와 분갈이, 병충해 관리 등의 어려움을 해소하고 식물의 건강한 관리를 위한 유익한 전문지식을 배우는 수업입니다.</p>
+                    <a class="btn" href="/">더 자세히 보기</a>
+                    <span aria-hidden="true">
+                        <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
+                            </svg>
+                    </span>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">자생식물 사진교실</h3>
+                    <p class="desc">식물과 다양한 생물을 사진으로 표현하는 강좌로 사진에 대한 이해와 촬영 기술을 학습을 바탕으로 전시원 현장을 돌면서 실습하는 수업입니다.</p>
+                    <a class="btn" href="/">더 자세히 보기</a>
+                    <span aria-hidden="true">
+                        <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
+                            </svg>
+                    </span>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">식물세밀화 교실</h3>
+                    <p class="desc">식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.</p>
+                    <a class="btn" href="/">더 자세히 보기</a>
+                    <span aria-hidden="true">
+                        <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
+                            </svg>
+                    </span>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

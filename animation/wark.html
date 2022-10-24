@@ -1,0 +1,46 @@
+  
+    <style>
+        .step {
+            height: 700px;
+            background: #ffe8d9;
+            position: relative;
+        }
+        .step .stepbox {
+            width: 800px; height: 600px;
+            background: url(img/gunslinger2.jpg);
+            border-radius: 0;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            animation: ani 1s steps(24, start) infinite;
+        }
+        .step .stepbox.start {
+            animation-play-state: running;
+        }
+        .step .stepbox.stop {
+            animation-play-state: paused;
+        }
+        @keyframes ani {
+            0% {background-position: 0 0;}
+            100% {background-position: -19200px 0;}
+        }
+        .stepBtn {
+            position: absolute; left: 15px; top: 20px;
+        }
+        .stepBtn a {
+            background: #e16162; color: #fff;
+            padding: 10px;
+            margin: 3px;
+            border-radius: 3px;
+        }
+
+    </style>
+    <div class="sample">
+        <h3><span></span><em class="sr-only"></em></h3>
+        <div class="timing step">
+            <div class="stepbox"></div>
+           
+        </div>
+    </div>
+</div>
+<!-- //Intro2 -->

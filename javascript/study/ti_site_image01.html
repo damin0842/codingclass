@@ -1,0 +1,134 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">사이트 만들기4</h2>
+        <p class="t_desc2" data-ke-size="size16">이미지 유형의 사이트 만들기1 입니다. <br>
+            피그마로 먼저 형태를 잡고 같은 모양으로 HTML과 CSS문서를 만들었습니다.</p>
+        <div class="t_iframe">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FaghippDRVCPx00TI2QMLZZ%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D327%253A98" allowfullscreen></iframe>
+        </div>
+        <h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+        <div class="t_desc2">
+            레이아웃을 2개의 이미지 박스로 나누어 배치 하였습니다.
+        </div>
+        <div class="t_code">
+<pre class="dart"><code class="lenguage-js">&lt;body>
+    &lt;div class="container">
+        &lt;header>
+            &lt;div class="tit">사무실은 바로 경쟁력의 원천입니다!&lt;/div>
+            &lt;div class="nav">설계 및 시공에 대한 풍부한 커리어를 가지고 있는
+                사무공간 전문 인테리어 기업입니다.&lt;/div>
+        &lt;/header>
+        &lt;section>
+            &lt;div class="image1">
+                &lt;div class="box">
+                    &lt;h2>기능성과 심미성을 갖춘 디자인&lt;/h2>
+                    &lt;p class="image__desc">리빙 분야의 트렌드를 제시하고 소비자의 니즈를 반영한 기획과 풍성한 제품으로 페스티벌형 전시의 역할도 수행합니다.&lt;/p>
+                    &lt;div class="image__btn">자세히 보기&lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="image2">
+                &lt;div class="box">
+                    &lt;h2>공간을 이루는 Total Product&lt;/h2>
+                    &lt;p>공간을 이루는 구성 제품이 한자리에 모이며, 수요자와 공급자를 연결해 디자인 기반 비즈니스가 이루어질 수 있는 플랫폼입니다.&lt;/p>
+                    &lt;div class="image__btn yellow">자세히 보기&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+    &lt;/div>
+&lt;/body>
+</code></pre>
+            <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
+            <p class="t_desc2">
+                2개의 박스를 flex 로 정렬하였습니다.
+            </p>
+            <div class="t_code">
+<pre class="dart"><code class="lenguage-js">&lt;style>
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+* {
+    font-family: 'GmarketSans';
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1160px;
+    height: 800px;
+    background-color: #fff;
+    margin: 120px auto;
+}
+header {
+    width: 1160px;
+    height: 100px;
+    background-color: #fff;
+    margin-bottom: 83px;
+    text-align: center;
+}
+header .tit {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+header .nav {
+    font-size: 20px;
+}
+section {
+    width: 1160px;
+    height: 370px;
+    background-color: #fff;
+    display: flex;
+    color: #fff;
+}
+section .image1 {
+    margin-right: 20px;
+    width: 570px;
+    height: 370px;
+    background-image: url("img/image01_bg01.jpg");
+    position: relative;
+}
+section .image2 {
+    width: 570px;
+    height: 370px;
+    background-image: url("img/image01_bg02.jpg");
+    position: relative;
+}
+section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    width: 472px;
+}
+section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 472px;
+    line-height: 1.5;
+}
+section .box {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+.image__btn{
+    font-size: 16px;
+    color: #fff;
+    background-color: #b45a30;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.image__btn.yellow{
+    background-color: #b59140;
+}
+&lt;/style>
+</code></pre>
+            </div>
+            <h3 class="t_tit2" data-ke-size="size23">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                    src="https://damin0842.github.io/coding/animation/wark.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link"><a href="https://damin0842.github.io/coding/siteimageType/imageType01.html"
+                    target="_blank" rel="noopener">원본 사이트 보기</a></div>
+        </div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

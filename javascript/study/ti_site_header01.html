@@ -1,0 +1,194 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">사이트 만들기</h2>
+        <p class="t_desc2" data-ke-size="size16">헤더 유형 사이트 만들기 01 입니다. <br>
+            피그마로 먼저 형태를 잡고 HTML과 CSS문서를 만들었습니다.</p>
+        <div class="t_iframe">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FaghippDRVCPx00TI2QMLZZ%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D606%253A1733" allowfullscreen></iframe>
+        </div>
+        <br>
+        <h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+        <div class="t_desc2">
+           로고 영역과 메뉴 영역 로그인 버튼이 있습니다.
+        </div>
+        <div class="t_code">
+<pre class="dart"><code class="lenguage-html">&lt;section id="headerType" class="header__wrap nexon">
+    &lt;div class="header__inner">
+        &lt;div class="header__logo">
+            &lt;a href="">web&lt;em>site&lt;/em>&lt;/a>
+        &lt;/div>
+        &lt;nav class="header__menu">
+            &lt;ul>
+                &lt;li>&lt;a href="">헤더 영역&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="">슬라이드 영역&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="">배너 영역&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="">컨텐츠 영역&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="">푸터 영역&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/nav>
+        &lt;div class="header__mamber">
+            &lt;a href="">로그인&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/section>
+</code></pre>
+            <br>
+            <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
+            <p class="t_desc2">
+                메뉴와 로그인 버튼에 오버 효과를 줬습니다.
+            </p>
+            <div class="t_code">
+<pre class="dart"><code class="lenguage-css">&lt;style>
+/* fonts */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+.gowun {
+    font-family: GowunBatang;
+    font-weight: 400;
+}
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+em,
+i,
+address {
+    font-style: normal;
+}
+/* ir 효과(이미지 대체 효과 == alt) */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
+}
+.container-fluid {
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+.section {
+    padding: 120px 0;
+}
+.section>h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section>p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.section>span {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.mb70 {
+    margin-bottom: 70px !important;
+}
+/* headerType */
+.header__inner {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+.header__logo {
+    width: 20%;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header__logo em {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+}
+.header__menu {
+    width: 60%;
+    text-align: center;
+}
+.header__menu li {
+    display: inline;
+}
+.header__menu li a {
+    padding: 13px 30px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+.header__menu li a:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+.header__mamber {
+    width: 20%;
+    text-align: right;
+}
+.header__mamber a {
+    font-size: 16px;
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+.header__mamber a:hover {
+    background-color: #000;
+    color: #fff;
+}
+&lt;/style>
+</code></pre>
+            </div>
+            <br>
+            <h3 class="t_tit2" data-ke-size="size23">결과</h3>
+
+            
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://damin0842.github.io/coding/site/headerType/headerType01.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://damin0842.github.io/coding/site/headerType/headerType01.html" target="_blank" rel="noopener">원본 사이트 보기</a>
+            </div>
+           
+        </div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

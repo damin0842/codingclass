@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>벡터와 비트맵</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <main id="main">
+        <div class="document">
+            <div>
+                <h2 class="t_tit">비트맵(Bitmap) 그래픽</h2>
+                <p class="t_desc2">비트맵 그래픽은 간단히 말해 서로 다른 점(픽셀)들의 조합으로 그려지는 이미지 표현 방식입니다. <br>
+                    비트맵 이미지는 정교하고 화려한 표현이 가능하여, 주로 사진 이미지에 주로 사용됩니다. <br>
+                    비트맵 이미지는 크기를 늘리거나 줄이면 원본 이미지에 손상이 가는 것이 특징이며, 우리는 흔히 이것을 '이미지가 깨졌다'라고 표현합니다.
+                </p>
+                <img src="https://www.greenart.co.kr/upimage/new_editor/202010/20201012092122.jpg" alt="비트맵사진진">
+                <p class="t_desc">
+                    비트맵 이미지는 이미지를 표시하는 방식에서 컴퓨터에 부담을 덜 주는 구조를 갖고 있기 때문에, <br>
+                    웹에서 이미지를 표시할 때는 주로 비트맵 이미지를 사용합니다. <br>
+                    우리가 흔히 보고 다루는 .jpg, .jpeg, .png, .gif 가 모두 비트맵 방식입니다.
+                </p>
+            </div>
+
+            <br> <br>
+            <div>
+                <h2 class="t_tit">벡터(Vector) 그래픽</h2>
+
+                <p class="t_desc2">벡터 이미지는 점과 점을 연결해 수학적 원리로 그림을 그려 표현하는 방식을 말합니다. <br>
+                    벡터 이미지는 그 특성 상 이미지의 크기를 늘리고 줄여도 손상되지 않는 장점이 있지만, <br>
+                    사진과 같은 복잡한 그림을 표현하려면 컴퓨터에 엄청난 부담을 주곤 했기에 웹에서는 잘 사용되지 않았습니다.
+                </p>
+                <img src="https://www.greenart.co.kr/upimage/new_editor/202010/20201012092138.png" alt="">
+                <p class="t_desc">
+                    다만, 최근에는 컴퓨터 하드웨어의 발달로 웹사이트의 로고 및 아이콘 표시에 벡터 그래픽이 사용되고 있습니다. <br>
+                    자주 접할 수 있는 벡터 파일의 형식에는 .ai, .eps, .svg 가 있습니다.
+                </p>
+            </div>
+            <br> <br>
+            <div>
+                <h2 class="t_tit">벡터(Vector)와 비트맵(Bitmap)의 차이!</h2>
+                <img style="width: 512px;" src="https://custom-workwear.co.uk/wp-content/uploads/2022/01/Vector-vs-Bitmap-Raster-Images-Featured-1920px.png" alt="">
+                
+                <img src="https://www.greenart.co.kr/upimage/new_editor/202010/20201012092150.png" alt="">
+
+                <br><br>
+                <table class="t_table">
+                    <tr>
+                        <th></th>
+                        <th>벡터(Vector)</th>
+                        <th>비트맵(Bitmap)</th>
+                    </tr>
+                    <tr>
+                        <th>장점</th>
+                        <td>확대하거나 축소해도 해상도에 영향을 끼치지 않는다. 용량이 많이 늘어나지 않는다.</td>
+                        <td>많은 픽셀로 정교하고 다양한 색상을 가진 이미지를 만들 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <th>단점</th>
+                        <td>사진과 이미지 같은 정교한 그래픽 표현에는 한계가 있다.</td>
+                        <td>이미지 축소와 확대가 가능하지만 이미지가 깨질 수 있고 품질이 떨어진다.</td>
+                    </tr>
+                    <tr>
+                        <th>형식</th>
+                        <td>AI, PDF, SVG</td>
+                        <td>JPG, JPEG, PNG, GIF</td>
+                    </tr>
+                </table>
+                <br>
+                <p class="t_desc">
+                    그래픽 요소들을 만들 때는 벡터 방식의 프로그램으로 제작하고, 사진과 같은 이미지를 제작할 때는 비트맵 방식으로 제작합니다. <br>
+                    어떤 작업이든 일러스트레이터 혹은 포토샵이 편하다고 무조건 그 프로그램만 지향하는 것은 안 좋은 방법입니다. <br>
+                    이 두 방식의 차이를 알고 계시면, 자신이 작업할 때 해당 작업물에 적한합 방식으로 작업하시기에 편하실 것입니다. 
+                </p>
+            </div>
+
+
+
+
+        </div>
+    </main>
+
+    </script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="document">
+        <h2 class="t_tit">jQuery 선택자</h2>
+        <h3 class="t_tit2">필터 선택자 종류</h3>
+        <table class="t_table">
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 25%;">
+                <col style="width: 60%;">
+            </colgroup>
+            <tr>
+                <th>선택자 종류</th>
+                <th colspan="2">설명</th>
+            </tr>
+            <tr>
+                <td>:even</td>
+                <td>$("tr:even")</td>
+                <td>tr 요소 중 짝수 행만 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:odd</td>
+                <td>$("tr:odd")</td>
+                <td>tr 요소 중 홀수 행만 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first</td>
+                <td>$("td:first")</td>
+                <td>첫 번째 td 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last</td>
+                <td>$("td:last")</td>
+                <td>마지막 번째 td 요소를 선택합니다.
+                </td>
+            </tr>
+            <tr>
+                <td>:header</td>
+                <td>$(":header")</td>
+                <td>헤딩(h1~h6) 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:eq()</td>
+                <td>$("li:eq(0)")</td>
+                <td>index가 0인 li 요소를 선택합니다. index는 0번이 첫 번째 요소입니다.</td>
+            </tr>
+            <tr>
+                <td>:gt()</td>
+                <td>$("li:gt(0)")</td>
+                <td>index가 0보다 큰 li 요소들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lt()</td>
+                <td>$("li:lt(2)")</td>
+                <td>index가 2보다 작은 li 요소들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>$("li:not(.bg)")</td>
+                <td>li요소 중에서 class명 bg가 아닌 li 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:root()</td>
+                <td>$(":root")</td>
+                <td>html을 의미합니다.</td>
+            </tr>
+            <tr>
+                <td>:animated()</td>
+                <td>$(":animated")</td>
+                <td>움직이는 요소를 선택합니다.</td>
+            </tr>
+           
+        </table>
+        <p class="t_box">
+            앞으로 학습하게 되는 선택자 시습은 결과를 한번에 확인하지 말고,
+            선택자를 하나씩 코딩하면서 결과를 그때그때 확인해 보는 방법이 jQUery 선택자를 이해하는데 도움이 될 것입니다.
+        </p>
+        <div class="t_code">
+<pre><code class="language-js">&lt;script src="https://code.jquery.com/jquery-3.6.1.min.js">&lt;/script>
+    &lt;script>
+        $(document).ready(function(){
+            $("tr:even").css("background", "red");
+            $("tr:odd").css("background", "orange");
+            $("td:first").css("background", "yellow");
+            $("td:last").css("background", "green");
+            $(":header").css("background", "blue");
+            $("li:eq(0)").css("background", "navy");
+            $("li:gt(0)").css("background", "purple");
+            $("li:lt(3)").css("border", "4px solid gray");
+            $(":root").css("background", "lightgray");
+            (function upDown(){
+            $("h2").slideToggle(2000,upDown);
+            })();
+            $(":animated").css("border","4px solid darked");
+        });
+    &lt;/script>
+</code></pre>
+        </div>
+        <h2 class="t_tit2">자식 필터 선택자</h2>
+        <table class="t_table">
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 25%;">
+                <col style="width: 60%;">
+            </colgroup>
+            <tr>
+                <th>선택자 종류</th>
+                <th colspan="2">설명</th>
+            </tr>
+            <tr>
+                <td>:even</td>
+                <td>$("tr:even")</td>
+                <td>tr 요소 중 짝수 행만 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:odd</td>
+                <td>$("tr:odd")</td>
+                <td>tr 요소 중 홀수 행만 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:first</td>
+                <td>$("td:first")</td>
+                <td>첫 번째 td 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:last</td>
+                <td>$("td:last")</td>
+                <td>마지막 번째 td 요소를 선택합니다.
+                </td>
+            </tr>
+            <tr>
+                <td>:header</td>
+                <td>$(":header")</td>
+                <td>헤딩(h1~h6) 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:eq()</td>
+                <td>$("li:eq(0)")</td>
+                <td>index가 0인 li 요소를 선택합니다. index는 0번이 첫 번째 요소입니다.</td>
+            </tr>
+            <tr>
+                <td>:gt()</td>
+                <td>$("li:gt(0)")</td>
+                <td>index가 0보다 큰 li 요소들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:lt()</td>
+                <td>$("li:lt(2)")</td>
+                <td>index가 2보다 작은 li 요소들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:not()</td>
+                <td>$("li:not(.bg)")</td>
+                <td>li요소 중에서 class명 bg가 아닌 li 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>:root()</td>
+                <td>$(":root")</td>
+                <td>html을 의미합니다.</td>
+            </tr>
+            <tr>
+                <td>:animated()</td>
+                <td>$(":animated")</td>
+                <td>움직이는 요소를 선택합니다.</td>
+            </tr>
+           
+        </table>
+        <div class="t_code">
+<pre><code class="language-js">&lt;script src="https://code.jquery.com/jquery-3.6.1.min.js">&lt;/script>
+    &lt;script>
+        $(document).ready(function() {
+            $("#m1 > span:first-child").css("border", "2px solid red");
+            $("#m1 > span:last-child").css("border", "2px solid red");
+            $("#m2 > span:first-of-type").css("border", "2px solid orange");
+            $("#m2 > span:last-of-type").css("border", "2px solid orange");
+            $("#m3 > span:nth-child(1)").css("border", "2px solid yellow");
+            $("#m3 > span:nth-last-child(1)").css("border", "2px solid yellow");
+            $("#m4 > span:nth-of-type(1)").css("border", "2px solid green");
+            $("#m4 > span:nth-last-of-type(1)").css("border", "2px solid green");
+            $("#m5 > span:only-child").css("border", "2px solid blue");
+            $("#m6 > span:only-of-type").css("border", "2px solid navy");
+        })
+    &lt;/script>
+</code></pre>
+                    </div>
+    </div>
+
+</body>
+
+</html>

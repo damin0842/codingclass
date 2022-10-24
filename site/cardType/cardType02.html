@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형02</title>
+    <style>
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmark {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .gray {
+            background-color: #f5f5f5;
+        }
+        /* ir 효과(이미지 대체 효과 == alt) */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        /* cardType */
+        .card__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+
+        .card__inner .card {
+            width: 24%;
+            position: relative;
+        }
+
+        .card__inner .card:first-child {
+            margin-bottom: 50px;
+        }
+
+        .card__inner .card img {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        /* 한줄 효과 */
+        .card__inner .card .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 18px;
+        }
+        /* 세줄 효과 */
+        .card__inner .card .desc {
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            line-height: 1.4;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;
+        }
+
+        .card__inner .card .more {
+            width: 24px;
+            height: 24px;
+            background-image: url(img/Group\ 1.svg);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 225px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section id="cardType02" class="card__weap gmark section gray">
+        <h2>나라별 음식 구경하기</h2>
+        <p>
+            각 나라를 대표하는 음식들 <br>
+            국가 별 음식 국경하기
+
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <img src="img/card02_bg01.jpg" alt="푸틴 – 캐나다">
+                <h3 class="tit">푸틴 – 캐나다</h3>
+                <p class="desc">캐나다 퀘벡 주 음식으로 감자튀김에 그레이비 소스와 치즈를 넣어 만듭니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg02.jpg" alt="몰레 포블라노 – 멕시코">
+                <h3 class="tit">몰레 포블라노 – 멕시코</h3>
+                <p class="desc">아보카드 소스를 얹어 삶은 닭고기에 각종 야채와 초콜릿 등 수십가지의 재료를 넣어 만듭니다. </p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg03.jpg" alt="세비체 – 페루">
+                <h3 class="tit">세비체 – 페루</h3>
+                <p class="desc">해산물을 얇게 잘라서 레몬즙에 재운 후 채소와 소스를 뿌려 먹는 음식입니다. </p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg04.jpg" alt="페이조아다 – 브라질">
+                <h3 class="tit">페이조아다 – 브라질</h3>
+                <p class="desc">고기와 페이조라고 불리는 콩을 넣어서 삶아 먹는 음식입니다. 우리나라의 부대찌개와 비슷합니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg05.jpg" alt="빠이사 – 콜롬비아">
+                <h3 class="tit">빠이사 – 콜롬비아</h3>
+                <p class="desc">간 쇠고기 볶음과 프리홀레스 쁠라따노 튀김, 달걀후라이 등을 함께 곁들여 먹는 음식입니다. </p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg06.jpg" alt="아사도 – 아르헨티나">
+                <h3 class="tit">아사도 – 아르헨티나</h3>
+                <p class="desc">그릴에 쇠고기 갈비부위를 구워 소금간을 한 후 치미추리 소스와 함께 먹는 음식입니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg07.jpg" alt="산꼬초 – 도미니카">
+                <h3 class="tit">산꼬초 – 도미니카</h3>
+                <p class="desc">도미니카식 전골 요리로, 고기와 유카, 옥수수 등을 넣고 끟인 음식입니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+            <article class="card">
+                <img src="img/card02_bg08.jpg" alt="햄버거와 감자칩 – 미국">
+                <h3 class="tit">햄버거와 감자칩 – 미국</h3>
+                <p class="desc">너무나 유명한 햄버거와 감자칩입니다. 여기에 성냥처럼 썬 감자 튀김을 곁들여 먹습니다.</p>
+                <a href="#" class="more"><span class="ir">더보기</span></a>
+            </article>
+        </div>
+    </section>
+</body>
+
+</html>

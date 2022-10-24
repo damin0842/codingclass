@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dracula.css">
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <main id="main">
+        <div class="document">
+
+            <h2 class="t_tit">서치 이펙트2</h2>
+            <p class="t_desc2">
+                includes()를 이용하여 태그 검색기를 만들었습니다.
+
+            </p>
+            <br>
+            <h2 class="t_tit2">스크립트</h2>
+            <div class="t_code">
+<pre><code class="language-js">&lt;script>
+    //선택자
+    const searchBox = document.querySelector(".search__box input");       //검색 영역 
+    const searchList = document.querySelectorAll(".search__list ul li")          //목록 리스트     
+    const searchInfo = document.querySelector(".search__info .num")         //전체 갯수
+    //전체 갯수 구하기
+    searchInfo.textContent = searchList.length;
+    
+    //검색 영역
+    searchBox.addEventListener("keyup",() => {
+        const searchWord = searchBox.value;     //사용자가 입력한 키워드
+
+        searchList.forEach(el => {
+            const cssName = el.dataset.name;    //CSS 속성 모든 값
+            
+            if(cssName.includes(searchWord)){
+                el.classList.remove("hide");
+            }
+            else{
+                el.classList.add("hide");
+            }
+        });
+    });
+&lt;/script>
+</code></pre>
+
+            </div>
+
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                    src="https://damin0842.github.io/coding/javascript/effect/searchEffect02.html"
+                    frameborder="0"></iframe>
+            </div>
+
+            <div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/searchEffect02.html"
+                    target="_blank" rel="noopener">원본 사이트 보기</a>
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

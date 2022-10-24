@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Franklin Gothic Medium";
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .title {
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .title img {
+        margin-top: 10px;
+      }
+      .title a {
+        font-size: 23px;
+        font-weight: bold;
+        color: #777;
+        position: absolute;
+        top: 25px;
+      }
+      aside {
+        width: 32%;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      aside .title__p{
+        margin-left: 20px;
+      }
+      .wrap {
+        margin: 50px auto;
+        max-width: 1000px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .slider__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+      .slider__inner {
+        width: 100%;
+        height: 100%;
+      }
+      .slider__img {
+        width: 100%;
+        height: 1200px;
+      }
+      .slider {
+        width: 100%;
+        height: 100%;
+        background: url(img/slider1.jpg) center;
+        box-sizing: border-box;
+      }
+
+      section {
+        width: 68%;
+      }
+      .mid {
+        margin: 0 auto;
+        text-align: center;
+        justify-content: space-between;
+        display: flex;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .mid div {
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      .mid img {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        display: block;
+      }
+
+      .bot__inner {
+        background: #e8e8e8;
+        justify-content: space-between;
+        display: flex;
+      }
+      .bot__inner div {
+        margin: 20px;
+        width: 200px;
+        background-color: #fff;
+        padding-bottom: 20px;
+      }
+      .bot__inner h2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .bot__inner img{
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .bot__inner a {
+        font-size: 8px;
+      }
+      footer {
+        align-items: center;
+        position: relative;
+        display: flex;
+        margin: 0 auto;
+        width: 1000px;
+        height: 100px;
+        background: #edf2f8;
+      }
+      footer img {
+        width: 50px;
+        height: 50px;
+      }
+      footer div{
+        width: 100px;
+      }
+      footer div p {
+        font-size: 23px;
+        font-weight: bold;
+        color: #777;
+      }
+      .myp {
+        margin: 30px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 700;
+        color: #777;
+      }
+      .aa {
+        display: inline;
+      }
+      .active{
+        color: #000;
+      }
+
+   
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <aside>
+        <div class="title">
+          <img src="img/title.PNG" alt="" />
+          <a href="">정부24</a>
+        </div>
+        <div class="title__p"><a href="">서비스</a></div>
+        <div class="title__p"><a href="">정책정보</a></div>
+        <div class="title__p"><a href="">기관정보</a></div>
+        <div class="title__p"><a href="">고객센터</a></div>
+      </aside>
+      <section>
+        <div class="slider__wrap">
+          <div class="slider__img">
+            <div class="slider__inner">
+              <div class="slider"></div>
+              <div class="slider"></div>
+              <div class="slider"></div>
+              <div class="slider"></div>
+            </div>
+          </div>
+        </div>
+        <div class="myp">
+          <span class="aa">자주 찾는 서비스 |</span>
+          <span class="bb">키워드 서비스</span>
+        </div>
+        <div class="mid">
+          <div>
+            <img src="img/mid1.PNG" alt="" />
+            <a href=""
+              >주민등록표등본 <br />
+              (초본) 교부
+            </a>
+          </div>
+          <div>
+            <img src="img/mid2.PNG" alt="" />
+            <a href=""
+              >토지(임야)대장 <br />
+              열람/등본 발급신청
+            </a>
+          </div>
+          <div>
+            <img src="img/mid3.PNG" alt="" />
+            <a href=""
+              >건축물대장 등/초본 <br />
+              발급(열람) 신청
+            </a>
+          </div>
+          <div>
+            <img src="img/mid4.PNG" alt="" />
+            <a href="">지방세 납세증명</a>
+          </div>
+          <div>
+            <img src="img/mid5.PNG" alt="" />
+            <a href=""
+              >지적도(임야도) 등본 <br />
+              발급 및 열람
+            </a>
+          </div>
+        </div>
+        <div class="bot">
+          <div class="bot__inner">
+            <div>
+              <h2>공지사항</h2>
+              <img src="img/bot1.PNG" alt="" />
+              <a href="">[어디서나 대학민원] 호서대학교 팩스번호</a>
+              <a href="">[전라북도 고창군] 새을행정시스템 Data</a>
+              <a href="">교육부 행정전자서명인증센터 시스템...</a>
+            </div>
+            <div>
+              <h2>공지사항</h2>
+              <img src="img/bot2.PNG" alt="" />
+              <a href="">[어디서나 대학민원] 호서대학교 팩스번호</a>
+              <a href="">[전라북도 고창군] 새을행정시스템 Data</a>
+              <a href="">교육부 행정전자서명인증센터 시스템...</a>
+            </div>
+            <div>
+              <h2>공지사항</h2>
+              <img src="img/bot3.PNG" alt="" />
+              <a href="">[어디서나 대학민원] 호서대학교 팩스번호</a>
+              <a href="">[전라북도 고창군] 새을행정시스템 Data</a>
+              <a href="">교육부 행정전자서명인증센터 시스템...</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <img src="img/footer.PNG" alt="" />
+        <p>정부 24</p>
+      </div>
+
+      <p>
+        03171 서울특별시 세종대로 209(세종로) 행정안전부 정부24 콜센터 <br />
+        1588-2188 정부민원안내콜센터 국번없이 110 <br />
+        Copyright c Ministry of the INterior and Safety. All Rights reserved.
+      </p>
+    </footer>
+  </body>
+  <script>
+    const sliderWrap = document.querySelector(".slider__wrap");
+    const sliderInner = document.querySelector(".slider__inner");
+    const sliderImg = document.querySelector(".slider__img");
+    const slider = document.querySelectorAll(".slider");
+
+    let currentIndex = 0;
+    let sliderCount = slider.length;
+    let sliderHeight = sliderInner.offsetHeight;
+    let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+    sliderInner.appendChild(sliderClone);
+
+    function sliderEffect() {
+      currentIndex++;
+      sliderInner.style.transition = "all 0.6s";
+
+      sliderInner.style.transform =
+        "translateY(-" + sliderHeight * currentIndex + "px)";
+
+      if (currentIndex == sliderCount) {
+        setTimeout(() => {
+          sliderInner.style.transition = "0s";
+          sliderInner.style.transform = "translateY(0px)";
+        }, 700);
+        currentIndex = 0;
+      }
+    }
+    setInterval(sliderEffect, 2000);
+
+    const tab = document.querySelector(".aa");
+    const tab2 = document.querySelector(".bb");
+
+    tab.addEventListener("click",()=>{
+        tab.classList.add("active");
+        tab2.classList.remove("active");
+    })
+    tab2.addEventListener("click",()=>{
+        tab.classList.remove("active");
+        tab2.classList.add("active");
+    })
+  </script>
+</html>

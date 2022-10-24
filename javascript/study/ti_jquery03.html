@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="document">
+        <h2 class="t_tit">jQuery 선택자</h2>
+        <h3 class="t_tit2">속성 선택자</h3>
+        <table class="t_table">
+            <colgroup>
+                <col style="width: 15%;">
+                <col style="width: 25%;">
+                <col style="width: 60%;">
+            </colgroup>
+            <tr>
+                <th>선택자 종류</th>
+                <th colspan="2">설명</th>
+            </tr>
+            <tr>
+                <td>요소[속성]</td>
+                <td>$("span[class]")</td>
+                <td>span 요소 중 class 속성을 가지고 있는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성='값']</td>
+                <td>$("span[class='abc']")</td>
+                <td>span 요소 중 class 'abc'인 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성!='값']</td>
+                <td>$("span[class!='abc']")</td>
+                <td>span 요소 중 class가 'abc'가 아닌 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성~='값']</td>
+                <td>$("span[class~='abc']")</td>
+                <td>span 요소 중 class가 'abc'를 포함하는 요소를 선택합니다.
+                    'abc'앞뒤로 연결된 문자가 없어야 합니다. 'bg abc'는 선택되나 'bg_abc'는 선택되지 않습니다.
+                </td>
+            </tr>
+            <tr>
+                <td>요소[속성*='값']</td>
+                <td>$("span[class*='abc']")</td>
+                <td>span 요소 중 class가 'abc'를 포함하는 요소를 모두 선택합니다.
+                    'bg abc', 'bg_abc' 모두 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성|='값']</td>
+                <td>$("span[class|='abc']")</td>
+                <td>span 요소 중 class가 'abc'나 'abc-'로 시작하는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성^='값']</td>
+                <td>$("span[class^='abc']")</td>
+                <td>span 요소 중 class가 'abc'로 시작하는 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>요소[속성$='값']</td>
+                <td>$("span[class$='abc']")</td>
+                <td>span 요소 중 class가 'abc'로 끝나는 요소를 선택합니다.</td>
+            </tr>
+           
+        </table>
+        <p class="t_box">
+            앞으로 학습하게 되는 선택자 시습은 결과를 한번에 확인하지 말고,
+            선택자를 하나씩 코딩하면서 결과를 그때그때 확인해 보는 방법이 jQUery 선택자를 이해하는데 도움이 될 것입니다.
+        </p>
+        <div class="t_code">
+<pre><code class="language-html">&lt;!DOCTYPE html>
+    &lt;html lang="ko">
+    
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;title>기본 선택자&lt;/title>
+        &lt;style>
+            * {
+                margin: 5px;
+            }
+        &lt;/style>
+        &lt;script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">&lt;/script>
+        &lt;script>
+            $(document).ready(function () {
+                $(".list1 > li[class='list_1']").css("border", "2px solid red");
+                $(".list1 > li[class!='list_1']").css("border", "2px solid orange");
+                $(".list2 > li[class~='list']").css("background", "yellow");
+                $(".list2 > li[class*='list']").css("border", "2px solid green");
+                $(".list3 > li[class|='list']").css("border", "2px solid blue");
+                $(".list4 > li[class^='list']").css("border", "2px solid navy");
+                $(".list4 > li[class$='bg']").css("background", "purple");
+            });
+        &lt;/script>
+    &lt;/head>
+    
+    &lt;body>
+        &lt;ul class="list1">
+            &lt;li class="list_1">내용1_1&lt;/li>
+            &lt;li class="list_2">내용1_2&lt;/li>
+            &lt;li class="list_3">내용1_3&lt;/li>
+        &lt;/ul>
+        &lt;ul class="list2">
+            &lt;li class="list bg">내용2_1&lt;/li>
+            &lt;li class="list_1">내용2_2&lt;/li>
+            &lt;li class="list_2">내용2_3&lt;/li>
+        &lt;/ul>
+        &lt;ul class="list3">
+            &lt;li class="list">내용3_1&lt;/li>
+            &lt;li class="list-1">내용3_2&lt;/li>
+            &lt;li class="list-bg">내용3_3&lt;/li>
+        &lt;/ul>
+        &lt;ul class="list4">
+            &lt;li class="list">내용1_1&lt;/li>
+            &lt;li class="list_1">내용2_2&lt;/li>
+            &lt;li class="list_bg">내용3_3&lt;/li>
+        &lt;/ul>
+    &lt;/body>
+    
+    &lt;/html>
+</code></pre>
+        </div>
+
+        
+    </div>
+
+</body>
+
+</html>

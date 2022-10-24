@@ -1,0 +1,664 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dracula.css">
+  <script src="../assets/js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+<body>
+
+  <main id="main">
+    <div class="document">
+      <h3 class="t_tit">애니메이션 효과 강아지</h3>
+      <p class="t_desc2">
+        CSS 애니메이션 효과로 움직이는 강아지를 만들었습니다.
+      </p>
+      <h3 class="t_tit2">HTML</h3>
+      <p class="t_desc">
+        HTML 문서를 Pug를 이용하여 단순화 하였습니다. 들여쓰기로 박스 경로가 바뀌니 정렬에 주의 하여야 합니다.
+      </p>
+
+      <details>
+        <summary>Pug 코드 보기</summary>
+        <div class="t_code">
+          <pre><code class="language-js">
+.dog
+.dog-body
+  .dog-tail
+    .dog-tail
+      .dog-tail
+        .dog-tail
+          .dog-tail
+            .dog-tail
+              .dog-tail
+                .dog-tail
+.dog-torso
+.dog-head
+  .dog-ears
+    .dog-ear
+    .dog-ear
+  .dog-eyes
+    .dog-eye
+    .dog-eye
+  .dog-muzzle
+    .dog-tongue
+</code></pre>
+        </div>
+      </details>
+
+        <div class="t_code">
+<pre><code class="language-js">
+&lt;div class="dog">
+  &lt;div class="dog-body">
+      &lt;div class="dog-tail">
+          &lt;div class="dog-tail">
+              &lt;div class="dog-tail">
+                  &lt;div class="dog-tail">
+                      &lt;div class="dog-tail">
+                          &lt;div class="dog-tail">
+                              &lt;div class="dog-tail">
+                                  &lt;div class="dog-tail">&lt;/div>
+                              &lt;/div>
+                          &lt;/div>
+                      &lt;/div>
+                  &lt;/div>
+              &lt;/div>
+          &lt;/div>
+      &lt;/div>
+  &lt;/div>
+  &lt;div class="dog-torso">&lt;/div>
+  &lt;div class="dog-head">
+      &lt;div class="dog-ears">
+          &lt;div class="dog-ear">&lt;/div>
+          &lt;div class="dog-ear">&lt;/div>
+      &lt;/div>
+      &lt;div class="dog-eyes">
+          &lt;div class="dog-eye">&lt;/div>
+          &lt;div class="dog-eye">&lt;/div>
+      &lt;/div>
+      &lt;div class="dog-muzzle">
+          &lt;div class="dog-tongue">&lt;/div>
+      &lt;/div>
+  &lt;/div>
+&lt;/div>
+</code></pre>
+        </div>
+
+
+     
+
+
+
+
+      <h3 class="t_tit2">CSS</h3>
+      <p class="t_desc">
+        CSS 문서를 SCSS를 이용하여 단순화 하였습니다. 
+      </p>
+      <details>
+        <summary>SCSS 코드 보기</summary>
+        <div class="t_code">
+<pre><code class="language-js">
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html, body {
+    background: #FFE16E;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: border-box;
+    position: relative;
+  }
+  $dog-width: 100px;
+  $interval: 200ms;
+  $color-gray: #eaebec;
+  $easing: ease-in-out;
+  
+  //dog
+  .dog{
+    width: $dog-width;
+    height: $dog-width;
+    z-index: 1;
+    
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(black, 0.03);
+      transform: translatey(-30%) scale(1.5);
+    }
+    *{
+    position:absolute;
+    }
+  }
+  
+  .dog-body, .dog-head, .dog-torso{
+    border-radius:50%;
+    background:#92A8D1;
+    position:absolute;
+    width:100%;
+    height:100%;
+  }
+  // dog-body
+  .dog-body{
+    top:-50%;
+    box-shadow: inset 0 -15px 0 0 #888;
+    animation: dog-body $interval $easing infinite alternate;
+    
+    &:before{
+      content:'';
+      position:absolute;
+      bottom: 90%;
+      right: 50%;
+      width:90%;
+      height:90%;
+      background:rgba(#888, 0.4);
+      border-top-left-radius:100%;
+      border-bottom-left-radius:10%;
+      border-top-right-radius:10%;
+      transform-origin: right bottom;
+      animation: dog-tail-blur $interval $interval / 6 $easing infinite alternate both;
+      
+      @keyframes dog-tail-blur{
+        0%{
+          transform:rotate(0);
+          opacity:0;
+        }
+        50%{
+          opacity:1;
+        }
+        100%{
+          transform:rotate(90deg);
+          opacity:0;
+        }
+      }
+    }
+    
+    @keyframes dog-body {
+      from{transform:translatex(-10%)}
+      to{transform:translatex(10%)}
+    }
+  }
+  
+  //dog-head
+  
+  .dog-head{
+    animation: dog-head $interval * 9 cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+    
+    @keyframes dog-head {
+      0%{transform:rotate(45deg)}
+      33%{transform:rotate(-45deg)}
+      66%{transform:rotate(0deg)}
+      100%{transform:rotate(45deg)}
+    }	
+  }
+  
+  //dog-torso
+  .dog-torso{
+    top:-20%;
+    box-shadow: inset 0 -15px 0 0 #888;
+    animation: dog-torso $interval $easing infinite alternate-reverse;
+    
+    @keyframes dog-torso{
+      0%{transform: translatex(-5%);}
+      100%{transform: translatex(5%);}
+      
+    }
+  }
+  
+  // dog-eyes
+  .dog-eyes{
+    width: 60%;
+    top:55%;
+    left:20%;
+    z-index:1;
+    
+    &:before{
+      content:'';
+      display:block;
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+      background:#777;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index:0;
+      border: 4px solid black;
+      border-left-width:0;
+      border-bottom-width:0;
+      border-top-width:0;
+      transform: rotate(-45deg)
+      
+    }
+  }
+  .dog-eye{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    z-index: 1;
+    
+    &:first-child{
+      left:0;
+    }
+    &:last-child{
+      right:0;
+    }
+  }
+  
+  .dog-muzzle{
+    width:60%;
+    left: 20%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    bottom:-15%;
+    background:#92A8D1;
+    
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+    
+    &:before {
+      width: 6px;
+      height: 20px;
+      bottom: 0;
+      background: #999;
+      left: calc(50% - 3px);
+    }
+    
+    &:after {
+      background: black;
+      width: 20px;
+      height: 15px;
+      bottom: 12px;
+      left: calc(50% - 10px);
+      border-bottom-left-radius: 60% 60%;
+      border-bottom-right-radius: 60% 60%;
+      border-top-left-radius: 50% 40%;
+      border-top-right-radius: 50% 40%;
+    }
+  }
+  
+  //dog-ears
+  .dog-ears{
+    width:40%;
+    top: 25%;
+    left: 30%;
+    
+  }
+  .dog-ear{
+    bottom: -10px;
+    height: 50px;
+    width: 50px;
+    background:#92A8D1;
+    
+    &:first-child{
+      right:100%;
+      border-bottom-left-radius:80%;
+      border-top-right-radius:80%;
+      box-shadow:inset -15px 15px 0 1px #888;
+      transform:rotate(10deg);
+    }
+    &:last-child{
+      left:100%;
+      border-top-left-radius:80%;
+      border-bottom-right-radius:80%;
+      box-shadow:inset 15px 15px 0 0 #888;
+      transform:rotate(-10deg);
+    }
+    
+  }
+  
+  .dog-tongue{
+    width: 40%;
+    height: 90%;
+    left: calc(50% - 20px);
+    z-index:-1;
+    transform-origin: center top;
+    
+    &:before{
+      content:'';
+      position:absolute;
+      left: 8px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius:40px;
+      background: #fd3163;
+      animation: dog-tongue-inner $interval / 2 $easing infinite alternate;
+      
+      @keyframes dog-tongue-inner{
+        from {transform: translatey(5%)}
+        to {transform: translatey(22%)}
+      }
+    }
+  }
+  
+  //dog-tail
+  .dog-tail{
+    $tail-width: 22px;
+    width: $tail-width;
+    height: $tail-width * 1.1;
+    background: #92A8D1;
+    bottom:40%;
+    border-radius: $tail-width /2;
+    left:calc(50% - #{$tail-width / 2});
+    transform-origin: center bottom;
+    
+    .dog-tail{
+      animation: dog-tail-segment $interval $easing infinite alternate;
+      @keyframes dog-tail-segment {
+        0%{transform: rotate(-20deg)}
+        100%{transform: rotate(20deg)}
+      }
+    }
+  }
+  .dog-body > .dog-tail{
+    bottom:93%;
+  }
+</code></pre>
+        </div>
+      </details>
+
+
+      <div class="t_code">
+        <pre><code class="language-js">
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+html,
+body {
+    background: #FFE16E;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    position: relative;
+}
+.dog {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+.dog:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.03);
+    transform: translatey(-30%) scale(1.5);
+}
+.dog * {
+    position: absolute;
+}
+.dog-body,
+.dog-head,
+.dog-torso {
+    border-radius: 50%;
+    background: #92A8D1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.dog-body {
+    top: -50%;
+    box-shadow: inset 0 -15px 0 0 #888;
+    animation: dog-body 200ms ease-in-out infinite alternate;
+}
+.dog-body:before {
+    content: "";
+    position: absolute;
+    bottom: 90%;
+    right: 50%;
+    width: 90%;
+    height: 90%;
+    background: rgba(136, 136, 136, 0.4);
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 10%;
+    border-top-right-radius: 10%;
+    transform-origin: right bottom;
+    animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+}
+@keyframes dog-tail-blur {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
+@keyframes dog-body {
+    from {
+        transform: translatex(-10%);
+    }
+    to {
+        transform: translatex(10%);
+    }
+}
+.dog-head {
+    animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+}
+@keyframes dog-head {
+    0% {
+        transform: rotate(45deg);
+    }
+    33% {
+        transform: rotate(-45deg);
+    }
+    66% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+.dog-torso {
+    top: -20%;
+    box-shadow: inset 0 -15px 0 0 #888;
+    animation: dog-torso 200ms ease-in-out infinite alternate-reverse;
+}
+@keyframes dog-torso {
+    0% {
+        transform: translatex(-5%);
+    }
+    100% {
+        transform: translatex(5%);
+    }
+}
+.dog-eyes {
+    width: 60%;
+    top: 55%;
+    left: 20%;
+    z-index: 1;
+}
+.dog-eyes:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: #777;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 0;
+    border: 4px solid black;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    transform: rotate(-45deg);
+}
+.dog-eye {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    z-index: 1;
+}
+.dog-eye:first-child {
+    left: 0;
+}
+.dog-eye:last-child {
+    right: 0;
+}
+.dog-muzzle {
+    width: 60%;
+    left: 20%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    bottom: -15%;
+    background: #92A8D1;
+}
+.dog-muzzle:before,
+.dog-muzzle:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.dog-muzzle:before {
+    width: 6px;
+    height: 20px;
+    bottom: 0;
+    background: #999;
+    left: calc(50% - 3px);
+}
+.dog-muzzle:after {
+    background: black;
+    width: 20px;
+    height: 15px;
+    bottom: 12px;
+    left: calc(50% - 10px);
+    border-bottom-left-radius: 60% 60%;
+    border-bottom-right-radius: 60% 60%;
+    border-top-left-radius: 50% 40%;
+    border-top-right-radius: 50% 40%;
+}
+.dog-ears {
+    width: 40%;
+    top: 25%;
+    left: 30%;
+}
+.dog-ear {
+    bottom: -10px;
+    height: 50px;
+    width: 50px;
+    background: #92A8D1;
+}
+.dog-ear:first-child {
+    right: 100%;
+    border-bottom-left-radius: 80%;
+    border-top-right-radius: 80%;
+    box-shadow: inset -15px 15px 0 1px #888;
+    transform: rotate(10deg);
+}
+.dog-ear:last-child {
+    left: 100%;
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    box-shadow: inset 15px 15px 0 0 #888;
+    transform: rotate(-10deg);
+}
+.dog-tongue {
+    width: 40%;
+    height: 90%;
+    left: calc(50% - 20px);
+    z-index: -1;
+    transform-origin: center top;
+}
+.dog-tongue:before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: #fd3163;
+    animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+}
+@keyframes dog-tongue-inner {
+    from {
+        transform: translatey(5%);
+    }
+    to {
+        transform: translatey(22%);
+    }
+}
+.dog-tail {
+    width: 22px;
+    height: 24.2px;
+    background: #92A8D1;
+    bottom: 40%;
+    border-radius: 11px;
+    left: calc(50% - 11px);
+    transform-origin: center bottom;
+}
+.dog-tail .dog-tail {
+    animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+}
+@keyframes dog-tail-segment {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+}
+.dog-body>.dog-tail {
+    bottom: 93%;
+}
+</code></pre>
+      </div>
+
+
+
+      <h3 class="t_tit2">결과</h3>
+      <p class="t_desc">
+      <div class="t_iframe">
+        <iframe src="https://damin0842.github.io/coding/javascript/study/ti_animation_dog" frameborder="0"></iframe>
+      </div>
+
+
+
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">퀴즈</h2>
+        <p class="t_desc2" data-ke-size="size16">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 슬라이드 유형 입니다. <br />
+           다음 문제 보기와 문항수 맞춘문제 개수를 추가하였습니다.
+        </p>
+        <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                src="https://damin0842.github.io/coding/javascript/effect/quizEffect06.html" frameborder="0"></iframe>
+        </div>
+        <div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/quizEffect06.html"
+                target="_blank" rel="noopener">원본 사이트 보기</a></div>
+        <h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+        <div class="t_code">
+<pre class="dart"><code class="language-js">//문제정보
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
+        answerNum: 1,
+        answerAsk: "눈이 부시지 않고 조도가 균일하며, 그림자가 없는 부드러운 침실이나 병실 등 휴식공간에 사용되는 조명방법은?",
+        answerChoice:
+            [
+                "전반확산조명",
+                "간접조명",
+                "직접조명",
+                "반간접조명"
+            ],
+        answerResult: "간접조명",
+        answerEx: "간접조명 - 광원에서 나온 빛을 천장이나 벽에 부딪혀 확산된 반사광으로 비추는 조명 방식. 효율은 떨어지지만 그늘짐이나 눈부심이 없고 조도분포가 균일하여 차분한 분위기를 연출할 수 있다."
+    },
+    {
+        answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
+        answerNum: 2,
+        answerAsk: "다음 형태(form) 중 반드시 수학적 법칙과 함께 생기며, 가장 뚜렷한 질서를 갖는 것은?",
+        answerChoice:
+            [
+                "유기적 형태	",
+                "기하학적 형태",
+                "내부적 형태",
+                "자연적 형태"
+            ],
+        answerResult: "기하학적 형태",
+        answerEx: "우리가 어떤 형태를 보고 그것을 분별할 때, 일차적으로 인식하는 것은 형태의 '윤곽'입니다. <br> 윤곽을 파악하고 그것의 특징에서 메시지를 얻는 것이죠. 이 윤곽에 어떠한 규칙성이 존재한다면 우리는 그것을 기하학적 형태라고 합니다."
+    }
+    ,
+    {
+        answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
+        answerNum: 3,
+        answerAsk: "부분과 부분 또는 부분과 전체 사이 안정된 관련성을 지니며, 서로 함께 속해있는 것처럼 보이는 디자인의 원리는?",
+        answerChoice:
+            [
+                "비례",
+                "조화",
+                "균형",
+                "강조"
+            ],
+        answerResult: "조화",
+        answerEx: "조화란 디자인에서 두개 이상의 요소 또는 단위 상호 간에 배척 없이 관련성이나 호응성을 주어 하나의 공감을 일으킬수 있으면 하모니가 나타나는데, 이들 관련성은 서로 간에 영향을 주어 통일성을 가지게 되는 것이다."
+    }
+    ,
+    {
+        answerType: "웹디자인 기능사 2013년 01회",
+        answerNum: 4,
+        answerAsk: "어둠이 시작될 때 물체의 상이 흐리게 나타나는 현상과 가장 관계가 깊은 것은?",
+        answerChoice: [
+            "색순응",
+            "푸르킨예 현상",
+            "박명시",
+            "조건등색",
+        ],
+        answerResult: "박명시",
+        answerEx: "명순응은 어두운 -> 밝은곳 갈 때 눈의 적응 암순응은 밝은 -> 어두운 곳 갈 때 눈의 적응입니다. 박명시란 그 중간에 눈의 적응입니다. 그 상태에선 물체가 흐리게 보여요",
+    },
+    // 08
+    {
+        answerType: "웹디자인 기능사 2013년 01회",
+        answerNum: 5,
+        answerAsk: "컴퓨터 그래픽에서 객체의 위치를 정확히 표현하기 위한 좌표계 중 좌표 위에 있는 점과 원점으로 규정하는 기준점과의 거리와 각도의 크기에 따라 좌표를 정의하는 좌표계는?",
+        answerChoice: [
+            "2차원 그래픽 좌표계",
+            "3차원 그래픽 좌표계",
+            "직교 좌표계",
+            "극 좌표계",
+        ],
+        answerResult: "극 좌표계",
+        answerEx: "?",
+    },
+];
+const quizQuestion = document.querySelector(".quiz__question");         //문제번호, 질문
+const quizSelects = document.querySelector(".quiz__selects");           //객관식 보기
+const quizType = document.querySelector(".quiz__type");                 //타입
+const quizResult = document.querySelector(".quiz__answer .result")      //해설
+const quizConfirm = document.querySelector(".quiz__answer .confirm")    //정답확인 버튼
+const quizView = document.querySelector(".quiz__view")                  //강아지
+let quizCount = 0;
+let quizScore = 0;
+//문제출력
+const updateQuiz = (index) => {
+    const questionTag = `
+        &lt;span class="number">${quizInfo[index].answerNum}&lt;/span>
+        &lt;div class="ask">${quizInfo[index].answerAsk}&lt;/div>
+    `;
+    const choiceTag = `
+        &lt;label for="select1">
+            &lt;input type="radio" id="select1" name="select" class="select" value="1">
+            &lt;span class="choice">${quizInfo[index].answerChoice[0]}&lt;/span>
+        &lt;/label>
+        &lt;label for="select2">
+            &lt;input type="radio" id="select2" name="select" class="select" value="2">
+            &lt;span class="choice">${quizInfo[index].answerChoice[1]}&lt;/span>
+        &lt;/label>
+        &lt;label for="select3">
+            &lt;input type="radio" id="select3" name="select" class="select" value="3">
+            &lt;span class="choice">${quizInfo[index].answerChoice[2]}&lt;/span>
+        &lt;/label>
+        &lt;label for="select4">
+            &lt;input type="radio" id="select4" name="select" class="select" value="4">
+            &lt;span class="choice">${quizInfo[index].answerChoice[3]}&lt;/span>
+        &lt;/label>
+    `;
+    //문제 출력
+    quizQuestion.innerHTML = questionTag;
+    quizSelects.innerHTML = choiceTag;
+    quizType.innerHTML = quizInfo[index].answerType;
+    quizResult.innerHTML = quizInfo[index].answerResult;
+    const quizChoice = quizSelects.querySelectorAll(".choice");
+    for (let i = 0; i &lt; quizChoice.length; i++) {
+        quizChoice[i].setAttribute("onclick", "choiceSelected(this)")
+    }
+    //문제, 해설 숨기기
+    quizResult.style.display = "none";
+    quizConfirm.style.display = "none";
+}
+updateQuiz(quizCount);
+const choiceSelected = (answer) => {
+    let userAnswer = answer.textContent;     //사용자가 체크한 정답
+    let currentAnswer = quizInfo[quizCount].answerResult // 문제 정답
+    if (userAnswer == currentAnswer) {
+        console.log("정답")
+        quizView.classList.add("like");
+        quizScore++;
+    } else {
+        console.log("오답")
+        quizView.classList.add("dislike");
+        quizResult.style.display = "block";
+    }
+    quizConfirm.style.display = "block";
+}
+//정답확인버튼
+const answerQuiz = () => {
+    
+    //마지막 문제
+    if (quizInfo.length - 1 == quizCount) {
+        quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에${quizScore} 문제를 맞추었습니다.`;
+    }
+    quizCount++;
+    updateQuiz(quizCount);
+    quizView.classList.remove("like", "dislike");
+}
+quizConfirm.addEventListener("click", answerQuiz)     
+</code></pre>
+        </div>
+    </div>
+</main><!-- //main -->

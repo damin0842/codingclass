@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>구조 요소</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: #000;
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .wrap {
+            width: 1200px;
+
+            margin: 120px auto;
+        }
+
+        header {
+
+            width: 1200px;
+            height: 193px;
+            margin: 0 0 34px;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            background-color: #b1e5e5;
+            display: flex;
+
+        }
+
+        .header__left {
+            width: 20%;
+        }
+
+
+
+        .header__right {
+            width: 80%;
+        }
+
+        header .h1 {
+
+            text-align: center;
+            width: 161px;
+            height: 159px;
+            background-color: #fff;
+            margin: 20px auto;
+            font-size: 20px;
+
+        }
+
+        header .h1 .h1__tit {
+
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            margin: 20px auto;
+            font-family: Inter;
+            font-size: 15px;
+            text-align: center;
+            color: #fff;
+        }
+
+        header .h1 a {
+            line-height: 95px;
+
+        }
+
+        header nav {
+            margin: 20px auto;
+            width: 889px;
+            height: 90px;
+            background-color: #fff;
+            line-height: 45px;
+
+        }
+
+        header nav ul {
+            text-align: center;
+
+        }
+
+        header nav ul .nav__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            line-height: 20px;
+            color: #fff;
+
+        }
+
+        header .header__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #687b7a;
+            text-align: center;
+            margin: 20px auto;
+            color: #fff;
+
+        }
+
+        header nav ul li {
+            list-style: none;
+            display: inline;
+            font-family: Inter;
+            font-size: 20px;
+            margin: 22px
+        }
+
+        #container {
+            width: 1200px;
+            height: 645px;
+            margin: 34px 0;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            background-color: #b1e5e5;
+            display: flex;
+        }
+
+        #container .div__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #687b7a;
+            text-align: center;
+            color: #fff;
+        }
+
+        #container section {
+            margin: 40px 20px;
+            width: 400px;
+            height: 550px;
+            background-color: #fff;
+            text-align: center;
+            color: #000;
+            font-size: 20px;
+            line-height: 500px;
+        }
+
+        #container section .section__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        #container .side {
+            width: 217px;
+            height: 260px;
+            margin: 40px 20px;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        #container article {
+            margin: 0 0 20px 0;
+            width: 217px;
+            height: 260px;
+            background-color: #fff;
+            font-size: 20px;
+
+        }
+
+        #container article .article__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        #container aside {
+            margin: 30px 0 0 0;
+            width: 217px;
+            height: 260px;
+            background-color: #fff;
+            font-size: 20px;
+
+        }
+
+        #container aside .aside__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-size: 15px;
+        }
+
+        footer {
+            width: 1200px;
+            height: 193px;
+            margin: 34px 0 0;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            background-color: #b1e5e5;
+        }
+
+        footer .footer__tit {
+            width: 95px;
+            height: 23px;
+            background-color: #687b7a;
+            text-align: center;
+            color: #fff;
+        }
+
+        address {
+            width: 569px;
+            height: 65px;
+            background-color: #fff;
+            margin: 10px 110px;
+            font-size: 15px;
+            text-align: center;
+            
+        }
+
+        footer .p {
+            width: 569px;
+            height: 65px;
+            background-color: #fff;
+            margin: 15px 110px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .p__tit{
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-size: 15px;
+        }
+        .address__tit{
+            width: 95px;
+            height: 23px;
+            background-color: #84bcb9;
+            text-align: center;
+            color: #fff;
+            line-height: 20px;
+            font-size: 15px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header__left">
+                <div class="h1">
+                    <div class="h1__tit">h1</div>
+
+                    <a href="#">반응형웹</a>
+
+                </div class="h1">
+            </div>
+            <div class="header__right">
+                <div class="header__tit">header</div>
+                <nav>
+                    <ul>
+                        <div class="nav__tit">nav</div>
+                        <li><a href="#">MENU01</a></li>
+                        <li><a href="#">MENU02</a></li>
+                        <li><a href="#">MENU03</a></li>
+                        <li><a href="#">MENU04</a></li>
+                        <li><a href="#">MENU05</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+        <div id="container">
+            <div class="div__tit">div</div>
+            <section>
+                <div class="section__tit">section</div>
+                콘텐츠 그룹 01
+            </section>
+            <section>
+                <div class="section__tit">section</div>
+
+                콘텐츠 그룹 02
+
+            </section>
+            <div class="side">
+                <article>
+                    <div class="article__tit">article</div>
+                    주요기사
+                </article>
+                <aside>
+                    <div class="aside__tit">aside</div>
+                    광고
+                </aside>
+
+            </div>
+        </div>
+        <footer>
+            <div class="footer__tit">footer</div>
+            <address> 
+                <div class="address__tit">address</div>
+                
+                경기도 부천시 오정구 삼정동 032)674-5685 icoxpub@naver.com</address>
+            <div class="p">
+                <div class="p__tit">p</div>
+                COPYRIGHT © ALL right reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

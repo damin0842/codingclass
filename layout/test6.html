@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            bottom: 0;
+        }
+
+        #wrap {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            color: #fff;
+        }
+
+        #header {
+            width: 100%;
+            height: 400px;
+            background-color: rgb(245, 240, 165);
+        }
+
+        #header .hl {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(207, 199, 79);
+            float: left;
+            line-height: 400px;
+        }
+
+        #header .hr {
+            line-height: 200px;
+
+        }
+
+        #header .hr .hr1 {
+            width: 900px;
+            height: 200px;
+            background-color: rgb(207, 221, 77);
+            float: left;
+        }
+
+        #header .hr .hr2 {
+            width: 900px;
+            height: 200px;
+            background-color: rgb(159, 187, 57);
+            float: left;
+        }
+
+        #nav {
+            width: 100%;
+            height: 900px;
+            background-color: rgb(221, 57, 57);
+        }
+
+        #nav .navtop {
+            line-height: 200px;
+            width: 1200px;
+            height: 400px;
+        }
+
+        #nav .navtop .nt1 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(150, 102, 102);
+            float: left;
+        }
+
+        #nav .navtop .nt2 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(116, 73, 73);
+            float: left;
+
+        }
+
+        #nav .navtop .nt3 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(87, 32, 32);
+            float: left;
+
+        }
+
+        #nav .navtop .nt4 {
+            width: 600px;
+            height: 200px;
+            background-color: rgb(80, 54, 54);
+            float: left;
+
+        }
+
+        #nav .navmid {
+            line-height: 100px;
+        }
+
+        #nav .navmid .nm1 {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(204, 82, 82);
+        }
+
+        #nav .navmid .nm2 {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(148, 93, 93);
+        }
+
+        #nav .navmid .nm3 {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(66, 48, 48);
+        }
+
+        #nav .navbot {
+            line-height: 200px;
+        }
+
+        #nav .navbot .nb1 {
+            height: 200px;
+            width: 600px;
+            background-color: rgb(75, 31, 31);
+            float: left;
+        }
+
+        #nav .navbot .nb2 {
+            height: 200px;
+            width: 600px;
+            background-color: rgb(180, 128, 128);
+            float: left;
+        }
+
+        #section {
+            line-height: 300px;
+            width: 100%;
+            background-color: rgb(132, 221, 233);
+            height: 600px;
+        }
+
+        #section .sectop {}
+
+        #section .sectop .st1 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(55, 124, 192);
+            float: left;
+        }
+
+        #section .sectop .st2 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(29, 60, 92);
+            float: left;
+        }
+
+        #section .sectop .st3 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(49, 107, 165);
+            float: left;
+        }
+
+        #section .sectop .st4 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(54, 129, 204);
+            float: left;
+        }
+
+        #section .sectop .st5 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(64, 149, 235);
+            float: left;
+        }
+
+        #section .sectop .st6 {
+            height: 300px;
+            width: 200px;
+            background-color: rgb(141, 189, 236);
+            float: left;
+        }
+
+        #section .secbot .sb1 {
+            height: 300px;
+            width: 600px;
+            background-color: rgb(10, 69, 124);
+            float: left;
+        }
+
+        #section .secbot .sb2 {
+            height: 300px;
+            width: 600px;
+            background-color: rgb(37, 84, 121);
+            float: left;
+        }
+
+        #footer {
+            line-height: 100px;
+            width: 100%;
+            background-color: rgb(235, 187, 241);
+            height: 100px;
+            ;
+        }
+
+        #footer .ft1 {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(219, 54, 211);
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="hl"></div>
+                <div class="hr">
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="container">
+                <div class="navtop">
+                    <div class="nt1"></div>
+                    <div class="nt2"></div>
+                    <div class="nt3"></div>
+                    <div class="nt4"></div>
+                </div>
+                <div class="navmid">
+                    <div class="nm1"></div>
+                    <div class="nm2"></div>
+                    <div class="nm3"></div>
+                </div>
+                <div class="navbot">
+                    <div class="nb1"></div>
+                    <div class="nb2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="sectop">
+                    <div class="st1"></div>
+                    <div class="st2"></div>
+                    <div class="st3"></div>
+                    <div class="st4"></div>
+                    <div class="st5"></div>
+                    <div class="st6"></div>
+                </div>
+                <div class="secbot">
+                    <div class="sb1"></div>
+                    <div class="sb2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="ft1"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+        document.querySelector(".hl").innerHTML = arr[0];
+        document.querySelector(".hr1").innerHTML = arr[1];
+        document.querySelector(".hr2").innerHTML = arr[2];
+
+        document.querySelector(".nt1").innerHTML = arr[0];
+        document.querySelector(".nt2").innerHTML = arr[1];
+        document.querySelector(".nt3").innerHTML = arr[2];
+        document.querySelector(".nt4").innerHTML = arr[3];
+        document.querySelector(".nm1").innerHTML = arr[0];
+        document.querySelector(".nm2").innerHTML = arr[1];
+        document.querySelector(".nm3").innerHTML = arr[2];
+        document.querySelector(".nb1").innerHTML = arr[3];
+        document.querySelector(".nb2").innerHTML = arr[4];
+
+        document.querySelector(".st1").innerHTML = arr[0];
+        document.querySelector(".st2").innerHTML = arr[1];
+        document.querySelector(".st3").innerHTML = arr[2];
+        document.querySelector(".st4").innerHTML = arr[3];
+        document.querySelector(".st5").innerHTML = arr[4];
+        document.querySelector(".st6").innerHTML = arr[5];
+        document.querySelector(".sb1").innerHTML = arr[6];
+        document.querySelector(".sb2").innerHTML = arr[7];
+
+        document.querySelector(".ft1").innerHTML = arr[0];
+    </script>
+</body>
+
+</html>

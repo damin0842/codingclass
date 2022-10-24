@@ -1,0 +1,105 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header --><main id="main">
+<p data-ke-size="size16">&nbsp;</p>
+<div class="document">
+<h2 class="t_tit" data-ke-size="size26">퀴즈</h2>
+<p class="t_desc2" data-ke-size="size16">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 주관식 여러문제 유형 입니다. <br />
+    정답을 입력했을 때와 오답을 입력했을 때 반응이 달라집니다. <br>
+    여러 문제를 동시에 출력하기 위해 선택자를 다중 선택하고 반복문을 사용했습니다.</p>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://damin0842.github.io/coding/javascript/effect/quizEffect03.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://damin0842.github.io/coding/javascript/effect/quizEffect01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
+<h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+<div class="t_code">
+<pre class="dart"><code>//선택자 
+const quizType = document.querySelectorAll(".quiz__type");                 //퀴즈 종류
+const quizNumber = document.querySelectorAll(".quiz__question .number");   //퀴즈 번호
+const quizAsk = document.querySelectorAll(".quiz__question .ask");         //퀴즈 질문
+const quizConfirm = document.querySelectorAll(".quiz__answer .confirm");   //정답 확인 버튼
+const quizResult = document.querySelectorAll(".quiz__answer .result");     //정답 결과
+const quizInput = document.querySelectorAll(".quiz__answer .input");       //사용자 정답
+const quizView = document.querySelectorAll(".quiz__view");                 //강아지
+//문제정보
+const quizInfo = [
+    {
+        answerType: "웹디자인기능사 2015년 5회",
+        answerNum: "1. ",
+        answerAsk:"홈페이지의 해당 컨셉(concept)을 이끌어 내기 위해 종이에 최대한 많이 그려 봄으로써 여러 가지 구성을 만들어 보는 디자인 실무의 초기 작업은?",
+        answerResult:"아이디어스케치"
+    },
+    {
+        answerType: "웹디자인기능사 2015년 5회",
+        answerNum: "2. ",
+        answerAsk:"오려낸 그림을 2차원 평면상에서 한 프레임씩 움직이면서 촬영하는 스톱 애니메이션을 말한다. 클레이 애니메이션이나 인형 애니메이션과 비슷하지만 3차원이 아닌 2차원이라는 점에서 구분되는 애니메이션은?",
+        answerResult:"컷아웃애니메이션"
+    },
+    {
+        answerType: "웹디자인기능사 2015년 5회",
+        answerNum: "3. ",
+        answerAsk:"태양광선이 투사되는 위치에 프리즘을 놓아 굴절된 광선을 스크린에 투사하여 나타난 여러 가지 색의 띠를 무엇이라 하는가?",
+        answerResult:"스펙트럼"
+    },
+    {
+        answerType: "웹디자인기능사 2015년 5회",
+        answerNum: "4. ",
+        answerAsk:"망막에 다른 색광이 자극하여 혼합되는 현상으로 색 점이 서로 가깝게 있어 명도와 채도가 떨어지지 않는 혼합 방식은?",
+        answerResult:"병치혼합"
+    }
+]
+//문제출력
+// for(let i=0; i&lt;quizInfo.length; i++){
+//     quizType[i].textContent = quizInfo[i].answerType;
+//     quizNumber[i].textContent = quizInfo[i].answerNum;
+//     quizAsk[i].textContent = quizInfo[i].answerAsk;
+//     quizResult[i].textContent = quizInfo[i].answerResult;
+// }
+
+quizInfo.forEach((el, i) => {
+    quizType[i].textContent = quizInfo[i].answerType;
+    quizNumber[i].textContent = quizInfo[i].answerNum;
+    quizAsk[i].textContent = quizInfo[i].answerAsk;
+    quizResult[i].textContent = quizInfo[i].answerResult;
+})
+//정답 숨기기(4개)
+// quizResult[0].style.display = "none";
+// quizResult[1].style.display = "none";
+// quizResult[2].style.display = "none";
+// quizResult[3].style.display = "none";
+// for(i=0; i&lt;quizInfo.length; i++){
+//     quizResult[i].style.display = "none";
+// }
+    
+quizInfo.forEach((el,i) => {
+    quizResult[i].style.display = "none";
+})
+//정답 확인
+// quizConfirm.addEventListener("click", () => {
+//     alert("ddd")
+// });
+quizConfirm.forEach((btn, num) => {
+    btn.addEventListener("click", () => {
+        //사용자 정답
+        const userWord = quizInput[num].value.toLowerCase().trim();
+       
+        //사용자 정답 == 문제 정답
+        if(userWord == quizInfo[num].answerResult){
+                //정답
+                alert("정답")
+                quizView[num].classList.add("like");
+                quizConfirm[num].style.display = "none";
+        }else{
+                //오답
+                alert("오답")
+                quizView[num].classList.add("dislike");
+                quizConfirm[num].style.display = "none";
+                quizResult[num].style.display = "block";
+                quizInput[num].style.display = "none";
+        }
+    });
+});    
+</code></pre>
+</div>
+</div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

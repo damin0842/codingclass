@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+<body>
+    <style>
+        .sample .table table{
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            text-align: center;
+        
+        }
+        .sample .table table tr th{
+            font-weight: normal;
+            background-color: #f5f5f5;
+            padding: 3px;
+        }
+        .sample .table table tr td{
+            border: 1px solid #e6e6e6;
+            padding: 6px;
+        }
+        .sample .table table tr td[class*="_P"]{
+            color: #fff;
+        }
+        .sample .table table tr td[class*="_P"]:hover{
+            color: #000;
+            cursor: help;
+        }
+        </style>
+    <main id="main">
+        <div class="document">
+            <div class="main_sample">
+                <div id="sample03" class="sample">
+                    <h3 class="t_tit">trim() / trimStart() / trimEnd()</h3>
+                    <p class="t_desc2">
+                        문자열의 앞 뒤 공백을 제거합니다.
+                    </p>
+                    
+                    <div class="t_code">
+<pre><code class="language-js">//03
+const str1 = "       javascript      ";
+const currentStr1 = str1.trim();
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "javascript";
+document.querySelector(".sample03_M1").innerHTML = "trim";
+document.querySelector(".sample03_P1").innerHTML = currentStr1;
+
+const str2 = "       javascript      ";
+const currentStr2 = str2.trimStart();
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = "javascript";
+document.querySelector(".sample03_M2").innerHTML = "trimStart";
+document.querySelector(".sample03_P2").innerHTML = currentStr2;
+
+const str3 = "       javascript      ";
+const currentStr3 = str3.trimEnd();
+document.querySelector(".sample03_N3").innerHTML = "3";
+document.querySelector(".sample03_Q3").innerHTML = "javascript";
+document.querySelector(".sample03_M3").innerHTML = "trimEnd";
+document.querySelector(".sample03_P3").innerHTML = currentStr3;
+</code></pre>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 5%;">
+                                <col style="width: 32%;">
+                                <col style="width: 22%;">
+                                <col style="width: 42%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>리턴값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample03_N1"></td>
+                                    <td class="sample03_Q1"></td>
+                                    <td class="sample03_M1"></td>
+                                    <td class="sample03_P1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample03_N2"></td>
+                                    <td class="sample03_Q2"></td>
+                                    <td class="sample03_M2"></td>
+                                    <td class="sample03_P2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample03_N3"></td>
+                                    <td class="sample03_Q3"></td>
+                                    <td class="sample03_M3"></td>
+                                    <td class="sample03_P3"></td>
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- sample03 -->
+                    </div></div>
+                </main>
+   
+    <script>
+         {
+            const str1 = "      javascript      ";
+            const currentStr1 = str1.trim();
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = str1;
+            document.querySelector(".sample03_M1").innerHTML = "trim()";
+            document.querySelector(".sample03_P1").innerHTML = currentStr1;
+            const str2 = "      javascript      ";
+            const currentStr2 = str2.trimStart();
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = str2;
+            document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+            document.querySelector(".sample03_P2").innerHTML = currentStr2;
+            const str3 = "      javascript      ";
+            const currentStr3 = str3.trimEnd();
+            document.querySelector(".sample03_N3").innerHTML = "3";
+            document.querySelector(".sample03_Q3").innerHTML = str3;
+            document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+            document.querySelector(".sample03_P3").innerHTML = currentStr3;
+        }
+    </script>
+</body>
+
+</html>

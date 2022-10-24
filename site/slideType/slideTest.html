@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미라클있수마수</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .GmarketSans {
+            font-family: 'GmarketSans';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        em,
+        i,
+        address {
+            font-style: normal;
+        }
+
+        /* ir 효과(이미지 대체 효과 == alt) */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+
+        main {
+            width: 960px;
+            margin: 120px auto;
+        }
+
+        /* headerType */
+        .header__inner {
+            width: 960px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .header__logo {
+            width: 100px;
+            height: 70px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+
+        .header__menu {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            text-align: right;
+        }
+
+        .header__menu li {
+            display: inline;
+        }
+
+        .header__menu li a {
+            padding: 13px 15px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+            color: #000;
+        }
+
+        .header__menu li a:hover {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+
+
+        /* slider */
+        .slider__wrap {
+            margin-top: 5px;
+            width: 960px;
+            height: 363px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider__img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+
+        @media (max-width: 800px) {
+            .slider__img {
+                width: 400px;
+                height: 225px;
+            }
+        }
+
+        .benner {
+            margin: 30px auto;
+            width: 960px;
+            height: 211px;
+            justify-content: space-between;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .benner>div {
+            width: 49%;
+            height: inherit;
+        }
+        .benner .benner1 {
+           border: 1px solid #e5e5e5;
+           padding: 30px;
+           font-size: 18px;
+           color: #666;
+           box-sizing: border-box;
+           position: relative;
+
+        }
+        .benner .benner1 h2{
+            font-weight: 600;
+            font-size: 20px;
+            color: #000;
+            display: inline;
+        }
+        .benner .benner1 .h3{
+            font-weight: 600;
+            font-size: 16px;
+            color: #666;
+        }
+        .benner .benner1 p{
+            line-height: 2;
+            font-size: 16px;
+            
+        }
+        .benner .benner1 i{
+            text-align: right;
+            position: absolute;
+            right: 20px;
+            font-size: 14px;
+        }
+        .benner .benner1 a{
+            text-align: right;
+            position: absolute;
+            top: 30px;
+            right: 45px;
+            font-size: 13px;
+        }
+        .benner .benner1 img{
+            top: 24px;
+            right: 20px;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .con__tit{
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            
+        }
+        .contants {
+            width: 960px;
+            height: 280px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            color: #666;
+        }
+
+        .contants>div {
+            width: 24%;
+            height: 280px;
+        }
+        .contants>div>p{
+            margin-top: 25px;
+        }
+
+        footer {
+            border-top: 1px dashed #a5a5a5;
+            margin-top: 40px;
+            width: 960px;
+            height: 150px;
+            padding-top: 30px;
+            color: #a5a5a5;
+            font-size: 14px;
+        }
+        .notice{
+            margin-bottom: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <main class="GmarketSans">
+        <header id="headerType" class="header__wrap nexon">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="img/logo01.jpg" alt="">
+                </div>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="">즐길거리</a></li>
+                        <li><a href="">요금/우대혜택</a></li>
+                        <li><a href="">참여프로그램</a></li>
+                        <li><a href="">이용가이드</a></li>
+                        <li><a href="">소통서비스</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <section id="sliderType01" class="container">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="img/slider01.jpg"></div>
+                    <div class="slider"><img src="img/slider02.jpg"></div>
+                    <div class="slider"><img src="img/slider03.jpg"></div>
+                </div>
+            </div>
+
+        </section>
+        <div class="benner">
+            <div class="benner1">
+                <div class="notice">
+                <h2 class="h2">롯데월드 소식 | </h2> <h2 class="h3">뉴스·공지</h2></div>
+                <img src="img/more01.svg" alt=""><a href="">더 보기 </a>
+                <p>그럴싸진관 미라클<i>2018.11.19</i></p>
+                <p>드림스테이지 '힘내 소중한 너'<i>2018.11.18</i></p>
+                <p>'힘내 소중한 너'음원 발매<i>2018.11.13</i></p>
+                <p>이용 요금 조정 안내<i>2018.11.12</i></p>
+            </div>
+            <div class="benner2">
+                <img src="img/popup01.jpg" alt="">
+            </div>
+        </div>
+        <h2 class="con__tit">특별한 경험</h2>
+
+        <div class="contants">
+            <div class="contants1">
+                <img src="img/con01.jpg" alt="">
+                <p>연간회원안내</p>
+            </div>
+            <div class="contants2">
+                <img src="img/con02.jpg" alt="">
+                <p>프리미엄투어</p>
+            </div>
+            <div class="contants3">
+                <img src="img/con03.jpg" alt="">
+                <p>공연참여 프로그램</p>
+            </div>
+            <div class="contants4">
+                <img src="img/con04.jpg" alt="">
+                <p>단체프로그램</p>
+            </div>
+
+        </div>
+
+        <footer>
+            서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자:박동기 <br>
+            사업자등록번호:219-85-00014 | 통신판매업신고번호:송파 제5513호 | 전화:1661-2000 <br>
+            <br>
+            COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.
+        </footer>
+    </main>
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;                       //현재 보이는 이미지
+        let sliderCount = slider.length;            //이미지 갯수
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;       //다음 이미지 
+            //1, 2, 3, 4, 5, 6, 7, 8, 9,......
+            //1, 2, 3, 4, 0, 1, 2, 3, 4, 0 ......
+
+            slider[currentIndex].style.opacity = "0";    //첫번째 이미지를 안보이게
+            slider[nextIndex].style.opacity = "1";       //두번째 이미지를 보이게
+
+            currentIndex = nextIndex;
+        }, 1000);
+
+        
+    </script>
+
+</body>
+
+</html>
+

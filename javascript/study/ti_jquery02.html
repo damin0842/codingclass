@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="document">
+        <h2 class="t_tit">jQuery 선택자</h2>
+        <p class="t_desc2">
+        jQuery 선택자 (selector) 는 이 책의 CSS3 파트에서 학습한 CSS 선택자와 의미가 같은것이 많이 있습니다. <br>
+        jQuery는 html 요소와 관련된 기능구현이 많아 그만큼 CSS와 매우 미접한 관계가 있습니다. <br> 
+        이런 이유 때문에 앞으로 학습할 주제별 실습에서도 CSS를 포함한 예제로 구성하였습니다. <br>
+        <br></p>
+        <p>jQuery 선택자의 형식은 다음과 같습니다.</p>
+        <table class="t_table">
+            <tr>
+                <th>$("선택자")</th>
+                <th>$("#gnb")</th>
+            </tr>
+        </table>
+    
+
+        <h3 class="t_tit2">기본 선택자</h3>
+        <table class="t_table">
+            <tr>
+                <th>선택자 종류</th>
+                <th colspan="2">설명</th>
+            </tr>
+            <tr>
+                <td>태그 선택자</td>
+                <td>$("p")</td>
+                <td>p 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>id 선택자</td>
+                <td>$("#gnb")</td>
+                <td>#gnb 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>class 선택자</td>
+                <td>$(".logo")</td>
+                <td>.logo인 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>자식 선택자</td>
+                <td>$("#gnb>ul>li")</td>
+                <td>#gnb의 자식 요소의 자식 요소 li를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>하위 선택자</td>
+                <td>$("#gnb ul")</td>
+                <td>#gnb의 하위에 있는 모든 ul 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>인접 선택자</td>
+                <td>$("#visual + #content")</td>
+                <td>#visual 다음에 오는 #content 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>형제 선택자</td>
+                <td>$("#visual ~ #footer")</td>
+                <td>#visual으 형제 요소 #footer를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>종속 선택자</td>
+                <td>$("div.util")</td>
+                <td>div 요소 중 class가 util인 요소를 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>그룹 선택자</td>
+                <td>$(".left, .right, #banner")</td>
+                <td>.left, .right, #banner 요소들을 선택합니다.</td>
+            </tr>
+            <tr>
+                <td>전체 선택자</td>
+                <td>$("*")</td>
+                <td>모든 요소를 선택합니다.</td>
+            </tr>
+        </table>
+        <p class="t_box">
+            앞으로 학습하게 되는 선택자 시습은 결과를 한번에 확인하지 말고, 
+            선택자를 하나씩 코딩하면서 결과를 그때그때 확인해 보는 방법이 jQUery 선택자를 이해하는데 도움이 될 것입니다.
+        </p>
+        <div class="t_code">
+<pre><code class="language-html">&lt;!DOCTYPE html>
+    &lt;html lang="ko">
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;title>기본 선택자&lt;/title>
+        &lt;style>
+            *{
+                margin: 5px;
+            }
+        &lt;/style>
+        &lt;script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">&lt;/script>
+        &lt;script>
+            $(document).ready(function(){
+                $("p").css("border","4px solid red");
+                $("#gnb").css("border","4px solid orange");
+                $(".logo").css("border","4px solid yellow");
+                $("#gnb>ul>li").css("border","4px solid green");
+                $("#gnb ul").css("border","4px solid blue");
+                $("#visual + #content").css("border","4px solid navy");
+                $("#visual ~ #footer").css("border","4px solid purple");
+                $("div.util").css("border","4px solid pink");
+                $(".left, .right, #banner").css("border","4px solid gray");
+            });
+        &lt;/script>
+    &lt;/head>
+    &lt;body>
+        &lt;header id="header">
+            &lt;div class="logo">로고&lt;/div>
+            &lt;div class="util">회원가입&lt;/div>
+            &lt;nav id="gnb">
+                &lt;ul>
+                    &lt;li>메뉴1
+                        &lt;ul>
+                            &lt;li>메뉴1_1&lt;/li>
+                        &lt;/ul>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/nav>
+            &lt;div id="visual">
+                &lt;p>비주얼&lt;/p>
+            &lt;/div>
+            &lt;div id="content">
+                &lt;div class="left">왼쪽&lt;/div>
+                &lt;div class="right">
+                    &lt;div class="util">오른쪽&lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;div id="banner">배너&lt;/div>
+            &lt;div id="footer">푸터&lt;/div>
+        &lt;/header>
+    &lt;/body>
+    &lt;/html>
+</code></pre>
+        </div>
+        
+        <p>예제 설명을 위해 css() 메서드를 사용하였습니다.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    html,
+    body {
+        background: #FFE16E;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .dog {
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+    }
+
+    .dog:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.03);
+        transform: translatey(-30%) scale(1.5);
+    }
+
+    .dog * {
+        position: absolute;
+    }
+
+    .dog-body,
+    .dog-head,
+    .dog-torso {
+        border-radius: 50%;
+        background: #92A8D1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dog-body {
+        top: -50%;
+        box-shadow: inset 0 -15px 0 0 #888;
+        animation: dog-body 200ms ease-in-out infinite alternate;
+    }
+
+    .dog-body:before {
+        content: "";
+        position: absolute;
+        bottom: 90%;
+        right: 50%;
+        width: 90%;
+        height: 90%;
+        background: rgba(136, 136, 136, 0.4);
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 10%;
+        border-top-right-radius: 10%;
+        transform-origin: right bottom;
+        animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+    }
+
+    @keyframes dog-tail-blur {
+        0% {
+            transform: rotate(0);
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes dog-body {
+        from {
+            transform: translatex(-10%);
+        }
+
+        to {
+            transform: translatex(10%);
+        }
+    }
+
+    .dog-head {
+        animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+    }
+
+    @keyframes dog-head {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        33% {
+            transform: rotate(-45deg);
+        }
+
+        66% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    .dog-torso {
+        top: -20%;
+        box-shadow: inset 0 -15px 0 0 #888;
+        animation: dog-torso 200ms ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes dog-torso {
+        0% {
+            transform: translatex(-5%);
+        }
+
+        100% {
+            transform: translatex(5%);
+        }
+    }
+
+    .dog-eyes {
+        width: 60%;
+        top: 55%;
+        left: 20%;
+        z-index: 1;
+    }
+
+    .dog-eyes:before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background: #777;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: 0;
+        border: 4px solid black;
+        border-left-width: 0;
+        border-bottom-width: 0;
+        border-top-width: 0;
+        transform: rotate(-45deg);
+    }
+
+    .dog-eye {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        z-index: 1;
+    }
+
+    .dog-eye:first-child {
+        left: 0;
+    }
+
+    .dog-eye:last-child {
+        right: 0;
+    }
+
+    .dog-muzzle {
+        width: 60%;
+        left: 20%;
+        height: 50%;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        bottom: -15%;
+        background: #92A8D1;
+    }
+
+    .dog-muzzle:before,
+    .dog-muzzle:after {
+        content: "";
+        display: block;
+        position: absolute;
+    }
+
+    .dog-muzzle:before {
+        width: 6px;
+        height: 20px;
+        bottom: 0;
+        background: #999;
+        left: calc(50% - 3px);
+    }
+
+    .dog-muzzle:after {
+        background: black;
+        width: 20px;
+        height: 15px;
+        bottom: 12px;
+        left: calc(50% - 10px);
+        border-bottom-left-radius: 60% 60%;
+        border-bottom-right-radius: 60% 60%;
+        border-top-left-radius: 50% 40%;
+        border-top-right-radius: 50% 40%;
+    }
+
+    .dog-ears {
+        width: 40%;
+        top: 25%;
+        left: 30%;
+    }
+
+    .dog-ear {
+        bottom: -10px;
+        height: 50px;
+        width: 50px;
+        background: #92A8D1;
+    }
+
+    .dog-ear:first-child {
+        right: 100%;
+        border-bottom-left-radius: 80%;
+        border-top-right-radius: 80%;
+        box-shadow: inset -15px 15px 0 1px #888;
+        transform: rotate(10deg);
+    }
+
+    .dog-ear:last-child {
+        left: 100%;
+        border-top-left-radius: 80%;
+        border-bottom-right-radius: 80%;
+        box-shadow: inset 15px 15px 0 0 #888;
+        transform: rotate(-10deg);
+    }
+
+    .dog-tongue {
+        width: 40%;
+        height: 90%;
+        left: calc(50% - 20px);
+        z-index: -1;
+        transform-origin: center top;
+    }
+
+    .dog-tongue:before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        background: #fd3163;
+        animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+    }
+
+    @keyframes dog-tongue-inner {
+        from {
+            transform: translatey(5%);
+        }
+
+        to {
+            transform: translatey(22%);
+        }
+    }
+
+    .dog-tail {
+        width: 22px;
+        height: 24.2px;
+        background: #92A8D1;
+        bottom: 40%;
+        border-radius: 11px;
+        left: calc(50% - 11px);
+        transform-origin: center bottom;
+    }
+
+    .dog-tail .dog-tail {
+        animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+    }
+
+    @keyframes dog-tail-segment {
+        0% {
+            transform: rotate(-20deg);
+        }
+
+        100% {
+            transform: rotate(20deg);
+        }
+    }
+
+    .dog-body>.dog-tail {
+        bottom: 93%;
+    }
+</style>
+
+<body>
+
+    <div class="dog">
+        <div class="dog-body">
+            <div class="dog-tail">
+                <div class="dog-tail">
+                    <div class="dog-tail">
+                        <div class="dog-tail">
+                            <div class="dog-tail">
+                                <div class="dog-tail">
+                                    <div class="dog-tail">
+                                        <div class="dog-tail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dog-torso"></div>
+        <div class="dog-head">
+            <div class="dog-ears">
+                <div class="dog-ear"></div>
+                <div class="dog-ear"></div>
+            </div>
+            <div class="dog-eyes">
+                <div class="dog-eye"></div>
+                <div class="dog-eye"></div>
+            </div>
+            <div class="dog-muzzle">
+                <div class="dog-tongue"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

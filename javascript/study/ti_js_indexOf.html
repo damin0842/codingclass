@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">indexOf()</h2>
+            <p class="t_desc2">indexOf() 메서드는 호출한 String 객체에서 주어진 값과 일치하는 첫 번째 인덱스를 반환합니다. <br>
+                일치하는 값이 없으면 -1을 반환합니다.</p>
+
+            <h2 class="t_tit2">indexOf("찾을 문자열")</h2>
+            <div class="t_code">
+<pre><code class="language-js">var str = 'HTML,CSS,JavaScript';
+var pos1 = str.indexOf('JavaScript');
+// 결과 : 9
+</code></pre>
+            </div>
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJWSZA%2Fbtrp7Gh5wuO%2F6GUP5RFV2Z2JW1k8gNEAKk%2Fimg.png"
+                alt="">
+
+
+            <h2 class="t_tit2">indexOf("찾을 문자열", "시작 위치")</h2>
+            <div class="t_code">
+<pre><code class="language-js">var str = 'HTML,CSS,JavaScript';
+var pos1 = str.indexOf(',', 5);
+// 결과 : 8
+</code></pre>
+            </div>
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdRPveB%2Fbtrp6mxRQ3H%2Fql0vGr7PrzkYEoqOYBSRA1%2Fimg.png"
+                alt="">
+                <br><br><br><br>
+
+                <h2 class="t_tit">lastIndexOf()</h2>
+                <p class="t_desc2">lastIndexOf() 메서드는 주어진 값과 일치하는 부분을 fromIndex로부터 역순으로 탐색하여, 최초로 마주치는 인덱스를 반환합니다. <br>
+                    일치하는 부분을 찾을 수 없으면 -1을 반환합니다.</p>
+            <h2 class="t_tit2">lastIndexOf("찾을 문자열") </h2>
+            <div class="t_code">
+<pre><code class="language-js">var str = 'HTML,CSS,JavaScript';
+var pos = str.lastIndexOf(',');
+// 결과 : 8
+</code></pre>
+            </div>
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbeo5PN%2Fbtrp66ORDLF%2FfNeRmQBS8jQKT28JkIw4EK%2Fimg.png"
+                alt="">
+
+                <br><br>
+            <div class="t_code">
+<pre><code class="language-js">//"문자열".indexOf(검색값)
+//"문자열".indexOf(검색값,위치값)
+// "문자열".lastIndexOf(검색값)
+// "문자열".lastIndexOf(검색값, 위치값)
+
+const str1 = "javascript reference"
+const currentStr1 = str1.indexOf("javascript")       //0
+const currentStr2 = str1.indexOf("reference")       //11
+const currentStr3 = str1.indexOf("j")                     //0
+const currentStr4 = str1.indexOf("a")                   //1
+const currentStr5 = str1.indexOf("v")                   //2
+const currentStr6 = str1.indexOf("jquery")           //-1
+const currentStr7 = str1.indexOf("b")                   //-1
+const currentStr8 = str1.indexOf("javascript", 0)   //0
+const currentStr9 = str1.indexOf("javascript", 1)   //-1
+const currentStr10 = str1.indexOf("reference", 0)   //11
+const currentStr11 = str1.indexOf("reference", 1)   //11
+const currentStr12 = str1.indexOf("reference", 11)  //11
+const currentStr13 = str1.indexOf("reference", 12)  //-1
+
+const currentStr14 = str1.lastIndexOf("javascript");    //0
+const currentStr15 = str1.lastIndexOf("reference");    //11
+const currentStr16 = str1.lastIndexOf("j");                  //0
+const currentStr17 = str1.lastIndexOf("a");                 //3
+const currentStr18 = str1.lastIndexOf("v");                 //2
+const currentStr19 = str1.lastIndexOf("jquery");         //-1
+const currentStr20 = str1.lastIndexOf("b");                //-1
+const currentStr21 = str1.lastIndexOf("javascript", 0); //0            
+const currentStr22 = str1.lastIndexOf("javascript", 1); //0         
+const currentStr23 = str1.lastIndexOf("reference", 0);  //-1           
+const currentStr24 = str1.lastIndexOf("reference", 1);  //-1             
+const currentStr25 = str1.lastIndexOf("reference", 11); //11            
+const currentStr26 = str1.lastIndexOf("reference", 12); //11
+</code></pre>
+            </div>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>

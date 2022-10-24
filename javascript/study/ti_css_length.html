@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dracula.css">
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <main id="main">
+        <div class="document">
+
+            <h2 class="t_tit">CSS 길이 단위</h2>
+            <p class="t_desc2">
+                가장 자주 사용되는 숫자 형식은 <length> 입니다. <br>
+                    예를 들면 10px (픽셀) 또는30em. CSS 에서 사용되는 길이는 — 상대 및 절대의 두 가지 유형이 있습니다. <br>
+                    얼마나 커질지 알기 위해서는 차이를 이해하는 것이 중요합니다. <br>
+            </p>
+            <br>
+            <h3 class="t_tit2">절대 길이 단위</h3>
+            <p>다음은 모두 절대 길이 단위이며 — 다른 것과 관련이 없으며 일반적으로 항상 동일한 크기로 간주됩니다.</p>
+            <table class="t_table">
+                <tr>
+                    <th>단위</th>
+                    <th>이름</th>
+                    <th>다음과 동일함</th>
+                </tr>
+                <tr>
+                    <td class="ce">cm</td>
+                    <td class="ce">센티미터</td>
+                    <td>1cm = 96px/2.54</td>
+                </tr>
+                <tr>
+                    <td class="ce">mm</td>
+                    <td class="ce">밀리미터</td>
+                    <td>1mm = 1/10th of 1cm</td>
+                </tr>
+                <tr>
+                    <td class="ce">Q</td>
+                    <td class="ce"> 4분의 1 밀리미터</td>
+                    <td>1Q = 1/40th of 1cm</td>
+                </tr>
+                <tr>
+                    <td class="ce">in</td>
+                    <td class="ce">인치</td>
+                    <td>1in = 2.54cm = 96px</td>
+                </tr>
+                <tr>
+                    <td class="ce">pc</td>
+                    <td class="ce">Picas</td>
+                    <td>1pc = 1/6th of 1in</td>
+                </tr>
+                <tr>
+                    <td class="ce">pt</td>
+                    <td class="ce">포인트</td>
+                    <td>1pt = 1/72th of 1in</td>
+                </tr>
+                <tr>
+                    <td class="ce">px</td>
+                    <td class="ce">픽셀</td>
+                    <td>1px = 1/96th of 1in</td>
+                </tr>
+            </table>
+            <p>이러한 값의 대부분은 화면 출력이 아닌 인쇄에 사용될 때 더 유용합니다. <br>
+                예를 들어 일반적으로 화면에 cm (센티미터) 를 사용하지 않습니다. <br>
+                보통 사용하는 유일한 값은 px (픽셀) 입니다.</p>
+            <br>
+            <h3 class="t_tit2">상대 길이 단위</h3>
+            <p class="t_desc">상대 길이 단위는 다른 요소 (상위 요소의 글꼴 크기 또는 viewport 크기) 와 관련이 있습니다. <br>
+                상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여 조정되도록 신중하게 계획할 수 있다는 이점이 있습니다. <br>
+                웹 개발에 가장 유용한 단위가 아래 표에 나열되어 있습니다.</p>
+            <table class="t_table">
+                <tr>
+                    <th>단위</th>
+                    <th>관련 사항</th>
+                </tr>
+                <tr>
+                    <td class="ce">em</td>
+                    <td>요소의 글꼴 크기.</td>
+                </tr>
+                <tr>
+                    <td class="ce">ex</td>
+                    <td>요소 글꼴의 x-height.</td>
+                </tr>
+                <tr>
+                    <td class="ce">ch</td>
+                    <td>요소 글꼴의 glyph "0" 의 사전 길이 (너비) 입니다<div class=""></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">rem</td>
+                    <td>루트 요소의 글꼴 크기.</td>
+                </tr>
+                <tr>
+                    <td class="ce">lh</td>
+                    <td>요소의 라인 높이.</td>
+                </tr>
+                <tr>
+                    <td class="ce">vw</td>
+                    <td>viewport 너비의 1%.</td>
+                </tr>
+                <tr>
+                    <td class="ce">vh</td>
+                    <td>viewport 높이의 1%.</td>
+                </tr>
+                <tr>
+                    <td class="ce">vmin</td>
+                    <td>viewport 의 작은 치수의 1%.</td>
+                </tr>
+                <tr>
+                    <td class="ce">vmax</td>
+                    <td>viewport 의 큰 치수의 1%.</td>
+                </tr>
+            </table>
+
+            <h3 class="t_tit2">백분율</h3>
+            <p class="t_desc">많은 경우 백분율은 길이와 같은 방식으로 처리됩니다. <br>
+                분율이 있는 것은 항상 다른 값에 상대적으로 설정된다는 것입니다. <br>
+                예를 들어, 요소의 font-size 를 백분율로 설정하면 요소 부모의 글꼴 크기에 대한 백분율이 됩니다. <br>
+                width 값에 백분율을 사용하면, 부모 너비의 백분율이 됩니다.</p>
+
+            <h3 class="t_tit2">ems 및 rems</h3>
+            <p class="t_desc">
+                em 과 rem 은 박스에서 텍스트로 크기를 조정할 때 가장 자주 발생하는 두 개의 상대 길이입니다. <br>
+                텍스트 스타일링 또는 CSS 레이아웃 과 같은 보다 복잡한 주제를 시작할 때, 이러한 작동 방식과 차이점을 이해하는 것이 좋습니다. <br>
+
+ 
+                em 단위는 "부모 요소의 글꼴 크기" 를 의미합니다.  <br>
+                ems class 가 있는 ul 내부의 li 요소는 부모로부터 크기를 가져옵니다. <br>
+                따라서 각 중첩 부분은 글꼴 크기가 부모 글꼴 크기의 1.3em — 1.3 배로 설정되므로 점점 더 커집니다. <br>
+
+                rem 단위는 "루트 요소의 글꼴 크기" 를 의미합니다. <br>
+                ("root em" 의 rem 표준입니다.) rems class 가 있는 ul 내부의 li 요소는 루트 요소는 (html) 에서 크기를 가져옵니다. <br>
+                이것은 각각의 연속적인 중첩 부분이 계속 커지는 것을 의미합니다<div class="br"></div>
+
+                그러나, CSS 에서 html font-size 를 변경하면 다른 모든 텍스트가 변경되는 것을 볼 수 있습니다 — rem- 및 em-크기 텍스트.
+            </p>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+    <script>hljs.highlightAll();</script>
+
+
+<body>
+    <main id="main">
+        <div class="document">
+
+            <h2 class="t_tit">CSS 기본 문법</h2>
+            <div class="t_desc2">CSS를 정의하는 방법으로는 내부 스타일시트, 외부 스타일시트, 인라인 스타일시트등이 있습니다. <br>
+                실제로는 외부 스타일시트를 많이 사용하는 편이지만, 간단한 스타일은 내부 스타일시트 만으로 사용할 수도 있습니다. <br>
+                또한 인라인 스타일시트는 대체로 거의 사용하지 않지만, 가장 우선순위가 높아서 꼭 필요한경우 편리하게 사용할 수 있습니다. <br>
+                CSS에서 주석은 /* */로 표현합니다.</div>
+            <h3 class="t_tit2">내부 스타일 시트</h3>
+            <p class="t_desc">
+                CSS를 HTML 문서 안에 &lt;style> 태그로 기재하여 HTML 문서 안에 CSS가 함께 저장되도록 하는 형태입니다.
+            </p>
+            <br>
+            <div class="t_code">
+                예시
+                <pre><code class="language-js">// 예시입니다.
+&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Document&lt;/title>
+    &lt;style type = "text/css">
+        p { color : red ; }
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;p>우리를 기쁘게 하는 것들.&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
+            </div>
+            <details>
+                <summary>결과</summary>
+                <p style="color: red;">우리를 기쁘게 하는 것들.</p>
+            </details>
+
+            <br>
+            <br>
+
+            <h3 class="t_tit2">외부 스타일 시트</h3>
+            <div class="t_desc">스타일 속성들을 따로 저장하여 HTML 문서에 파일명으로 연결할 수 있습니다. <br>
+                이때 스타일은 *.css 확장자를 가진 별도의 파일로 저장하고, HTML에서는 &lt;link> 태그를 이용하여 선언합니다. <br>
+                내부 스타일시트는 그 스타일이 기술된 페이지에만 적용되는 반면, 외부 스타일시트는 그 스타일을 선언한 모든 HTML 페이지에 적용됩니다.
+            </div>
+            <br>
+            <div class="t_code">
+                예시
+                <pre><code class="language-js">// 예시입니다.
+&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>외부 스타일시트&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css">
+&lt;/head>
+&lt;body>
+    &lt;p>우리를 기쁘게 하는 것들.&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
+            </div>
+            style.css
+            <div class="t_code">
+                <pre><code class="language-js">@charset "UTF-8";
+p { color: red; }
+</code></pre>
+            </div>
+
+            <details>
+                <summary>결과</summary>
+                <p style="color: red;">우리를 기쁘게 하는 것들.</p>
+            </details>
+            <br>
+            <br>
+
+            <h3 class="t_tit2">@import</h3>
+            <div class="t_desc">@import는 CSS 안으로 다른 CSS 파일을 불러들일 경우 사용합니다. <br>
+                CSS의 맨 윗줄에 기술합니다.
+            </div>
+            <br>
+            <div class="t_code">
+                예시
+<pre><code class="language-js">// 예시입니다.
+&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>스타일시트 포함&lt;/title>
+    &lt;style type = "text/css">
+        @import url("style.css");
+    &lt;/style>
+&lt;/head>
+&lt;body>
+    &lt;p>우리를 기쁘게 하는 것들.&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
+            </div>
+            <details>
+                <summary>결과</summary>
+                <p style="color: red;">우리를 기쁘게 하는 것들.</p>
+            </details>
+            <br>
+            <br>
+
+                <h3 class="t_tit2">인라인 스타일</h3>
+                <div class="t_desc">인라인 스타일은 태그에 직접 CSS를 정의해주는 기법으로, 해당 요소에 style=" " 형식으로 기술합니다. <br>
+                    인라인 스타일은 내부스타일이나 외부스타일에서 기술된 속성보다 우선으로 적용되므로 우선순위가 절대적으로 높아야 할 경우에 샤용 할 수 있으나, <br>
+                    스타일을 공통 CSS로 수정할 수 없고 일일이 html을 열어서 편집해야 하므로 일반적으로 많이 사용하지는 않습니다.
+                </div>
+                <br>
+                <div class="t_code">
+                    예시
+<pre><code class="language-js">// 예시입니다.
+&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>인라인 스타일&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;p style="color: red;">우리를 기쁘게 하는 것들.&lt;/p>
+&lt;/body>
+&lt;/html>
+</code></pre>
+                </div>
+                <details>
+                    <summary>결과</summary>
+                    <p style="color: red;">우리를 기쁘게 하는 것들.</p>
+                </details>
+       </div>
+       
+    </main>
+
+
+
+</body>
+
+</html>

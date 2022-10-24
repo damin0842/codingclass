@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="document">
+        <h2 class="t_tit">jQuery 연결 방법</h2>
+        <p class="t_desc2">
+        jQuery를 사용하기 위해서는 jQuery 라이브러리를 웹페이지에 연결해서 사용해야 합니다.
+        <br><br>
+        jQuery 라이브러리를 연결하는 방식에는 파일을 직접 다운로드받아 연결하는 방식과 CDN(Content Delivery Network)방식이 있습니다.
+        <br>
+        현재 1.x, 2.x, 3.x 버전을 지원해 주고 있으며 각 버전별로 브라우저 지원이나 기존 메서드들의 지원 여부 등의 차이가 있습니다.
+        <br>
+    </p>
+
+        <h3 class="t_tit2">Download 방식</h3>
+
+        <p class="t_box">1. https://jquery.com/download에 접속하여 "Download the compressed, production jQuery 3.6.1"을 다운로드 합니다. <br>
+        2. html 문서를 jQuery 라이브러리와 같은 경로에 저장합니다.<br>
+            라이브러리가 잘 연결되었는지 확인하기 위해 jQuery 명령어 $(document).ready()를 사용해 보도록 하겠습니다.
+        </p>
+        <div class="t_code">
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>jQuery 라이브러리 연결&lt;/title>
+    &lt;script src="/javascript/study/jquery-3.6.1.min.js">&lt;/script>
+    &lt;script>
+        $(document).ready(function(){
+            console.log("jQuery 시작");
+        });
+    &lt;/script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html>
+</code></pre>
+        </div>
+        <h3 class="t_tit2">CDN 방식</h3>
+       <p class="t_box"> https://code.jquery.com 사이트에 접속하여 jQuery 3.6.1 - minified 버전을 선택하고 CDN을 카피 합니다.</p>
+        <br>
+
+        <div class="t_code">
+<pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>jQuery 라이브러리 연결&lt;/title>
+    &lt;script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">&lt;/script>
+    &lt;script>
+        $(document).ready(function(){
+            console.log("jQuery 시작");
+        });
+    &lt;/script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html>
+</code></pre>
+        </div>
+        <p class="t_box">integrity와 crossorigin은 스크립트 해킹 등을 방지하기 위한 속성들 정도로만 알고 있으면 됩니다. <br>
+            자세한 내용을 알고 싶다면 https:www.w3.org/TR/SRI에서 확인할 수 있습니다.
+            <br> <br>
+            jQuery CDN은 구글이나 MS등에서도 제공해 주고 있습니다.
+        </p>
+        <h2 class="t_tit">jQuery 기본 형식</h2>
+        <div class="t_code">
+<pre><code language-html>&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>jQuery 라이브러리 연결&lt;/title>
+    &lt;script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">&lt;/script>
+    &lt;script>
+        $(document).ready(function(){
+            실행문;
+        });
+    &lt;/script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html>
+</code></pre>
+        </div>
+        <p class="t_box">jQuery는 기본적으로 $(document).ready()로 시작합니다. <br>
+            ready()는 jQuery 이벤트로 앞에서 학습한 자바스크립트의 load 이벤트와 유사한 기능을 가지고 있습니다. <br> <br>
+            $(document).ready()를 짧게 표현할 수도 있습니다. <br>두 개의 구문 중 편한 것으로 선택하여 사용하면 됩니다.
+
+        </p>
+        <div class="t_code">
+<pre><code language-html>&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>jQuery 라이브러리 연결&lt;/title>
+    &lt;script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">&lt;/script>
+    &lt;script>
+        $(function(){
+            실행문;
+        });
+    &lt;/script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html>
+</code></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>

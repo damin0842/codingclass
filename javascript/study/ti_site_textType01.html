@@ -1,0 +1,163 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">사이트 만들기</h2>
+        <p class="t_desc2" data-ke-size="size16">텍스트 유형의 사이트 만들기1 입니다. <br>
+            피그마로 먼저 형태를 잡고 같은 모양으로 HTML과 CSS문서를 만들었습니다.</p>
+        <div class="t_iframe">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FaghippDRVCPx00TI2QMLZZ%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D518%253A1621" allowfullscreen></iframe>
+        </div>
+        <h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+        <div class="t_desc2">
+           아이콘을 6개 만들었습니다.
+        </div>
+        <div class="t_code">
+<pre class="dart"><code class="lenguage-html">&lt;body>
+    &lt;header>
+        &lt;p class="sub">텍스트 유형 01&lt;/p>
+        &lt;h2 class="tit">스크립트를 익히는 방법&lt;/h2>
+    &lt;/header>
+    &lt;div class="container">
+        &lt;div class="tb">
+            &lt;div class="box">
+                &lt;div class="img img1">&lt;/div>
+                &lt;h3>검색 이펙트&lt;/h3>
+                &lt;p>자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들수 있습니다.&lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+            &lt;div class="box">
+                &lt;div class="img img2">&lt;/div>
+                &lt;h3>퀴즈 이펙트&lt;/h3>
+                &lt;p>기본 메서드를 통해 자바스크립트의 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들수 있습니다.&lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="tb">
+            &lt;div class="box">
+                &lt;div class="img img3">&lt;/div>
+                &lt;h3>마우스 이펙트&lt;/h3>
+                &lt;p>검색 스크립트를 완성하는 튜토리얼입니다. 자바스크립트의 기본 메서드를 통해 메서드를 검색을 쉽게 만들수 있습니다.&lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+            &lt;div class="box">
+                &lt;div class="img img4">&lt;/div>
+                &lt;h3>슬라이드 이펙트&lt;/h3>
+                &lt;p>메서드를 통해 쉽게 검색을 만들수 있습니다. 자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. &lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="tb">
+            &lt;div class="box">
+                &lt;div class="img img5">&lt;/div>
+                &lt;h3>패랠랙스 이펙트&lt;/h3>
+                &lt;p>검색 스크립트를 완성하는 튜토리얼입니다. 자바스크립트의 기본 메서드를 통해 쉽게 검색을 만들수 있습니다. &lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+            &lt;div class="box">
+                &lt;div class="img img6">&lt;/div>
+                &lt;h3>게임 이펙트&lt;/h3>
+                &lt;p>자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들수 있습니다.&lt;/p>
+                &lt;a href="">더보기&lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/body>
+</code></pre>
+            <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
+            <p class="t_desc2">
+            </p>
+            <div class="t_code">
+<pre class="dart"><code class="lenguage-css">&lt;style>
+    @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+    *{
+        font-family: 'NexonLv1Gothic';
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        text-align: center;
+        margin-top: 120px;
+    }
+    header .sub{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    header .tit{
+
+        font-size: 48px;
+        margin-bottom: 60px;
+    }
+    .container{
+        margin: 0 auto;
+        width: 1160px;
+        display: flex;
+        justify-content: center;
+    }
+    .container>div{
+        width: 32%;
+    }
+    .box{
+        font-size: 16px;
+        height: 260px;
+        background-color: #fff;
+        margin: 30px 15px;
+        color: #666;
+    }
+    .box:hover{
+        background-color: #f5f5f5;
+    }
+    .box h3{
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    .box .img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: aliceblue;
+        margin-bottom: 10px;
+    }
+    .img1{
+        background: url(/site/textType/icon01.jpg);
+    }
+    .img2{
+        background: url(/site/textType/icon02.jpg);
+    }
+    .img3{
+        background: url(/site/textType/icon03.jpg);
+    }
+    .img4{
+        background: url(/site/textType/icon04.jpg);
+    }
+    .img5{
+        background: url(/site/textType/icon05.jpg);
+    }
+    .img6{
+        background: url(/site/textType/icon06.jpg);
+    }
+  
+    .box p{
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    .box a{
+        color: #666;
+        
+    }
+ 
+    &lt;/style>
+</code></pre>
+            </div>
+            <h3 class="t_tit2" data-ke-size="size23">결과</h3>
+            <div class="t_link"><a href="https://damin0842.github.io/coding/site/testType/textType01.html"
+                    target="_blank" rel="noopener">원본 사이트 보기</a></div>
+        </div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

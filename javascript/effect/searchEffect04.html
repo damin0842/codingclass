@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/search.css" />
+    <link
+      href="https://webfontworld.github.io/tmon/Tmon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <nav>
+        <ul>
+          <li><a href="searchEffect01.html">1</a></li>
+          <li><a href="searchEffect02.html">2</a></li>
+          <li><a href="searchEffect03.html">3</a></li>
+          <li class="active"><a href="searchEffect04.html">4</a></li>
+          <li><a href="searchEffect05.html">5</a></li>
+          <li><a href="searchEffect06.html">6</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+      <div class="search__wrap">
+        <span>find()를 이용하여 속성을 검색하면 설명 보여주기</span>
+        <h1>CSS 속성 검색하기</h1>
+        <div class="search__box">
+          <label for="search">검색하기</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="CSS 속성을 입력해주세요!"
+          />
+        </div>
+        <div class="search__desc">
+          <div class="desc">속성을 검색하시면 설명이 표시됩니다!!!</div>
+        </div>
+        <div class="search__info">
+          <div>전체 속성 갯수 : <span class="num">0</span></div>
+        </div>
+        <div class="search__list"></div>
+      </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+      <div class="modal__wrap">
+        <div class="modal__btn">소스 보기</div>
+        <div class="modal__cont">
+          <div class="modal__box">
+            <div class="title">
+              <span class="dot" aria-label="true"></span>
+              <div class="tabs">
+                <div class="active">
+                  <span class="favicon" aria-label="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                      <path
+                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="orange"
+                      ></path>
+                      <path
+                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="yellow"
+                      ></path>
+                    </svg>
+                  </span>
+                  <em>Javascript</em>
+                  <span class="close">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M12.5 3.5L3.5 12.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M12.5 12.5L3.5 3.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  <span class="favicon" aria-label="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                      <path
+                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="orange"
+                      ></path>
+                      <path
+                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="yellow"
+                      ></path>
+                    </svg>
+                  </span>
+                  <em>HTML</em>
+                  <span class="close">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M12.5 3.5L3.5 12.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M12.5 12.5L3.5 3.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+                <div>
+                  <span class="favicon" aria-label="true">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                      <path
+                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="orange"
+                      ></path>
+                      <path
+                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="yellow"
+                      ></path>
+                    </svg>
+                  </span>
+                  <em>CSS</em>
+                  <span class="close">
+                    <svg
+                      width="18"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M12.5 3.5L3.5 12.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M12.5 12.5L3.5 3.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <span class="plus" aria-label="true">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M2.5 8H13.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M8 2.5V13.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="cont">
+              <div class="active">
+                <pre><code class="language-js">
+
+</code></pre>
+              </div>
+              <div>
+                <pre><code class="language-html">
+</code></pre>
+              </div>
+              <div>
+                <pre><code class="language-css">
+
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="modal__close">
+            <svg
+              width="18"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M12.5 3.5L3.5 12.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12.5 12.5L3.5 3.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+      const searchNum = document.querySelector(".search__info .num");
+      const searchList = document.querySelector(".search__list");
+      const searchBox = document.querySelector(".search__box input");
+      const searchDesc = document.querySelector(".search__desc");
+
+      //출력하기
+      const cssProperty = [
+        { name: "accent-color", desc: "특정요소에색상을지정할때사용됩니다." },
+        {
+          name: "align-content",
+          desc: "콘텐츠아이템의상하관계정렬상태를설정합니다.",
+        },
+        {
+          name: "align-items",
+          desc: "콘텐츠아이템의내부상하관계정렬상태를설정합니다.",
+        },
+        {
+          name: "align-self",
+          desc: "개별적인콘텐츠아이템의정렬상태를설정합니다.",
+        },
+        { name: "all", desc: "요소의속성을초기화또는상속을설정합니다." },
+        {
+          name: "animation",
+          desc: "애니메이션과관련된속성을일괄적으로설정합니다.",
+        },
+        { name: "animation-delay", desc: "애니메이션지연시간을설정합니다." },
+        {
+          name: "animation-direction",
+          desc: "애니메이션움직임방향을설정합니다.",
+        },
+        {
+          name: "animation-duration",
+          desc: "애니메이션움직임시간을설정합니다.",
+        },
+        {
+          name: "animation-fill-mode",
+          desc: "애니메이션이끝난후의상태를설정합니다.",
+        },
+        {
+          name: "animation-iteration-count",
+          desc: "애니메이션의반복횟수를설정합니다.",
+        },
+        { name: "animation-name", desc: "애니메이션keyframe이름을설정합니다." },
+        {
+          name: "animation-play-state",
+          desc: "애니메이션진행상태를설정합니다.",
+        },
+        { name: "animation-timeline", desc: "x" },
+        {
+          name: "animation-timing-function",
+          desc: "애니메이션움직임의속도를설정합니다.",
+        },
+        {
+          name: "appearance",
+          desc: "운영체제및브라우저에기본적으로설정되어있는테마를기반으로요소를표현합니다.",
+        },
+        {
+          name: "aspect-ratio",
+          desc: "요소의크기를비율대로조정할수있게합니다.",
+        },
+        {
+          name: "backdrop-filter",
+          desc: "요소뒤영역에흐림이나색상시프트등그래픽효과를적용할수있는속성입니다.",
+        },
+        {
+          name: "backface-visibility",
+          desc: "입체적인모습의뒷면의가시성을결정하는속성이다.",
+        },
+        { name: "background", desc: "백그라운드속성을일괄적으로설정합니다." },
+        {
+          name: "background-attachment",
+          desc: "배경이미지의고정여부를설정합니다.",
+        },
+        {
+          name: "background-blend-mode",
+          desc: "배경을혼합했을때그래픽효과를설정합니다.",
+        },
+        {
+          name: "background-clip",
+          desc: "백그라운드이미지의위치기준점을설정합니다.",
+        },
+        { name: "background-color", desc: "백그라운드색을설정합니다." },
+        { name: "background-image", desc: "백그라운드이미지속성을설정합니다." },
+        {
+          name: "background-origin",
+          desc: "백그라운드이미지의위치기준점을설정하기위한속성입니다.",
+        },
+        {
+          name: "background-position",
+          desc: "백그라운드이미지의위치영역을설정합니다.",
+        },
+        {
+          name: "background-position-x",
+          desc: "백그라운드이미지의x축위치영역을설정합니다.",
+        },
+        {
+          name: "background-position-y",
+          desc: "백그라운드이미지의y축위치영역을설정합니다.",
+        },
+        {
+          name: "background-repeat",
+          desc: "백그라운드이미지반복여부를설정합니다.",
+        },
+        {
+          name: "background-size",
+          desc: "백그라운드이미지사이즈를설정합니다.",
+        },
+        {
+          name: "block-size",
+          desc: "기록모드에따라서,요소의블록의수평과수직크기를정의합니다.",
+        },
+        { name: "border", desc: "테두리속성을일괄적으로설정합니다." },
+        { name: "border-block", desc: "X" },
+        { name: "border-block-color", desc: "x" },
+        { name: "border-block-end", desc: "x" },
+        { name: "border-block-end-color", desc: "x" },
+        { name: "border-block-end-style", desc: "x" },
+        { name: "border-block-end-width", desc: "x" },
+        { name: "border-block-start", desc: "x" },
+        { name: "border-block-start-color", desc: "x" },
+        { name: "border-block-start-style", desc: "x" },
+        { name: "border-block-start-width", desc: "x" },
+        { name: "border-block-style", desc: "x" },
+        { name: "border-block-width", desc: "x" },
+        { name: "border-bottom", desc: "아래쪽속성을일괄적으로설정합니다." },
+        {
+          name: "border-bottom-color",
+          desc: "테두리아래쪽색속성을설정합니다.",
+        },
+        {
+          name: "border-bottom-left-radius",
+          desc: "아래왼쪽모서리굴곡을설정합니다.",
+        },
+        {
+          name: "border-bottom-right-radius",
+          desc: "아래오른쪽모서리굴곡을설정합니다.",
+        },
+        {
+          name: "border-bottom-style",
+          desc: "아래쪽테두리의스타일속성을설정합니다.",
+        },
+        {
+          name: "border-bottom-width",
+          desc: "아래쪽테두리의두께속성을설정합니다.",
+        },
+        {
+          name: "border-collapse",
+          desc: "테이블의테두리를겹칠지,떨어트릴지를설정합니다.",
+        },
+        { name: "border-color", desc: "모든면의테두리색상을설정합니다." },
+        {
+          name: "border-end-end-radius",
+          desc: "요소의테두리반경을설정합니다.",
+        },
+        {
+          name: "border-end-start-radius",
+          desc: "요소의테두리반경을설정합니다.",
+        },
+        { name: "border-image", desc: "요소의주위에이미지를설정합니다." },
+        {
+          name: "border-image-outset",
+          desc: "테두리상자와테두리이미지의거리를설정합니다.",
+        },
+        {
+          name: "border-image-repeat",
+          desc: "모서리영역을테두리이미지크기에맞춰설정합니다.",
+        },
+        {
+          name: "border-image-slice",
+          desc: "설정한이미지를여러개의영역으로나눕니다.",
+        },
+        {
+          name: "border-image-source",
+          desc: "테두리이미지로사용할원본이미지를설정합니다.",
+        },
+        { name: "border-image-width", desc: "테두리이미지의너비를설정합니다." },
+        {
+          name: "border-inline",
+          desc: "스타일시트의한위치에개별논리적인라인테두리속성값을설정합니다.",
+        },
+        {
+          name: "border-inline-color",
+          desc: "모든인라인테두리색상을설정합니다.",
+        },
+        {
+          name: "border-inline-end",
+          desc: "인라인엔드border속성값을설정합니다.",
+        },
+        {
+          name: "border-inline-end-color",
+          desc: "개별논리적인라인끝테두리색상을설정합니다.",
+        },
+        {
+          name: "border-inline-end-style",
+          desc: "인라인끝테두리스타일을설정합니다.",
+        },
+        {
+          name: "border-inline-end-width",
+          desc: "논리적인라인끝테두리너비를설정합니다.",
+        },
+        {
+          name: "border-inline-start",
+          desc: "개별논리적인라인시작테두리속성값을설정합니다.",
+        },
+        {
+          name: "border-inline-start-color",
+          desc: "논리적인라인시작테두리색상을설정합니다.",
+        },
+        {
+          name: "border-inline-start-style",
+          desc: "논리적인라인시작테두리스타일을설정합니다.",
+        },
+        {
+          name: "border-inline-start-width",
+          desc: "논리적인라인시작테두리너비를설정합니다.",
+        },
+        {
+          name: "border-inline-style",
+          desc: "논리적인라인테두리스타일을설정합니다.",
+        },
+        {
+          name: "border-inline-width",
+          desc: "논리적인라인테두리너비를설정합니다.",
+        },
+        {
+          name: "border-left",
+          desc: "테두리왼쪽너비,스타일,색상을설정합니다.",
+        },
+        {
+          name: "border-left-color",
+          desc: "요소의왼쪽테두리의색상을설정합니다.",
+        },
+        {
+          name: "border-left-style",
+          desc: "요소의왼쪽테두리의스타일속성을설정합니다.",
+        },
+        {
+          name: "border-left-width",
+          desc: "요소의왼쪽테두리의두께를설정합니다.",
+        },
+        { name: "border-radius", desc: "요소의테두리굴곡을설정합니다." },
+        {
+          name: "border-right",
+          desc: "요소의오른쪽테두리속성을일괄적으로설정합니다.",
+        },
+        {
+          name: "border-right-color",
+          desc: "요소의오른쪽테두리의색상을설정합니다.",
+        },
+        {
+          name: "border-right-style",
+          desc: "요소의오른쪽테두리의스타일속성을설정합니다.",
+        },
+        {
+          name: "border-right-width",
+          desc: "요소의오른쪽테두리의두께를설정합니다.",
+        },
+        {
+          name: "border-spacing",
+          desc: "테이블의테두리사이의간격을설정합니다.",
+        },
+        {
+          name: "border-start-end-radius",
+          desc: "논리적테두리반경을설정합니다.",
+        },
+        {
+          name: "border-start-start-radius",
+          desc: "논리적테두리반경을설정합니다.",
+        },
+        { name: "border-style", desc: "요소의테두리스타일속성을설정합니다." },
+        {
+          name: "border-top",
+          desc: "요소의위쪽테두리속성을일괄적으로설정합니다.",
+        },
+        {
+          name: "border-top-color",
+          desc: "요소의위쪽테두리의색상을설정합니다.",
+        },
+        {
+          name: "border-top-left-radius",
+          desc: "요소의위쪽왼쪽모서리의굴곡을설정합니다",
+        },
+        {
+          name: "border-top-right-radius",
+          desc: "요소의위쪽오른쪽모서리의굴곡을설정합니다.",
+        },
+        {
+          name: "border-top-style",
+          desc: "요소의위쪽테두리의스타일속성을설정합니다.",
+        },
+        {
+          name: "border-top-width",
+          desc: "요소의위쪽테두리의두께를설정합니다.",
+        },
+        { name: "border-width", desc: "요소의테두리의두께를설정합니다." },
+        { name: "bottom", desc: "요소의아래쪽에서의위치를설정합니다." },
+        {
+          name: "box-decoration-break",
+          desc: "분할될때요소의조각을렌더링하는방법을설정합니다.",
+        },
+        { name: "box-shadow", desc: "박스그림자효과를설정합니다." },
+        {
+          name: "box-sizing",
+          desc: "브라우저가요소의크기를어떻게계산할지를설정합니다.",
+        },
+        {
+          name: "break-after",
+          desc: "박스나누기가작동하는방식을설정합니다.상자가없으면속성이무시됩니다.",
+        },
+        {
+          name: "break-before",
+          desc: "박스나누기가작동하는방식을설정합니다.상자가없으면속성이무시됩니다.",
+        },
+        {
+          name: "break-inside",
+          desc: "박스나누기가작동하는방식을설정합니다.상자가없으면속성이무시됩니다.",
+        },
+        { name: "caption-side", desc: "테이블내용을지정된쪽에배치합니다." },
+        {
+          name: "caret-color",
+          desc: "삽입캐럿의색상을설정합니다.이것은텍스트입력커서라고도합니다.",
+        },
+        { name: "clear", desc: "float버그를제거해줍니다." },
+        { name: "clip", desc: "요소의특정부분만나오도록할수있습니다." },
+        {
+          name: "clip-path",
+          desc: "이미지나요소를말그대로클립(잘라내기)할수있는속성",
+        },
+        { name: "color", desc: "텍스트의색상을설정합니다." },
+        { name: "color-scheme", desc: "렌더링할수있는색구성표를나타냅니다." },
+        { name: "column-count", desc: "요소의내용을지정된수의열로나눕니다." },
+        {
+          name: "column-fill",
+          desc: "열로나눌때요소의균형을이루는방법을제어합니다.",
+        },
+        { name: "column-gap", desc: "열사이의간격크기를설정합니다." },
+        {
+          name: "column-rule",
+          desc: "다중열레이아웃에서열사이에그려지는선의너비,스타일및색상을설정합니다.",
+        },
+        {
+          name: "column-rule-color",
+          desc: "다중열레이아웃에서열사이에그려지는선의색상을설정합니다.",
+        },
+        {
+          name: "column-rule-style",
+          desc: "다중열레이아웃에서열사이에그려지는선의스타일을설정합니다.",
+        },
+        {
+          name: "column-rule-width",
+          desc: "다중열레이아웃에서열사이에그려지는선의너비를설정합니다.",
+        },
+        {
+          name: "column-span",
+          desc: "다단구성시여러단을차지하는요소를지정하기위한속성",
+        },
+        {
+          name: "column-width",
+          desc: "다중열레이아웃에서이상적인열너비를설정합니다.",
+        },
+        {
+          name: "columns",
+          desc: "내용을그릴때사용할열수와해당열의너비를설정합니다.",
+        },
+        {
+          name: "contain",
+          desc: "각위젯의내부가위젯의경계상자외부에서부작용이발생하지않도록방지하는데사용할수있으므로모두독립적인위젯이많이포함된페이지에서유용합니다.",
+        },
+        {
+          name: "content",
+          desc: "한값으로요약됩니다.contnet속성으로추가한기능은'익명콘텐츠'입니다.",
+        },
+        {
+          name: "content-visibility",
+          desc: "요소가콘텐츠를전혀렌더링하는지여부를제어하고강력한포함세트를강제하여사용자에이전트가필요할때까지많은레이아웃및렌더링작업을잠재적으로생략할수있습니다.",
+        },
+        {
+          name: "counter-increment",
+          desc: "카운터값을주어진값만큼늘리거나줄입니다.",
+        },
+        { name: "counter-reset", desc: "카운터를주어진값으로재설정합니다." },
+        { name: "counter-set", desc: "카운터를주어진값으로설정합니다." },
+        {
+          name: "cursor",
+          desc: "요소위에마우스커서가올라갔을때보여줄모양을지정합니다.",
+        },
+        {
+          name: "direction",
+          desc: "텍스트,테이블열및가로오버프롤의방향을설정합니다.",
+        },
+        { name: "display", desc: "요소를어떻게보여줄지를결정합니다." },
+        {
+          name: "empty-cells",
+          desc: "보이는내용이없는셀주위에테두리와배경을표시할지여부를설정합니다.",
+        },
+        { name: "filter", desc: "흐림효과나변형효과를나타냅니다." },
+        {
+          name: "flex",
+          desc: "플렉스아이템이자신의컨테이너가차지하는공간에맞추기위해크기를키우거나줄이는방법을설정하는속성입니다.",
+        },
+        { name: "flex-basis", desc: "플렉스초기기본크기를설정합니다." },
+        {
+          name: "flex-direction",
+          desc: "아이템이플렉스컨테이너안에위치되는방법을설정합니다.",
+        },
+        { name: "flex-flow", desc: "플렉스방향,포장의속성을설정합니다." },
+        {
+          name: "flex-grow",
+          desc: "플렉스아이템요소가컨테이너내부의정도를제한합니다.",
+        },
+        {
+          name: "flex-shrink",
+          desc: "플렉스아이템요소의flex-shrink을설정합니다.",
+        },
+        { name: "flex-wrap", desc: "플렉스아이템을wrap으로감쌉니다." },
+        {
+          name: "float",
+          desc: "레이아웃흐름에서벗어나요소의모서리가페이지왼쪽이나오른쪽에이동한다.",
+        },
+        { name: "font", desc: "텍스트에대해설정합니다." },
+        {
+          name: "font-family",
+          desc: "선택한항목에우선순위가더높은글꼴패밀리이름을추가합니다.",
+        },
+        {
+          name: "font-feature-settings",
+          desc: "다양한모바일타입피처를설정합니다.",
+        },
+        { name: "font-kerning", desc: "글꼴에커닝정보의사용을설정합니다." },
+        {
+          name: "font-language-override",
+          desc: "서체에서언어별글리프의사용을제어합니다.",
+        },
+        {
+          name: "font-optical-sizing",
+          desc: "텍스트렌더링이다양한크기로보기에최적화되어있는지여부를설정합니다.",
+        },
+        { name: "font-size", desc: "폰트크기를설정합니다." },
+        {
+          name: "font-size-adjust",
+          desc: "현재글꼴크기를기준으로소문자크기를설정합니다.",
+        },
+        {
+          name: "font-stretch",
+          desc: "글꼴에서일반,축소또는확장된면을선택합니다.",
+        },
+        { name: "font-style", desc: "글꼴의스타일을설정합니다." },
+        {
+          name: "font-synthesis",
+          desc: "브라우저가굵은글꼴과이탤릭글꼴을합성하는것을허용할지설정합니다.",
+        },
+        { name: "font-variant", desc: "글꼴에대한모든글꼴변형을설정합니다." },
+        {
+          name: "font-variant-alternates",
+          desc: "대체글리프의사용을제어합니다.",
+        },
+        {
+          name: "font-variant-caps",
+          desc: "문자에대한대체글리프의사용을제어합니다.",
+        },
+        {
+          name: "font-variant-east-asian",
+          desc: "일본어및중국어와같은동아시아스크립트에대한대체글리프사용을제어합니다.",
+        },
+        {
+          name: "font-variant-ligatures",
+          desc: "텍스트콘텐츠에사용되는합자및컨텍스트형식을제어합니다.",
+        },
+        {
+          name: "font-variant-numeric",
+          desc: "숫자,분수및서수마커에대한대체글리프의사용을제어합니다.",
+        },
+        {
+          name: "font-variant-position",
+          desc: "위첨자또는아래첨자로배치되는더작은대체글리프의사용을제어합니다.",
+        },
+        {
+          name: "font-variation-settings",
+          desc: "변경하려는특성의4글자축이름을해당값과함께지정하여가변글꼴특성에대한저수준제어를제공합니다.",
+        },
+        { name: "font-weight", desc: "글꼴두께를설정합니다." },
+        {
+          name: "forced-color-adjust",
+          desc: "작성자가강제색상모드에서특정요소를선택할수있습니다.",
+        },
+        { name: "gap(grid-gap)", desc: "정과열사이의거리를설정합니다." },
+        { name: "grid", desc: "표형태의레이아웃을만들수있는속성입니다." },
+        { name: "grid-area", desc: "영역(Area)이름을설정합니다." },
+        {
+          name: "grid-auto-columns",
+          desc: "암시적으로생성된그리드열트랙또는트랙패턴의크기를지정합니다.",
+        },
+        {
+          name: "grid-auto-flow",
+          desc: "자동배치알고리즘이작동하는방식을제어하여자동배치항목이그리드로흐르는방식을정확히지정합니다.",
+        },
+        {
+          name: "grid-auto-rows",
+          desc: "암시적으로생성된그리드행트랙또는트랙패턴의크기를지정합니다.",
+        },
+        {
+          name: "grid-column",
+          desc: "그리드항목의크기와위치를지정하고그리드영역의인라인시작및인라인끝가장자리를지정합니다.",
+        },
+        {
+          name: "grid-column-end",
+          desc: "그리드열내에서그리드항목의끝위치를지정하여그리드영역의블록끝가장자리를지정합니다.",
+        },
+        {
+          name: "grid-column-start",
+          desc: "특정item을표시하기시작할열을지정합니다.",
+        },
+        {
+          name: "grid-row",
+          desc: "그리드열내에서그리드항목의시작위치를지정합니다.",
+        },
+        {
+          name: "grid-row-end",
+          desc: "그리드행네에서그리드항목의끝위치를지정함으로써그리드영역의인라인끝가장자리를지정합니다.",
+        },
+        {
+          name: "grid-row-start",
+          desc: "그리드행내에서그리드항목의시작위치를지정함으로써그리드영역의인라인시작가장자리를지정합니다.",
+        },
+        { name: "grid-template", desc: "그리드열,행및영역을정의합니다." },
+        {
+          name: "grid-template-areas",
+          desc: "명명된격자영역을지정하고격자에셀을설정하고이름을할당합니다.",
+        },
+        { name: "grid-template-columns", desc: "그리드열의너비를설정합니다." },
+        { name: "grid-template-rows", desc: "그리드행의높이를설정합니다." },
+        {
+          name: "hanging-punctuation",
+          desc: "문장부호가텍스트줄의시작또는끝에매달려야하는지여부를지정합니다.",
+        },
+        { name: "height", desc: "요소의높이를설정합니다." },
+        {
+          name: "hyphenate-character",
+          desc: "하이픈나누기전에줄끝에서사용되는문자를설정합니다.",
+        },
+        {
+          name: "hyphens",
+          desc: "여러줄에걸치는텍스트에서단어에붙임표를추가하는방식을설정합니다.",
+        },
+        {
+          name: "image-orientation",
+          desc: "이미지방향에대한레이아웃독립적수정을지정합니다.",
+        },
+        { name: "image-rendering", desc: "렌더링에대한이미지를제공합니다." },
+        {
+          name: "image-resolution",
+          desc: "요소에서사용되는모든래스터이미지의고유해상도를지정합니다.",
+        },
+        {
+          name: "ime-mode",
+          desc: "IME(InputMethodEditor)의상태를반환하거나설정합니다.",
+        },
+        {
+          name: "initial-letter",
+          desc: "떨어뜨림,올리기및움푹들어간이니셜문자에대한스타일을설정합니다.",
+        },
+        {
+          name: "initial-letter-align",
+          desc: "단락내에서첫글자의정렬을지정합니다.",
+        },
+        {
+          name: "inline-size",
+          desc: "쓰기모드에따라요소블록의가로또는세로크기를정의합니다.",
+        },
+        { name: "inset", desc: "상하좌우값을지정해줄수있는css속성." },
+        {
+          name: "inset-block",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적오프셋에매핑되는요소의논리적블록시작및끝오프셋을정의합니다.",
+        },
+        {
+          name: "inset-block-end",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적인세트에매핑되는요소의논리적블록끝오프셋을정의합니다.",
+        },
+        {
+          name: "inset-block-start",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적인세트에매핑되는요소의논리적블록시작오프셋을정의합니다.",
+        },
+        {
+          name: "inset-inline",
+          desc: "인라인방향으로요소의논리적시작및끝오프셋을정의합니다.",
+        },
+        {
+          name: "inset-inline-end",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적오프셋에매핑되는요소의논리적인라인끝삽입을정의합니다.",
+        },
+        {
+          name: "inset-inline-start",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적오프셋에매핑되는요소의논리적인라인시작삽입을정의합니다.",
+        },
+        {
+          name: "isolation",
+          desc: "요소가새로운쌓임맥락을생성해야하는지지정합니다.",
+        },
+        {
+          name: "justify-content",
+          desc: "플렉스컨테이너의기본축과그리드컨테이너의인라인축을기준으로아이템들을정렬합니다.",
+        },
+        {
+          name: "justify-items",
+          desc: "상자의모든항목에대한기본값을정의합니다.",
+        },
+        {
+          name: "justify-self",
+          desc: "적절한축을따라정렬컨테이너내부에서상자가정렬되는방식을설정합니다.",
+        },
+        { name: "left", desc: "배치된요소의수평위치지정에참여합니다." },
+        { name: "letter-spacing", desc: "글자사이의간격을조절합니다." },
+        {
+          name: "line-break",
+          desc: "한중일3개국어의텍스트줄을어디서바꿀지지정합니다.",
+        },
+        {
+          name: "line-height",
+          desc: "라인상자의높이를설정합니다.heigh와값이같을경우가운데정렬",
+        },
+        {
+          name: "line-height-step",
+          desc: "라인상자높이의단계단위를설정합니다.",
+        },
+        { name: "list-style", desc: "모든목록스타일속성을설정합니다." },
+        {
+          name: "list-style-image",
+          desc: "목록항목마커로사용할이미지를설정합니다.",
+        },
+        {
+          name: "list-style-position",
+          desc: "목록항목에대한상대위치를설정합니다.",
+        },
+        { name: "list-style-type", desc: "목록항목요소의마커를설정합니다." },
+        { name: "margin", desc: "요소사이의간격을설정합니다." },
+        {
+          name: "margin-block",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적블록시작및끝여백을정의합니다.",
+        },
+        {
+          name: "margin-block-end",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적블록끝여백을정의합니다.",
+        },
+        {
+          name: "margin-block-start",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적블록시작여백을정의합니다.",
+        },
+        { name: "margin-bottom", desc: "아래여백영역을설정합니다." },
+        {
+          name: "margin-inline",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적인라인시작및끝여백을모두정의합니다.",
+        },
+        {
+          name: "margin-inline-end",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적인라인끝여백을정의합니다.",
+        },
+        {
+          name: "margin-inline-start",
+          desc: "쓰기모드,방향및텍스트방향에따라물리적여백에매핑되는요소의논리적인라인시작여백을정의합니다.",
+        },
+        { name: "margin-left", desc: "요소의왼쪽에여백영역을설정합니다." },
+        { name: "margin-right", desc: "요소의오른쪽여백영역을설정합니다." },
+        { name: "margin-top", desc: "요소의상단여백영역을설정합니다." },
+        {
+          name: "margin-trim",
+          desc: "컨테이너가컨테이너의가장자리에인접한자식의여백을트리밍할수있습니다.",
+        },
+        {
+          name: "mask",
+          desc: "아이템이부분적으로만보여지게하거나혹은완전히가려서보여지지않게할수있는기능을가지고있습니다.",
+        },
+        {
+          name: "mask-border",
+          desc: "요소테두리의가장자리를따라마스크를만들수있습니다.",
+        },
+        {
+          name: "mask-border-mode",
+          desc: "마스크테두리에사용되는혼합모드를지정합니다.",
+        },
+        {
+          name: "mask-border-outset",
+          desc: "요소의마스크테두리가테두리상자에서설정되는거리를지정합니다.",
+        },
+        {
+          name: "mask-border-repeat",
+          desc: "소스이미지의가장자리영역이요소의마스크테두리크기에맞게조정되는방식을설정합니다.",
+        },
+        { name: "mask-border-slice", desc: "이미지세트를영역으로나눕니다." },
+        {
+          name: "mask-border-source",
+          desc: "요소의마스크테두리를만드는데사용되는소스이미지를설정합니다.",
+        },
+        {
+          name: "mask-border-width",
+          desc: "요소의마스크테두리너비를설정합니다.",
+        },
+        { name: "mask-clip", desc: "마스크의영향을받는영역을결정합니다." },
+        {
+          name: "mask-composite",
+          desc: "현재마스크레이어아래에마스크레이어가있는합성작업을나타냅니다.",
+        },
+        {
+          name: "mask-image",
+          desc: "요소의마스크레이어로사용되는이미지를설정합니다.",
+        },
+        {
+          name: "mask-mode",
+          desc: "정의된마스크참조가광도또는알파마스크로처리되는지여부를설정합니다.",
+        },
+        { name: "mask-origin", desc: "마스크의원점을설정합니다." },
+        {
+          name: "mask-position",
+          desc: "정의된각마스크이미지에대해설정된마스크위치레이어를기준으로초기위치를설정합니다.",
+        },
+        {
+          name: "mask-repeat",
+          desc: "마스크이미지가반복되는방식을설정합니다.",
+        },
+        { name: "mask-size", desc: "마스크이미지의크기를설정합니다." },
+        {
+          name: "mask-type",
+          desc: "SVG요소가휘도또는알파마스크로사용되는지여부를설정합니다.",
+        },
+        {
+          name: "max-block-size",
+          desc: "지정된대로쓰기방향과반대방향으로요소의최대크기를지정합니다.",
+        },
+        { name: "max-height", desc: "요소의최대높이를설정합니다." },
+        {
+          name: "max-inline-size",
+          desc: "쓰기모드에따라요소블록의가로또는세로최대크기를정의합니다.",
+        },
+        { name: "max-width", desc: "요소의최대너비를설정합니다." },
+        {
+          name: "min-block-size",
+          desc: "쓰기모드에따라요소블록의최소가로또는세로크기를정의합니다.",
+        },
+        { name: "min-height", desc: "요소의최소높이를합니다." },
+        {
+          name: "min-inline-size",
+          desc: "쓰기모드에따라요소블록의가로또는세로최소크기를정의합니다.",
+        },
+        { name: "min-width", desc: "요소의최소너비를설정합니다." },
+        { name: "mix-blend-mode", desc: "배경을혼합합니다." },
+        {
+          name: "object-fit",
+          desc: "img나video요소와같은대체요소의콘텐츠크기를어떤방식으로조절해요소에맞출것인지지정합니다.",
+        },
+        { name: "object-position", desc: "오브젝트위치를설정합니다." },
+        {
+          name: "offset",
+          desc: "정의된경로에따라요소에애니메이션을적용하는데필요한모든속성을설정합니다.",
+        },
+        {
+          name: "offset-anchor",
+          desc: "실제로경로를따라움직이는요소를따라이동하는요소의상자내부지점을지정합니다.",
+        },
+        { name: "offset-distance", desc: "요소가배치될위치를지정합니다." },
+        {
+          name: "offset-path",
+          desc: "요소가따라갈모션경로를지정하고상위컨테이너또는SVG좌표시스템내에서의요소의위치를정의합니다.",
+        },
+        {
+          name: "offset-postion",
+          desc: "요소가따라배치될때요소의위치를정의합니다.",
+        },
+        {
+          name: "offset-rotate",
+          desc: "요소가따라배치될때요소의방향을정의합니다.",
+        },
+        { name: "opacity", desc: "요소의투명도를설정합니다." },
+        {
+          name: "order",
+          desc: "플렉스또는그리드컨테이너안에서현재요소의배치순서를지정합니다.",
+        },
+        {
+          name: "orphans",
+          desc: "페이지,영역또는열의맨아래에표시되어야하는블록컨테이너최소줄수를설정합니다.",
+        },
+        { name: "outline", desc: "요소의윤곽선을설정합니다." },
+        { name: "outline-color", desc: "요소의윤곽선색상을설정합니다." },
+        {
+          name: "outline-offset",
+          desc: "윤곽선과요소의가장자리또는테두리사이의간격을설정합니다.",
+        },
+        { name: "outline-style", desc: "윤곽선의스타일을설정합니다." },
+        { name: "outline-width", desc: "윤곽선의두께를설정합니다." },
+        {
+          name: "overflow",
+          desc: "내용이박스보다큰경우넘친부분에대해설정합니다.",
+        },
+        {
+          name: "overflow-anchor",
+          desc: "콘텐츠이동을최소화하기위해스크롤위치를조정하는브라우저의스크롤고정동작을옵트아웃하는방법을제공합니다.",
+        },
+        {
+          name: "overflow-block",
+          desc: "콘텐츠가상자의블록시작및블록끝가장자리를오버플로할때표시되는내용을설정합니다.",
+        },
+        {
+          name: "overflow-clip-margin",
+          desc: "클리핑되기전에요소가경계를벗어나얼마나멀리칠할수있는지를결정합니다.",
+        },
+        {
+          name: "overflow-inline",
+          desc: "콘텐츠가상자의인라인시작및끝가장자리를오버플로할때표시되는내용을설정합니다.",
+        },
+        { name: "overflow-wrap", desc: "줄바꿈위해단어쪼개기" },
+        {
+          name: "overflow-x",
+          desc: "콘텐츠가블록수준요소의왼쪽및오른쪽가장자리를오버플로할때표시되는내용을설정합니다.",
+        },
+        {
+          name: "overflow-y",
+          desc: "콘텐츠가블록수준요소의위쪽및아래쪽가장자리를오버플로할때표시되는내용을설정합니다.",
+        },
+        {
+          name: "overscroll-behavior",
+          desc: "스크롤영역의경계에도달할때브라우저가수행하는작업을설정합니다.",
+        },
+        {
+          name: "overscroll-behavior-block",
+          desc: "스크롤영역의블록방향경계에도달할때브라우저의동작을설정합니다.",
+        },
+        {
+          name: "overscroll-behavior-inline",
+          desc: "스크롤영역의인라인방향경계에도달할때브라우저의동작을설정합니다.",
+        },
+        {
+          name: "overscroll-behavior-x",
+          desc: "스크롤영역의수평경계에도달할때브라우저의동작을설정합니다.",
+        },
+        {
+          name: "overscroll-behavior-y",
+          desc: "스크롤영역의수직경계에도달할때브라우저의동작을설정합니다.",
+        },
+        { name: "padding", desc: "속성의네방향여백을설정합니다." },
+        {
+          name: "padding-block-end",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적패딩에매핑되는요소의논리적블록끝패딩을정의합니다.",
+        },
+        {
+          name: "padding-block-start",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적패딩에매핑되는요소의논리적블록시작패딩을정의합니다.",
+        },
+        { name: "padding-bottom", desc: "요소내부의아래쪽여백을설정합니다." },
+        {
+          name: "padding-inline-end",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적패딩에매핑되는요소의논리적인라인끝패딩을정의합니다.",
+        },
+        {
+          name: "padding-inline-start",
+          desc: "요소의쓰기모드,방향및텍스트방향에따라물리적패딩에매핑되는요소의논리적인라인시작패딩을정의합니다.",
+        },
+        { name: "padding-left", desc: "요소의왼쪽여백을설정합니다." },
+        { name: "padding-right", desc: "요소의오른쪽여백을설정합니다." },
+        { name: "padding-top", desc: "요소의상단여백을설정합니다." },
+        {
+          name: "page-break-after",
+          desc: "페이지인쇄시분리에관한설정을정의합니다.",
+        },
+        {
+          name: "page-break-before",
+          desc: "프린터로출력할때다음페이지로페이지를넘기는것을지정하는Property입니다.",
+        },
+        {
+          name: "page-break-inside",
+          desc: "인쇄시페이지분리에관한설정을정의합니다.",
+        },
+        {
+          name: "perspective",
+          desc: "3D위치요소에약간의원근감을주기위해z=0평면과사용자사이의거리를결정합니다.",
+        },
+        { name: "perspective-origin", desc: "뷰어가보고있는위치를결정합니다." },
+        {
+          name: "place-content",
+          desc: "그리드나플렉스레이아웃에서블록및인라인방향을따라콘텐츠를한번에정렬할수있습니다.",
+        },
+        {
+          name: "place-items",
+          desc: "그리드나플렉스레이아웃에서블록및인라인방향을따라항목을한번에정렬할수있습니다.",
+        },
+        {
+          name: "place-self",
+          desc: "그리드나플렉스레이아웃에서블록및인라인방향으로개별항목을한번에정리할수있습니다.",
+        },
+        {
+          name: "pointer-event",
+          desc: "HTML요소들의마우스/터치이벤트들(CSShover/active,JSclick/tap,커서드래그등)의응답을조정할수있는속성이다.",
+        },
+        { name: "position", desc: "속성이배치될최종위치를결정합니다." },
+        {
+          name: "print-color-adjust",
+          desc: "출력장치에서요소의모양을최적화하기위해사용자에이전트가수행할수있는작업을설정합니다.",
+        },
+        {
+          name: "quotes",
+          desc: "속성또는값을사용하여추가된따옴표를브라우저에서렌더링하는방법을설정합니다.",
+        },
+        {
+          name: "resize",
+          desc: "요소의크기를조정할수있는지여부와가능한경우방향을설정합니다.",
+        },
+        { name: "right", desc: "배치된요소의수평위치지정에참여합니다." },
+        { name: "rotate", desc: "속성과별도로회전변환을지정할수있습니다." },
+        {
+          name: "row-gap(grid-row-gap)",
+          desc: "요소행사이의간격을설정합니다.",
+        },
+        {
+          name: "ruby-align",
+          desc: "베이스에대한다양한루비요소의분포를정의합니다.",
+        },
+        {
+          name: "ruby-position",
+          desc: "기본요소를기준으로루비요소의위치를정의합니다.",
+        },
+        {
+          name: "scale",
+          desc: "속성과별개로스케일변환을개별적으로지정할수있습니다.",
+        },
+        {
+          name: "scroll-behavior",
+          desc: "스크롤이탐색또는CSSOM스크롤API에의해트리거될때스크롤상자의동작을설정합니다.",
+        },
+        {
+          name: "scroll-margin",
+          desc: "요소의모든스크롤여백을한번에설정하여속성이요소의여백에대해수행하는것과유사한값을할당합니다.",
+        },
+        {
+          name: "scroll-margin-block",
+          desc: "블록차원에서요소의스크롤여백을설정합니다.",
+        },
+        {
+          name: "scroll-margin-block-end",
+          desc: "상자를스냅포트에맞추는데사용되는블록치수끝에서스크롤스냅영역의여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-block-start",
+          desc: "상자를스냅포트에맞추는데사용되는블록차원의시작부분에서스크롤스냅영역의여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-bottom",
+          desc: "상자를snapport에맞추는데사용되는스크롤스냅영역의아래쪽여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-inline",
+          desc: "인라인차원에서요소의스크롤여백을설정합니다.",
+        },
+        {
+          name: "scroll-margin-inline-end",
+          desc: "상자를snapport에맞추는데사용되는인라인차원의끝에서스크롤스냅영역의여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-inline-start",
+          desc: "상자를snapport에맞추는데사용되는인라인차원의시작부분에서스크롤스냅영역의여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-left",
+          desc: "상자를snapport에맞추는데사용되는스크롤스냅영역의왼쪽여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-right",
+          desc: "상자를snapport에맞추는데사용되는스크롤스냅영역의오른쪽여백을정의합니다.",
+        },
+        {
+          name: "scroll-margin-top",
+          desc: "상자를snapport에맞추는데사용되는스크롤스냅영역의위쪽여백을정의합니다.",
+        },
+        {
+          name: "scroll-padding",
+          desc: "요소의모든면에스크롤패딩을한번에설정합니다.",
+        },
+        {
+          name: "scroll-padding-block",
+          desc: "블록차원에서요소의스크롤패딩을설정합니다.",
+        },
+        {
+          name: "scroll-padding-block-end",
+          desc: "스크롤포트의최적보기영역의블록차원에서끝가장자리에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-block-start",
+          desc: "스크롤포트의최적보기영역의블록차원에서시작가장자리에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-bottom",
+          desc: "스크롤포트의최적보기영역하단에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-inline",
+          desc: "인라인차원에서요소의스크롤패딩을설정합니다.",
+        },
+        {
+          name: "scroll-padding-inline-end",
+          desc: "스크롤포트의최적보기영역의인라인차원에서끝가장자리에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-inline-start",
+          desc: "스크롤포트의최적보기영역의인라인차원에서시작가장자리에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-left",
+          desc: "스크롤포트의최적보기영역왼쪽에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-right",
+          desc: "스크롤포트의최적보기영역오른쪽에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-padding-top",
+          desc: "스크롤포트의최적보기영역상단에대한오프셋을정의합니다.",
+        },
+        {
+          name: "scroll-snap-align",
+          desc: "상자의스냅위치를해당스냅컨테이너의스냅포트내에서해당스냅영역의정렬로지정합니다.",
+        },
+        { name: "scroll-snap-coordinate", desc: "x" },
+        { name: "scroll-snap-destination", desc: "x" },
+        { name: "scroll-snap-points-x", desc: "x" },
+        { name: "scroll-snap-points-y", desc: "x" },
+        {
+          name: "scroll-snap-stop",
+          desc: "스크롤컨테이너가가능한스냅위치를'통과'할수있는지여부를정의합니다.",
+        },
+        {
+          name: "scroll-snap-type",
+          desc: "스냅포인트가있는경우스크롤컨테이너에스냅포인트가얼마나엄격하게적용되는지설정합니다.",
+        },
+        {
+          name: "scrollbar-color",
+          desc: "스크롤바트랙과썸의색상을설정합니다.",
+        },
+        {
+          name: "scrollbar-width",
+          desc: "작성자가표시될때요소의스크롤막대의최대두께를설정합니다.",
+        },
+        {
+          name: "shape-image-threshold",
+          desc: "이미지를값으로사용하여모양을추출하는데사용되는알파채널임계값을설정합니다.",
+        },
+        { name: "shape-margin", desc: "CSS모양의여백을설정합니다." },
+        {
+          name: "shape-outside",
+          desc: "인접한인라인콘텐츠가둘러싸야하는사각형이아닐수있는모양을정의합니다.",
+        },
+        { name: "tab-size", desc: "탭문자(+0009U)의폭을지정하는데사용합니다." },
+        {
+          name: "table-layout",
+          desc: "셀,행및열배치하는데사용되는알고리즘을설정합니다.",
+        },
+        { name: "text-align", desc: "블럭안요소의정렬을설정합니다." },
+        {
+          name: "text-align-last",
+          desc: "강제줄바꿈직전의블록이나줄의마지막줄을정렬하는방법을설정합니다.",
+        },
+        {
+          name: "text-combine-upright",
+          desc: "문자조합을단일문자공간으로설정합니다.",
+        },
+        { name: "text-decoration", desc: "텍스트에꾸밈요소를설정합니다." },
+        {
+          name: "text-decoration-color",
+          desc: "텍스트에추가되는장식의색상을설정합니다.",
+        },
+        {
+          name: "text-decoration-line",
+          desc: "밑줄이나윗줄과같이요소의텍스트에사용되는장식의종류를설정합니다.",
+        },
+        {
+          name: "text-decoration-skip",
+          desc: "요소에영향을미치는텍스트장식이건너뛰어야하는요소콘텐츠의부분을설정합니다.",
+        },
+        {
+          name: "text-decoration-skip-ink",
+          desc: "윗줄과밑줄이글리프어센더및디센더를전달할때그려지는방법을지정합니다.",
+        },
+        {
+          name: "text-decoration-style",
+          desc: "지정된선의스타일을설정합니다.",
+        },
+        { name: "text-emphasis", desc: "텍스트에강조표시를적용합니다." },
+        { name: "text-emphasis-color", desc: "강조표시의색상을설정합니다." },
+        {
+          name: "text-emphasis-position",
+          desc: "루비텍스트와마찬가지로강조표시를위한공간이충분하지않으면줄높이가높아집니다.",
+        },
+        { name: "text-emphasis-style", desc: "강조표시의모양을설정합니다." },
+        {
+          name: "text-indent",
+          desc: "블록의텍스트줄앞에배치되는빈공간의길이를설정합니다.",
+        },
+        {
+          name: "text-justify",
+          desc: "텍스트에적용해야하는맞춤유형을설정합니다.",
+        },
+        {
+          name: "text-orientation",
+          desc: "줄에서텍스트문자의방향을설정합니다.",
+        },
+        {
+          name: "text-overflow",
+          desc: "숨겨진오버플로콘텐츠가사용자에게신호되는방식을설정합니다.",
+        },
+        {
+          name: "text-rendering",
+          desc: "텍스트를렌더링할때최적화할대상에대한정보를렌더링엔진에게제공합니다.",
+        },
+        { name: "text-shadow", desc: "그림자를추가합니다." },
+        {
+          name: "text-size-adjust",
+          desc: "일부스마트폰및태블릿에서사용되는텍스트인플레이션알고리즘을제어합니다.",
+        },
+        {
+          name: "text-transform",
+          desc: "요소의텍스트를대문자로표시하는방법을지정합니다.",
+        },
+        {
+          name: "text-underline-position",
+          desc: "속성값을사용하여설정되는밑줄의위치를지정합니다.",
+        },
+        {
+          name: "top",
+          desc: "태그위치를상단기준으로어느높이에위치시킬건지설정합니다.",
+        },
+        {
+          name: "touch-action",
+          desc: "터치스크린사용자가요소의영역을조작하는방법을설정합니다.",
+        },
+        {
+          name: "transform",
+          desc: "요소에회전,크기조절,기울이기,이동효과를부여할수있습니다.",
+        },
+        {
+          name: "transform-box",
+          desc: "속성이관련된레이아웃상자를정의합니다.",
+        },
+        { name: "transform-origin", desc: "요소변형의원점을설정합니다." },
+        {
+          name: "transform-style",
+          desc: "요소의자식이3D공간에배치되는지또는요소평면에서병합되는지여부를설정합니다.",
+        },
+        {
+          name: "transition",
+          desc: "애니메이션효과의속도를조절하는방법을제공합니다.",
+        },
+        {
+          name: "transition-delay",
+          desc: "전환(transition)효과가나타나기전까지의지연시간을설정합니다.",
+        },
+        {
+          name: "transition-duration",
+          desc: "전환(transition)효과가지속될시간을설정함.",
+        },
+        {
+          name: "transition-property",
+          desc: "전환효과를적용할CSS속성을설정합니다.",
+        },
+        {
+          name: "transition-timing-function",
+          desc: "전환효과의영향을받는CSS속성에대해중간값이계산되는방식을설정합니다.",
+        },
+        {
+          name: "translate",
+          desc: "속성과별개로개별적으로변환을지정할수있습니다.",
+        },
+        {
+          name: "unicode-bidi",
+          desc: "속성과함께문서의양방향텍스트가처리되는방식을결정합니다.",
+        },
+        {
+          name: "user-select",
+          desc: "text텍스트를선택할수있습니다.element텍스트를선택할수있지만요소범위로제한됩니다.",
+        },
+        {
+          name: "vertical-align",
+          desc: "inline또는table-cellbox에서의수직정렬을지정합니다.",
+        },
+        { name: "visibility", desc: "태그의가시성을결정합니다." },
+        {
+          name: "white-space",
+          desc: "요소의공백을어떻게처리할지를정의합니다.",
+        },
+        {
+          name: "widows",
+          desc: "페이지,영역또는열의상단에표시되어야하는블록컨테이너의최소줄수를설정합니다.",
+        },
+        { name: "width", desc: "요소의너비를설정합니다." },
+        {
+          name: "will-change",
+          desc: "요소에예상되는변화의종류에관한힌트를브라우저에게제공하게합니다.",
+        },
+        {
+          name: "word-break",
+          desc: "텍스트들을줄을바꾸면서표시해야할때텍스트를어떤식으로줄바꿈해줄지정하는속성.",
+        },
+        {
+          name: "word-spacing",
+          desc: "신약과사이에,태그와사이의거리를설정합니다.",
+        },
+        {
+          name: "writing-mode",
+          desc: "텍스트줄을가로또는세로로배치할지여부와블록이진행되는방향을설정합니다.",
+        },
+        { name: "z-index", desc: "요소들의수직위치를설정합니다." },
+      ];
+
+      cssProperty.map((element, index) => {
+        searchNum.innerHTML = index;
+        searchList.innerHTML += `<span>${element.name}</span>`;
+      });
+
+      //입력하기
+      searchBox.addEventListener("keyup", () => {
+        const searchWord = searchBox.value;
+        //console.log(searchWord);
+        findProperty(searchWord);
+      });
+
+      //속성 찾기
+      function findProperty(searchData) {
+        const targetData = cssProperty.find((data) => data.name === searchData);
+
+        if (targetData == null) {
+          searchDesc.textContent =
+            "해당 속성은 존재하지 않습니다. 다시 검색해주세요!";
+          //종료
+          return;
+        }
+        searchDesc.textContent = targetData.desc;
+
+        
+      };
+
+      
+      //버튼을 클릭하면 속성 설명이 나오게
+      const searchKeyword = document.querySelectorAll(".search__list span");
+      searchKeyword.forEach((el)=>{
+        el.addEventListener("click",()=>{
+            const clickKey = el.innerText;
+            const targetData = cssProperty.find((data) => data.name === clickKey);
+            searchDesc.textContent = targetData.desc;
+        });
+      });
+      
+    
+    </script>
+  </body>
+</html>

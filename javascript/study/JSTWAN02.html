@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+
+    <style>
+        /* PrismJS 1.26.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+        code[class*=language-],
+        pre[class*=language-] {
+            color: #000;
+            background: 0 0;
+            text-shadow: 0 1px #fff;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none
+        }
+
+        code[class*=language-] ::-moz-selection,
+        code[class*=language-]::-moz-selection,
+        pre[class*=language-] ::-moz-selection,
+        pre[class*=language-]::-moz-selection {
+            text-shadow: none;
+            background: #b3d4fc
+        }
+
+        code[class*=language-] ::selection,
+        code[class*=language-]::selection,
+        pre[class*=language-] ::selection,
+        pre[class*=language-]::selection {
+            text-shadow: none;
+            background: #b3d4fc
+        }
+
+        @media print {
+
+            code[class*=language-],
+            pre[class*=language-] {
+                text-shadow: none
+            }
+        }
+
+        pre[class*=language-] {
+            padding: 1em;
+            margin: .5em 0;
+            overflow: auto
+        }
+
+        :not(pre)>code[class*=language-],
+        pre[class*=language-] {
+            background: #f5f2f0
+        }
+
+        :not(pre)>code[class*=language-] {
+            padding: .1em;
+            border-radius: .3em;
+            white-space: normal
+        }
+
+        .token.cdata,
+        .token.comment,
+        .token.doctype,
+        .token.prolog {
+            color: #708090
+        }
+
+        .token.punctuation {
+            color: #999
+        }
+
+        .token.namespace {
+            opacity: .7
+        }
+
+        .token.boolean,
+        .token.constant,
+        .token.deleted,
+        .token.number,
+        .token.property,
+        .token.symbol,
+        .token.tag {
+            color: #905
+        }
+
+        .token.attr-name,
+        .token.builtin,
+        .token.char,
+        .token.inserted,
+        .token.selector,
+        .token.string {
+            color: #690
+        }
+
+        .language-css .token.string,
+        .style .token.string,
+        .token.entity,
+        .token.operator,
+        .token.url {
+            color: #9a6e3a;
+            background: hsla(0, 0%, 100%, .5)
+        }
+
+        .token.atrule,
+        .token.attr-value,
+        .token.keyword {
+            color: #07a
+        }
+
+        .token.class-name,
+        .token.function {
+            color: #dd4a68
+        }
+
+        .token.important,
+        .token.regex,
+        .token.variable {
+            color: #e90
+        }
+
+        .token.bold,
+        .token.important {
+            font-weight: 700
+        }
+
+        .token.italic {
+            font-style: italic
+        }
+
+        .token.entity {
+            cursor: help
+        }
+
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+
+        h1 {
+            padding-bottom: 40px;
+        }
+
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 1px;
+        }
+
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #f2f2f2;
+            padding: 15px 15px 12px 15px;
+            border-bottom: 1px solid #e6e6e6;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+
+        .sample .ex {
+            padding: 20px;
+        }
+
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+            line-height: 1.6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+            ;
+        }
+
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+
+        ol {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        ol li {
+            display: inline;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 5px;
+        }
+
+        ol li a {
+            display: inline-block;
+            border-radius: 30px;
+            padding: 2px 20px 0px 20px;
+            border: 1px solid #000;
+        }
+
+        ol li a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        ol li.active {
+            background: #000;
+        }
+
+        ol li.active a {
+            color: #fff;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript Test01</h1>
+
+    <div id="sample0" class="sample">
+        <h2>00. Intro.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">parseInt(x) : x의 자료형을 숫자(정수)로 바꿔줌, 숫자가 아니면 NaN 반환
+String(x) : x의 자료형을 문자열로 바꿔줌.
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+    <div id="sample1" class="sample">
+        <h2>01. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q1(num) {
+    let answer = 0;
+    while(num) {
+        answer += num % 10;
+        num = parseInt(num / 10);
+    }
+    return answer;
+}
+
+console.log(q1(1996));
+</code></pre>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div id="sample2" class="sample">
+        <h2>02. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q2() {
+    const array = [10, 31, 1, 2, 3 ,4, 32];
+    return array.sort();
+}
+
+console.log(q2());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample3" class="sample">
+        <h2>03. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q3() {
+    const array = [10, 31, 1, 2, 3 ,4, 32];
+    return array.filter(x => String(x).length >= 2);
+}
+
+console.log(q3());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample4" class="sample">
+        <h2>04. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q4() {
+    const array = [10,20,30,40,50];
+    return array.reduce((prev, curr) => prev += curr, 0) / array.length;
+}
+
+console.log(q4());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample5" class="sample">
+        <h2>05. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q5() {
+    return "abcdefghijklmnop".match(/[d-f]/g);
+}
+
+console.log(q5());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample6" class="sample">
+        <h2>06. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q6(a,b,c,d) {
+    const array = [...arguments];
+    return array.reduceRight((prev, curr) => {
+        return prev += curr;
+    }, 0);
+}
+
+console.log(q6(1,2,3,4));
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample7" class="sample">
+        <h2>07. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q7() {
+    const str = "taraeaea";
+    return str.split('').map(word => {
+        if(word !== "a") return word;
+    }).join('');
+}
+
+console.log(q7());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample8" class="sample">
+        <h2>08. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q8() {
+    let answer = 0;
+    const array = [1,2,3,4,5];
+    for(let i = 3; i < 8; i++) {
+        if(array.includes(i) && 0) {
+            answer++;
+        }
+    }
+    return answer;
+}
+
+console.log(q8());
+</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="sample9" class="sample">
+        <h2>09. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q9() {
+    const obj = {
+        a : "가",
+        b : "나",
+        c : "다",
+    };
+
+    const { c : one, b : two, a : three } = obj;
+    return one + two + three;
+}
+
+console.log(q9());
+</code></pre>
+        </div>
+    </div>
+    <hr>
+
+    <div id="sample10" class="sample">
+        <h2>10. 결괏값을 작성하시오.<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">function q10(arr) {
+    let flag = false;
+    let n = 1;
+    while(!flag) {
+        n++;
+        for(let i = 1; i < arr.length; i++) {
+            if((arr[0] * n) % arr[i] === 0) {
+                flag = true;
+            }
+            else {
+                flag = false;
+                break;
+            }
+        }
+    }
+    return arr[0] * n
+}
+
+console.log(q10([2,6,8,14]));
+</code></pre>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        {
+            function q1(num) {
+                let answer = 0;
+                while (num) {
+                    answer += num % 10;
+                    num = parseInt(num / 10);
+                }
+                return answer;
+            }
+            console.log(q1(1996));
+
+        }
+        {
+            function q2() {
+                const array = [10, 31, 1, 2, 3, 4, 32];
+                return array.sort();
+            }
+
+            console.log(q2());
+        }
+        //스트링 절대값 js05
+    </script>
+</body>
+
+</html>

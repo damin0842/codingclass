@@ -1,0 +1,268 @@
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<!-- //header -->
+<main id="main">
+    <p data-ke-size="size16">&nbsp;</p>
+    <div class="document">
+        <h2 class="t_tit" data-ke-size="size26">사이트 만들기2</h2>
+        <p class="t_desc2" data-ke-size="size16">카드 유형의 사이트 만들기2 입니다. <br>
+            피그마로 먼저 형태를 만들고 똑같은 모양으로 HTML과 CSS문서를 만들었습니다.</p>
+        <div class="t_iframe">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FaghippDRVCPx00TI2QMLZZ%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D67%253A2"
+                allowfullscreen></iframe>
+        </div>
+        <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
+        <div class="t_code">
+            <pre class="dart"><code>/* fonts */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    width: 100%;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-width: 1160px;
+}
+/* cardType */
+.card__inner .cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+.card__inner .cardBot {
+    display: flex;
+    justify-content: space-between;
+}
+.section {
+    padding: 120px 0;
+}
+.section>h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'GmarketSans';
+}
+.section>p {
+    font-family: 'GmarketSans';
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.card {
+    width: 24%;
+    height: 333px;
+    background: #f5f5f5;
+    margin-bottom: 50px;
+}
+.card__body {
+    padding: 24px 0px;
+}
+.card__body .tit {
+    font-family: 'GmarketSans';
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    position: relative;
+}
+.card__body .tit svg {
+    position: absolute;
+    right: 5px;
+}
+.card__body .desc {
+    margin: 10px 0 0;
+    font-size: 18px;
+    font-family: 'GmarketSans';
+    font-size: 18px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;
+}
+</code></pre>
+            <h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+            <div class="t_code">
+                <pre class="dart"><code>&lt;body>
+    &lt;section id="cardType" class="card__wrap section">
+        &lt;h2>나라별 음식 구경하기&lt;/h2>
+        &lt;p>국가 별 음식 국경하기 &lt;br>
+            각 나라를 대표하는 음식들&lt;/p>
+        &lt;div class="card__inner container">
+
+            &lt;div class="cardTop">
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg01.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">푸틴 – 캐나다
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">캐나다 퀘벡 주 음식으로 감자튀김에 그레이비 소스와 치즈를 넣어 만듭니다.&lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg02.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">몰레 포블라노 – 멕시코
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">아보카드 소스를 얹어 삶은 닭고기에 각종 야채와 초콜릿 등 수십가지의 재료를 넣어 만듭니다. &lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg03.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">세비체 – 페루
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">해산물을 얇게 잘라서 레몬즙에 재운 후 채소와 소스를 뿌려 먹는 음식입니다. &lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg04.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">페이조아다 – 브라질
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">고기와 페이조라고 불리는 콩을 넣어서 삶아 먹는 음식입니다. 우리나라의 부대찌개와 비슷합니다.&lt;/p>
+                    &lt;/div>
+                &lt;/article>
+            &lt;/div>
+            &lt;div class="cardBot">
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg05.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">빠이사 – 콜롬비아
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">간 쇠고기 볶음과 프리홀레스 쁠라따노 튀김, 달걀후라이 등을 함께 곁들여 먹는 음식입니다. &lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg06.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">아사도 – 아르헨티나
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">그릴에 쇠고기 갈비부위를 구워 소금간을 한 후 치미추리 소스와 함께 먹는 음식입니다.&lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg07.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">산꼬초 – 도미니카
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">도미니카식 전골 요리로, 고기와 유카, 옥수수 등을 넣고 끟인 음식입니다. &lt;/p>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="img/card02_bg08.jpg" alt="웹표준 사이트 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">햄버거와 감자칩 – 미국
+                            &lt;svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                &lt;rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                &lt;path
+                                    d="M18.7071 13.7071C19.0976 13.3166 19.0976 12.6834 18.7071 12.2929L12.3431 5.92893C11.9526 5.53841 11.3195 5.53841 10.9289 5.92893C10.5384 6.31946 10.5384 6.95262 10.9289 7.34315L16.5858 13L10.9289 18.6569C10.5384 19.0474 10.5384 19.6805 10.9289 20.0711C11.3195 20.4616 11.9526 20.4616 12.3431 20.0711L18.7071 13.7071ZM4 14L18 14V12L4 12L4 14Z"
+                                    fill="white" />
+                            &lt;/svg>
+                        &lt;/h3>
+                        &lt;p class="desc">너무나 유명한 햄버거와 감자칩입니다. 여기에 성냥처럼 썬 감자 튀김을 곁들여 먹습니다.&lt;/p>
+                    &lt;/div>
+                &lt;/article>
+            &lt;/div>
+        &lt;/div>
+    &lt;/section>
+&lt;/body>
+</code></pre>
+            </div>
+            <h3 class="t_tit2" data-ke-size="size23">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                    src="https://damin0842.github.io/coding/site/cardType/cardType02.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link"><a href="https://damin0842.github.io/coding/site/cardType/cardType02.html"
+                    target="_blank" rel="noopener">원본 사이트 보기</a></div>
+        </div>
+</main><!-- //main -->
+<script src="../assets/js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

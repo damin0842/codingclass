@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레퍼런스 북</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <span>이름 : 진다민</span>
+    </header>
+
+    <!-- header -->
+    <main id="main">
+        <nav class="main_header">
+            <h2>HTML <em>레퍼런스 북</em></h2>
+
+        </nav>
+
+        <div class="main_menu">
+            <ul>
+                <li><a href="alphabet.html">알파벳</a></li>
+                <li><a href="basic.html">기초 문법</a></li>
+                <li><a href="block.html">블록구조/인라인구조</a></li>
+                <li><a href="web.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="sementic.html">시멘틱 태그</a></li>
+                <li><a href="seo.html">검색엔진 시스템(SEO)</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+        </div>
+        <div class="main_refer">
+            <div class="document">
+                <h2 class="t_tit">레이아웃01</h2>
+                <p class="t_desc">
+                    이번 레이아웃은 화면 크기가 줄어들때 측면 영역이 한줄로 보이게 바뀌는
+                    구조 입니다.
+                </p>
+                <div class="t_iframe">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2Z6MYAl9zYulOhlw6JTlYW%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D0%253A1"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="float">
+                    <h3 class="t_tit2">float을 이용한 레이아웃</h3>
+                    <p class="t_desc2">
+                        float 속성은 특히 국내 실무 내에서 레이아웃 설계하는 과정에서 많이 사용하는 속성입니다. <br>
+                        복잡한 형태의 레이아웃을 구성하는데 필요한 핵심 속성으로 특정 요소를 떠있게, 흐르도록, 부유하게 하도록 하는 속성입니다. <br>
+                        다시 말해, float 속성을 사용해 박스를 왼쪽(left) 또는 오른쪽(right)으로 "부유"시키는 레이아웃 기법입니다. <br>
+                        여기서 '부유하다' 라는 의미는 요소가 기본적인 문서 배치의 흐름에서 벗어나 요소의 모서리가 페이지의 왼쪽이나 오른쪽으로 이동하는 것을 말합니다. <br>
+                        이 플로팅 모델을 이용하면 문서의 흐름과 관계없이 화면 배치를 유연하게 할 수 있습니다.
+                    </p>
+                    <hr>
+                    <div class="t_code">
+                        <pre><code class="language-js">*{
+    margin: 0;
+}
+#body {
+    background-color: #FFF3E0;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 1200px;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav {
+    width: 1200px;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 400px;
+    height: 780px;
+    background-color: #FFB74D;
+    float: left;
+}
+#section {
+    width: 800px;
+    height: 780px;
+    background-color: #FFA726;
+    float: left;
+}
+#footer {
+    width: 1200px;
+    height: 100px;
+    background-color: #FF9800;
+    clear: both;
+}
+@media (max-width: 1220px){
+    #header{
+        width: 100%;
+    }
+    #nav{
+        width: 100%;
+    }
+    #wrap {
+        width: 96%;
+    }
+    #aside {
+        width: 30%;
+    }
+    #section {
+        width: 70%;
+    }
+    #footer{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    </div>
+                    <h3 class="t_tit2">결과</h4>
+                        <div class="t_iframe">
+                            <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled"
+                                src="https://codepen.io/damin0842/embed/bGvYLOr?default-tab=result" frameborder="no"
+                                loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/damin0842/pen/bGvYLOr">
+                                    Untitled</a> by damin0842 (<a href="https://codepen.io/damin0842">@damin0842</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                        </div>
+                </div>
+                <div class="flex">
+                    <h3 class="t_tit2">flex를 이용한 레이아웃</h3>
+                    <p class="t_desc2">
+                        Flexbox는 모던 웹을 위하여 제안된 기존 layout보다 더 세련된 방식의 니즈에 부합하기 위한 CSS3의 새로운 layout 방식이다. <br>
+                        요소의 사이즈가 불명확하거나 동적으로 변화할 때에도 유연한 레이아웃을 실현할 수 있다. <br>
+                        복잡한 레이아웃이라도 적은 코드로 보다 간단하게 표현할 수 있다. <br>
+                        이해를 돕기 위해 간단한 flexbox 레이아웃을 만들어 보자.
+                    </p>
+                    <hr>
+                    <div class="t_code">
+                        <pre><code class="language-js">        *{
+    margin: 0;
+}
+#body {
+    background-color: #FFF3E0;
+}
+#wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: #FFE0B2;
+}
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #FFCC80;
+}
+#aside {
+    width: 30%;
+    height: 780px;
+    background-color: #FFB74D;
+}
+#section {
+    width: 70%;
+    height: 780px;
+    background-color: #FFA726;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #FF9800;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    </div>
+                    <h3 class="t_tit2">결과</h4>
+                        <div class="t_iframe">
+                            <iframe src="https://codepen.io/damin0842/embed/mdxBYyd?default-tab=result&theme-id=light"
+                                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/damin0842/pen/mdxBYyd">
+                                    Untitled</a> by damin0842 (<a href="https://codepen.io/damin0842">@damin0842</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                        </div>
+                        <p class="t_box">
+                            Flexbox의 장점을 정리해 보면 아래와 같다. <br>
+
+                            1줄의 코드 추가로 수평 정렬이 가능하다. <br>
+                            요소의 상하좌우 정렬, 순서 변경이 간단하다. <br>
+                            요소가 간격 조절이 간단하다. <br>
+                            서로 다른 height를 갖는 요소의 수평정렬 시, 간단히 상하중앙 정렬이 가능하다. <br>
+                            비교적 최신 브라우저가 아니면 벤더 프리픽스를 사용하여야 하고 IE계열은 IE8,9의 경우 지원하지 않고 IE10,11의 경우도 일부 지원하므로 주의가 필요하다.
+                            <br>
+                            IE계열에서 Flexbox를 사용하기 위해서는 flexibility.js를 사용하면 편리하다.
+
+                            브라우저의 지원 상황은 caniuse를 참조하기 바란다. <br>
+                        </p>
+                </div>
+                <div class="grid">
+                    <h3 class="t_tit2">grid 이용한 레이아웃</h3>
+                    <p class="t_desc2">
+                        CSS 그리드 레이아웃(Grid Layout)은 페이지를 여러 주요 영역으로 나누거나, 크기와 위치 및 문서 계층 구조의 관점에서 HTML 기본 요소로 작성된 콘트롤 간의
+                        관계를 정의하는 데 아주 탁월합니다. <br>
+                        테이블과 마찬가지로 그리드 레이아웃은 세로 열과 가로 행을 기준으로 요소를 정렬할 수 있습니다. <br>
+                        하지만, 테이블과 달리 CSS 그리드는 다양한 레이아웃을 훨씬 더 쉽게 구현할 수 있습니다. <br>
+                        예를 들어, 그리드 컨테이너 속 자식 요소를, 마치 CSS로 일일이 위치를 지정해 준 것처럼, 실제로 겹치게 층을 지면서 자리를 잡도록 각 요소의 위치를 지정해 줄 수도
+                        있습니다.
+                    </p>
+                    <img src="https://poiemaweb.com/img/bootstrap_grid.png" alt="" style="max-width:60%">
+                    <br>
+                    <p class="t_box">
+                        그리드 레이아웃을 구성 시에는 반드시 .row(행)를 먼저 배치하고 행 안에 .col(열)을 필요한 갯수만큼 배치한다. <br>
+                        즉, container 내에 .row(행)을 먼저 배치하고 그 안에 .col(열)을 배치한다. <br>
+                        그리고 콘텐츠는 .col(열)내에 배치한다. <br>
+                    </p>
+                    <br>
+                    <div class="t_code">
+                        <pre><code class="language-js"> * {
+    margin: 0;
+}
+body {
+    background-color: #FFF3E0;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto; /* 블록구조를 가운데 정렬 */
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "aside section"
+        "footer footer"
+    ;
+    grid-template-columns: 30% 70% ;
+    grid-template-rows: 100px 100px 780px 100px;
+}
+#header {
+    grid-area: header;
+    background-color: #FFE0B2;
+}
+#nav {
+    grid-area: nav;
+    background-color: #FFCC80;
+}
+#aside {
+    grid-area: aside;
+    background-color: #FFB74D;
+}
+#section {
+    grid-area: section;
+    background-color: #FFA726;
+}
+#footer {
+    grid-area: footer;
+    background-color: #FF9800;
+}
+@media (max-width: 1220px){
+    #wrap {
+        width: 96%;
+    }
+}
+@media (max-width: 768px){
+    #wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 480px){
+    #wrap {
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "aside aside"
+        "section section"
+        "footer footer";
+        grid-template-rows: 100px 100px 300px 480px 100px;
+    }
+    #aside {
+        width: 100%;
+        height: 300px;
+    }
+    #section {
+        width: 100%;
+        height: 480px;
+    }
+}
+</code></pre>
+                    </div>
+                    <h3 class="t_tit2">결과</h4>
+                        <div class="t_iframe">
+                            <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled"
+                                src="https://codepen.io/damin0842/embed/eYMeVxQ?default-tab=result" frameborder="no"
+                                loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                See the Pen <a href="https://codepen.io/damin0842/pen/eYMeVxQ">
+                                    Untitled</a> by damin0842 (<a href="https://codepen.io/damin0842">@damin0842</a>)
+                                on <a href="https://codepen.io">CodePen</a>.
+                            </iframe>
+                        </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <!-- main -->
+    <footer id="footer">
+        <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
+    </footer>
+    <!-- footer -->
+    <script src="/assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>

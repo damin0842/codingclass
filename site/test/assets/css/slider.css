@@ -1,0 +1,82 @@
+ /* slider */
+
+ .slider__wrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__img {
+  /*이미지 보이는 영역*/
+  width: 1100px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slider__inner {
+  /*이미지를 감싸고 있는 부모 : 움직이는 부분 */
+  display: flex;
+  flex-wrap: wrap;
+  width: 4800px;
+  /*총 이미지 6개*/
+  height: 500px;
+  background: #000;
+}
+
+.slider {
+  position: relative;
+  /*개별적인 이미지 */
+  width: 1100px;
+  height: 500px;
+  color: #fff;
+}
+.slider::before {
+  content: '';
+}
+
+.slider > div {
+  text-align: left;
+  width: 400px;
+  position: absolute;
+  left: 100px;
+  bottom: 70px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+}
+.slider > div p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.button-next{
+  position: absolute;
+  top: 50%;
+  left: 1000px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: url(../img/allow_left.png) no-repeat center / cover;
+  cursor: pointer;
+  z-index: 1000;
+}
+.button-prev{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 31%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background: url(../img/allow_right.png) no-repeat center / cover;
+  cursor: pointer;
+  z-index: 1000;
+}
+.button-next::before,.button-prev::before{
+  content: '';
+}

@@ -1,0 +1,123 @@
+/* imageType */
+.image__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image__box {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image__box img {
+    vertical-align: top;
+    transition: all 0.6s ease-in-out;
+}
+
+.image__desc {
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    padding: 23px 20px;
+    box-sizing: border-box;
+    background: rgba(266, 65, 59, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.image:hover .image__desc {
+    bottom: 0;
+}
+
+.image:hover .image__box img {
+    transform: scale(1.03);
+}
+
+.img1 .image__desc {
+    background: rgba(266, 65, 59, 0.4);
+}
+
+.img2 .image__desc {
+    background: rgba(234, 207, 105, 0.4);
+}
+
+.img3 .image__desc {
+    background: rgba(165, 175, 232, 0.4);
+}
+
+.img1 .image__desc h3 {
+    color: rgb(195, 45, 44)
+}
+
+.img2 .image__desc h3 {
+    color: rgb(135, 117, 54)
+}
+
+.img3 .image__desc h3 {
+    color: rgb(62, 73, 138)
+}
+
+.img1 .image__desc .more {
+    color: rgb(195, 45, 44)
+}
+
+.img2 .image__desc .more {
+    color: rgb(135, 117, 54)
+}
+
+.img3 .image__desc .more {
+    color: rgb(62, 73, 138)
+}
+
+.image__desc h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.image__desc .more {
+    font-size: 16px;
+}
+
+.image__desc .more:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 960px) {
+    .image__inner {
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 50%;
+    }
+
+    .image:nth-child(3) {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+    .image__inner {
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .image:nth-child(2) {
+        display: none;
+    }
+}

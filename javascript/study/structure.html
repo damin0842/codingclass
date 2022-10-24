@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조관련요소</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <main id="main">
+        <div class="document">
+            <div class="sample01">
+                <h1 class="t_tit">구조 관련 요소</h1>
+                <table class="t_table">
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 20%;">
+                        <col style="width: 65%;">
+                    </colgroup>
+                    <tr>
+                        <th>요소 <br> 유형</th>
+                        <th>태그명</th>
+                        <th>태그의 의미 및 특징</th>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="12">블록 레벨 <br> 요소</td>
+                        <td class="ce" rowspan="2">&lt;header> <br> &lt;/header></td>
+                        <td>1. HTML 문서의 헤더 영역을 의미하는 태그로 제목이나 내비게이션,검색 등의 내용들을 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header>,&lt;footer>태그는 포함할 수 없습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">&lt;section> <br> &lt;/section></td>
+                        <td>1. HTML 문서에서 맥락이 같은 요소들을 주제별로 그룹화해주는 태그이며 섹션 주제에 대한 제목요소( &lt;h2> ~ &lt;h6> )를 포함하는 것이 좋습니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">&lt;footer> <br> &lt;/footer></td>
+                        <td>1. HTML 문서의 푸터 영역을 의미하는 태그로 섹션 작성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있지만 &lt;header>,&lt;footer>태그는 포함할 수 없습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">&lt;nav> <br> &lt;/nav></td>
+                        <td>1. HTML 문서에서 메인 메뉴나 목차등을 정의해주는 태그입니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">&lt;article> <br> &lt;/article></td>
+                        <td>1. HTML 문서에서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스 기사, 블로그 포스팅을 의미하는 태그이며 제목요소( &lt;h2> ~ &lt;h6>
+                            )를 포함하는 것이 좋습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce" rowspan="2">&lt;aside> <br> &lt;/aside></td>
+                        <td>1. 메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그이며 HTML문서의 오른쪽이나 왼쪽의 사이드 메뉴나 광고 등의 영역으로 사용됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td>2. 텍스트, 인라인 요소, 블록 레벨 요소를 포함할 수 있습니다.</td>
+                    </tr>
+                </table>
+                <br>
+                <h2 class="t_tit2">디자인 예시</h2>
+                <div class="t_iframe">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FpivtACEXOWTN4xJmWkzKdV%2FUntitled%3Fnode-id%3D2%253A2"
+                        allowfullscreen></iframe>
+                </div>
+                <br>
+                <h2 class="t_tit2">HTML</h2>
+                <div class="t_code">
+<pre><code class="language-js">&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>구조 요소&lt;/title>
+&lt;/head>
+&lt;body>    
+    &lt;header>
+        &lt;h1>&lt;a href="#">반응형웹&lt;/a>&lt/h1>
+        &lt;nav>
+            &lt;ul>
+                &lt;li>&lt;a href="#">MENU01&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">MENU02&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">MENU03&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">MENU04&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">MENU05&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/nav>
+    &lt;/header>
+    &lt;div id="container">
+        &lt;section>
+            &lt;h2>콘텐츠 그룹01&lt;/h2>
+        &lt;/section>
+        &lt;section>
+            &lt;h2>콘텐츠 그룹02&lt;/h2>
+        &lt;/section>
+        &lt;article>
+            &lt;h2>주요기사&lt;/h2>
+        &lt;/article>
+        &lt;aside>광고&lt;/aside>
+    &lt;/div>
+    &lt;footer>
+        &lt;address>경기도 부천시 오정구 삼정동  032)674-5685  icoxpub@naver.com&lt;/address>
+        &lt;p>COPYRIGHT © ALL right reserved.&lt;/p>
+    &lt;/footer>
+&lt;/body>
+&lt;/html> 
+</code></pre>
+                </div>
+                <div class="t_iframe">
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled"
+                        src="https://codepen.io/damin0842/embed/abYQooa?default-tab=" frameborder="no" loading="lazy"
+                        allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/damin0842/pen/abYQooa">
+                            Untitled</a> by damin0842 (<a href="https://codepen.io/damin0842">@damin0842</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+                </div>
+                <br>
+                <h2 class="t_tit2">결과</h2>
+                <div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe
+                        src="https://damin0842.github.io/coding/javascript/study/structure2.html" frameborder="0"></iframe>
+                </div>
+                <div class="t_link"><a href="https://damin0842.github.io/coding/javascript/study/structure2.html"
+                        target="_blank" rel="noopener">원본 사이트 보기</a></div>
+            </div>
+            <!-- document -->
+    </main>
+</body>
+</html>

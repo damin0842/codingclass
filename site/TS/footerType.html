@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://webfontworld.github.io/PyeongChang/PyeongChangPeace.css" rel="stylesheet">
+    <style>
+        /* reset */
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dd,
+        dt,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        fieldset,
+        form,
+        legend,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        button,
+        image,
+        figure,
+        figcaption {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+        }
+
+
+        /* 시멘틱 태그 초기화 */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        /* 폰트 초기화 */
+        body,
+        button,
+        input,
+        select,
+        table,
+        text,
+        textarea {
+            color: #000;
+            font-family: 'Inter';
+        }
+
+        /* 링크 초기화 */
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* 목록 초기화 */
+        li,
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        /* 제목 초기화 */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+
+        /* 폰트 스타일 초기화 */
+        em,
+        address {
+            font-style: normal;
+        }
+
+        /* 이미지 초기화 */
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /* 보더 초기화 */
+        img,
+        fieldset,
+        button {
+            border: 0;
+        }
+
+        /* clearfix 클리어 픽스 */
+        .clearfix {
+            zoom: 1;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: block;
+            line-height: 0;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        /* 블라인드 효과 */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        /* 이미지 대체(ir) */
+        .ir {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* footer */
+
+        .footer__inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            height: 190px;
+            background: #F1F1F1;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .footer__title {
+            width: 30%;
+        }
+
+        .footer__title h2 {
+            font-family: 'PyeongChang Peace';
+            font-size: 45px;
+            font-weight: 700;
+            color: #f7cac9;
+            text-align: left;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            margin-bottom: 10px;
+        }
+
+        .footer__title p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: left;
+            color: #666;
+        }
+
+
+        .footer__menu {
+            width: 55%;
+            display: flex;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            justify-content: space-between;
+        }
+
+        .footer__menu h3 {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 20px;
+
+        }
+
+        .footer__menu li {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 5px;
+        }
+
+
+
+
+        @media(max-width:960px) {
+            .footer__title {
+                width: 100%;
+            }
+            .footer__title h2{
+                text-align: center;
+            }
+            .footer__title p{
+                text-align: center;
+
+            }
+            .footer__menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <footer id="footer__type">
+        <div class="footer__inner">
+            <div class="footer__title">
+                <h2>사뿐소품</h2>
+                <p>주소 | 경기도 안산시 단원구 고잔동 535-2</p>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <h3>사이트 정보</h3>
+                    <li><a href="#">브랜드스토리</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+                <ul>
+                    <h3>개인정보</h3>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                </ul>
+                <ul>
+                    <h3>고객센터</h3>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">자주하는 질문</a></li>
+                    <li><a href="#">1:1 상담</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

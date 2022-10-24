@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 연산자</title>    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascripts</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">자바스크립트 연산자</h2>
+            <p class="t_desc2">
+            프로그램에 필요한 수식을 만들 때 필요한 것이 연산자 입니다. <br>
+            자바스크립트에서 연산자에는 산술연산자, 대입연산자, 비교연산자, 논리연산자가 등이 있습니다.
+            </p>
+            <br>
+            <h3 class="t_tit2">산술 연산자</h3>
+            <p class="t_desc">
+                산술 연산자는 사칙연산을 다루는 기본적이면서도 가장 많이 사용되는 연산자입니다.
+            </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>산술 연산자 종류</th>
+                        <th>속성 설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="ce">+</td>
+                        <td>더하기 연산을 할 때 사용합니다.</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>문자와 문자, 문자와 변수 등을 연걸할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">-</td>
+                        <td>빼기 연산을 할 떄 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">*</td>
+                        <td>곱하기 연산을 할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">/</td>
+                        <td>몫을 구할 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">&</td>
+                        <td>나머지를 구할 때 사용 합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">++</td>
+                        <td>1씩 증가시킬 때 사용합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">--</td>
+                        <td>1씩 감소시킬 때 사용합니다.</td>
+                    </tr>
+                </tbody>
+            </table>   
+            <h3 class="t_tit2">대입 연산자</h3>
+            <p class="t_desc">
+                대입 연산자는 변수에 값을 대입할 때 사용하는 이항 연산자이며, <br>
+                피연산자들의 결합 방향은 오른쪽에서 왼쪽입니다. <br>
+                또한, 앞서 살펴본 산술 연산자와 결합한 다양한 복합 대입 연산자가 존재합니다.
+            </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>대입 연산자 종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">=</td>
+                        <td>왼쪽의 피연산자에 오른쪽의 피연산자를 대입함. <br>
+                            num = 1은 우변의 1값을 좌변의 num 변수에 대입(저장)합니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">+=</td>
+                        <td>왼쪽의 피연산자에 오른쪽의 피연산자를 더한 후, 
+                            그 결괏값을 왼쪽의 피연산자에 대입함. <br>
+                            num += 2는 num = num + 2와 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">-=</td>
+                        <td>왼쪽의 피연산자에서 오른쪽의 피연산자를 뺀 후, 
+                            그 결괏값을 왼쪽의 피연산자에 대입함. <br>
+                            num -= 2는 num = num - 2와 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">*=</td>
+                        <td>왼쪽의 피연산자에 오른쪽의 피연산자를 곱한 후, 
+                            그 결괏값을 왼쪽의 피연산자에 대입함. <br>
+                            num *= 2는 num = num * 2와 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">/=</td>
+                        <td>왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후, 
+                            그 결괏값을 왼쪽의 피연산자에 대입함. <br>
+                            num /= 2는 num = num / 2와 같습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">%=</td>
+                        <td>왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후, 
+                            그 나머지를 왼쪽의 피연산자에 대입함. <br>
+                            num %= 2는 num = num % 2와 같습니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="t_tit2">비교 연산자</h3>
+            <p class="t_desc">
+                비교 연산자는 피연산자 사이의 상대적인 크기를 판단하여, 
+                참(true)과 거짓(false)을 반환합니다. <br>
+                비교 연산자는 모두 두 개의 피연산자를 가지는 이항 연산자이며, 
+                피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다.
+            </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <th>산술 연산자 종류</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">></td>
+                        <td>a > b가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">&lt;</td>
+                        <td>a < b가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">>=</td>
+                        <td>a >= b가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce"><=</td>
+                        <td>a <= b가 참이면 true, 거짓이면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">==</td>
+                        <td>a == b, a와 b가 같으면 true, 같지않으면 false가 됩니다.
+                            <br>== 연산자의 경우 데이터 타입은 비교하지 않습니다.
+                            <br>->ex)5 == '5'는 true가 나옵니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">!=</td>
+                        <td>a != b, a와 b가 같지않으면 true, 같으면 false가 됩니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">===</td>
+                        <td>a === b, a와 b가 같고 데이터 타입도 같으면 true, 
+                            같지않으면 false가 됩니다.
+                            ->ex)5 ==='5'는 false가 나옵니다.</td>
+                    </tr><tr>
+                        <td class="ce">!==</td>
+                        <td>a !== b, a와 b가 같지 않거나 데이터 타입이 같지 않으면 true, 같으면 false가 됩니다.</td>
+                   
+                </tbody>
+            </table>
+            <br>
+            <p class="t_desc">
+                자바스크립트에서 비교 연산자는 피연산자의 타입에 따라 두 가지 기준으로 비교를 진행합니다. <br>
+                1. 피연산자가 둘 다 숫자면, 해당 숫자를 서로 비교합니다. <br>
+                2. 피연산자가 둘 다 문자열이면, 문자열의 첫 번째 문자부터 알파벳 순서대로 비교합니다.
+            </p>
+            <br>
+            <h4 class="t_tit3">동등 연산자와 일치 연산자</h4>
+            <p class="t_desc2">
+                동등 연산자(==, equal)와 일치 연산자(===, strict equal)는 모두 두 개의 피연산자가 서로 같은지를 비교해 줍니다. <br>
+                두 연산자 모두 피연산자의 타입을 가리지는 않지만, 그 같음을 정의하는 기준이 조금 다릅니다. <br>
+                동등 연산자(==)는 두 피연산자의 값이 서로 같으면 참(true)을 반환합니다. <br>
+                이때 두 피연산자의 타입이 서로 다르면, 비교를 위해 강제로 타입을 같게 변환합니다. <br>
+                하지만 일치 연산자(===)는 타입의 변환 없이 두 피연산자의 값이 같고, 타입도 같아야만 참(true)을 반환합니다.
+            </p>
+            <h3 class="t_tit2">논리 연산자</h3>
+            <p class="t_desc">
+                논리 연산자는 주어진 논리식을 판단하여, 참(true)과 거짓(false)을 결정하는 연산자입니다. <br>
+                AND 연산과 OR 연산은 두 개의 피연산자를 가지는 이항 연산자이며, <br> 
+                피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다. <br>
+                NOT 연산자는 피연산자가 단 하나뿐인 단항 연산자이며, <br>
+                피연산자의 결합 방향은 오른쪽에서 왼쪽입니다.
+            </p>
+            <table class="t_table">
+                <tr>
+                    <th>논리 연산자 종류</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td class="ce">&& (AND연산자)</td>
+                    <td>a&&b, a와 b 모두 trus(참)일 때 true(참)이 됩니다.
+                        <br>->true && true = true &nbsp;&nbsp;&nbsp; true && false = false
+                        <br>&nbsp;&nbsp;false && true = false &nbsp;&nbsp;&nbsp;
+                        false && false = false
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">|| (or연산자)</td>
+                    <td>a||b, a와 b중 하나만 true(참)이면 true(참)이 됩니다.
+                        <br>->true && true = true &nbsp;&nbsp;&nbsp; true && false = true
+                        <br>&nbsp;&nbsp;false && true = true &nbsp;&nbsp;&nbsp;
+                        false && false = false
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">! (NOT연산자)</td>
+                    <td>!a, a가 true이면 false, false이면 true로 바꾸어 줍니다.</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+   
+</body>
+</html>

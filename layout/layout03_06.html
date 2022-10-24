@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #body{
+            background-color: rgb(227, 236, 241);
+        }
+        #wrap{
+            margin: 0 auto;
+            width: 1200px;
+        }
+        #header{
+            height: 100px;
+            background-color: rgba(207, 234, 248, 0.932);
+        }
+        #nav{
+            height: 100px;
+            background-color: rgba(172, 220, 245, 0.932);
+        }
+        #main{
+            display: grid;
+            grid-template-areas:
+                "section aside aside"
+                "section bside bside"
+                "section cside cside";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 260px 260px 260px;
+
+        }
+        #section{
+            grid-area: section;
+            background-color: rgba(129, 204, 241, 0.932);
+        }
+        #aside{
+            grid-area: aside;
+            background-color: rgba(93, 193, 243, 0.932);
+        }
+        #bside{
+            grid-area: bside;
+            background-color: rgba(59, 181, 241, 0.932);
+        }
+        #cside{
+            grid-area: cside;
+            background-color: rgba(32, 169, 238, 0.932);
+        }
+        #footer{
+            height: 100px;
+            background-color: rgba(23, 91, 236, 0.932);
+        }
+        @media (max-width:1300px){
+            #wrap{
+                width: 96%;
+            }
+            #main{
+            grid-template-areas:
+                "section aside aside"
+                "section bside cside"
+                "section bside cside";
+            grid-template-columns: 30% 35% 35%;
+            grid-template-rows: 260px 520px;
+            }
+        }
+        @media (max-width:768px){
+            #wrap{
+                width: 100%;
+            }
+            #main{
+                grid-template-areas:
+                "section aside"
+                "section bside";
+                grid-template-columns: 30% 70% ;
+                grid-template-rows: 390px 390px;
+            }
+        }
+        @media (max-width:480px){
+            #main{
+                grid-template-areas:
+                "section"
+                "aside"
+                "bside";
+                grid-template-columns: 100%;
+                grid-template-rows: 200px 430px 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="main">
+            <div id="section"></div>
+            <div id="aside"></div>
+            <div id="bside"></div>
+            <div id="cside"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
