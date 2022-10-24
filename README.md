@@ -72,6 +72,6 @@ https://damin0842.github.io/codingclass/animation/svg.html
 https://damin0842.github.io/codingclass/animation/css.html
 
 ## MYSQL   
-https://damin0842.github.io/codingclass/javascript/sql/index.html
+https://damin0842.github.io/codingclass/sql/index.html
 
    
