@@ -1,4 +1,4 @@
-# codingclass   
+# github  
 https://damin0842.github.io/codingclass/
    
 # dothome
