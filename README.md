@@ -13,13 +13,10 @@ https://damin0842.github.io/codingclass/html/alphabet.html
 https://damin0842.github.io/codingclass/css/index.html
 
 ##SITE1   
-https://damin0842.github.io/codingclass/site/index.html
+https://damin0842.github.io/codingclass/site/site1/index.html
 
 ##SITE2   
-https://damin0842.github.io/codingclass/site1/index.html
-
-##SITE3   
-https://damin0842.github.io/codingclass/site2/index.html
+https://damin0842.github.io/codingclass/site/site2/index.html
 
 ##게임 이펙트   
 https://damin0842.github.io/codingclass/javascript/effect/gameEffect01.html
