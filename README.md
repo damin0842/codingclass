@@ -1,6 +1,4 @@
-# codingclass
-
-##클래스   
+# codingclass   
 https://damin0842.github.io/codingclass/
 
 ##자바 스크립트   
