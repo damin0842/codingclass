@@ -65,4 +65,13 @@ https://damin0842.github.io/codingclass/javascript/effect/sliderEffect05.html
 https://damin0842.github.io/codingclass/javascript/effect/sliderEffect06.html
 https://damin0842.github.io/codingclass/javascript/effect/sliderEffect07.html
 
+## SVG Animation
+https://damin0842.github.io/codingclass/animation/svg.html
+
+## CSS Animation   
+https://damin0842.github.io/codingclass/animation/css.html
+
+## MYSQL   
+https://damin0842.github.io/codingclass/javascript/sql/index.html
+
    
