@@ -1,7 +1,7 @@
 # class
-https://damin0842.github.io/codingclass/
-https://gdami.netlify.app
-http://gdami.dothome.co.kr/codingclass/index.html
+https://damin0842.github.io/codingclass/   
+https://gdami.netlify.app   
+http://gdami.dothome.co.kr/codingclass/index.html   
    
 ## 자바 스크립트   
 https://damin0842.github.io/codingclass/javascript/index.html
