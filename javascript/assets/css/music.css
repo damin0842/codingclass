@@ -1,219 +1,214 @@
-.music__wrap{}
-.music__inner{
-    width: 450px;
-    background: #000;
-    position: absolute;
-    right: 100px;
-    top: 100px;
-    padding: 10px;
-    padding-top: 0;
+.music__wrap {
 }
-.music__header{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
+.music__inner {
+  width: 450px;
+  background: #000;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  padding: 10px;
+  padding-top: 0;
 }
-.music__header h2{
-    font-size: 14px;
+.music__header {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
 }
-.music__contents{
-    background: #c4c4c4;
-    width: 100%;
+.music__header h2 {
+  font-size: 14px;
 }
-.music__view{
-    display: flex;
-    padding: 20px;
+.music__contents {
+  background: #c4c4c4;
+  width: 100%;
 }
-.music__view .img{
-    width: 30%;
+.music__view {
+  display: flex;
+  padding: 20px;
 }
-.music__view .img img{
-    width: 100%;
-    border: 4px dashed #000;
-    border-radius: 50%;
+.music__view .img {
+  width: 30%;
 }
-.music__view .title{
-    width: 70%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.music__view .img img {
+  width: 100%;
+  border: 4px dashed #000;
+  border-radius: 50%;
 }
-.music__view .title h3{
-    font-size: 30px;
-    line-height: 1.2;
-    margin-bottom: 5px;
+.music__view .title {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.music__view .title h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 5px;
 }
 .music__view .title p {
-    margin-top: 10px;
-    color: #4055e1;
-    text-transform: uppercase;
-    font-weight: 600;
+  margin-top: 10px;
+  color: #4055e1;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.music__control{
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-    padding-top: 0;
+.music__control {
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  padding-top: 0;
 }
 
 .music__control .progress {
-    width: 100%;
-    height: 6px;
-    background: #000;
-    border-radius: 5px;
+  width: 100%;
+  height: 6px;
+  background: #000;
+  border-radius: 5px;
 }
 .music__control .progress .bar {
-    width: 0;
-    height: inherit;
-    background: #7fff5b;
-    border-radius: 5px;
+  width: 0;
+  height: inherit;
+  background: #7fff5b;
+  border-radius: 5px;
 }
 .music__control .progress .timer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3px;
 }
 .music__control .control {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 .music__control .control i:hover {
-    background-color: #fff !important;
-    padding: 10px;
-    display: inline-block;
+  background-color: #fff !important;
+  padding: 10px;
+  display: inline-block;
 }
 .music__control .control .repeat {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 144px;
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 144px;
 }
 .music__control .control .repeat_one {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 96px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 96px;
 }
 .music__control .control .shuffle {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 48px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 48px;
 }
 .music__control .control .prev {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 288px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 288px;
 }
 .music__control .control .play {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 0;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 0;
 }
 .music__control .control .next {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 240px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 240px;
 }
 
 .music__control .control .stop {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 336px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 336px;
 }
 .music__control .control .list {
-    height: 48px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 192px;
-
+  height: 48px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 192px;
 }
 
-.music__footer{
-    background: #c4c4c4;
+.music__footer {
+  background: #c4c4c4;
 }
-.music__footer.hide{
-    display: none;
+.music__footer.hide {
+  display: none;
 }
-.music__footer.show{
-    display: block;
+.music__footer.show {
+  display: block;
 }
 
-.music__list{
-    padding: 20px;
-    
-
+.music__list {
+  padding: 20px;
 }
 .music__list ul {
-    max-height: 400px;
-    overflow-y: scroll;
+  max-height: 400px;
+  overflow-y: scroll;
 }
-.music__list ul.hide{
-    display: none;
+.music__list ul.hide {
+  display: none;
 }
-.music__list ul.show{
-    display: block;
+.music__list ul.show {
+  display: block;
 }
-.music__list h3{
-    font-size: 24px;
-    border-top: 4px solid #000;
-    
+.music__list h3 {
+  font-size: 24px;
+  border-top: 4px solid #000;
 }
-.music__list h3 .list{
-    display: inline-block;
-    height: 24px;
-    width: 48px;
-    background: url(../img/consol.png);
-    background-position: 192px;
-    margin-left: 5px;
-    vertical-align: -5px;
-    margin-top: 20px;
-    
-
+.music__list h3 .list {
+  display: inline-block;
+  height: 24px;
+  width: 48px;
+  background: url(../img/consol.png);
+  background-position: 192px;
+  margin-left: 5px;
+  vertical-align: -5px;
+  margin-top: 20px;
 }
 
 .music__list li {
-    position: relative;
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-    list-style: none;
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+  list-style: none;
 }
-.music__list li.playing{
-    color: #e14058;
+.music__list li.playing {
+  color: #e14058;
 }
-.music__list li strong{
-    display: block;
+.music__list li strong {
+  display: block;
 }
 .music__list li em {
-    font-style: normal;
-    font-size: 16px;
-    position: absolute;
-    left: 0;
-    top: 40px;
+  font-style: normal;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 40px;
 }
-.music__list li span{
-    position: absolute;
-    right: 0;
-    top: 40px;
+.music__list li span {
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
 
+#volume-control {
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+  width: 8px;
+  height: 100px;
+  padding: 0 5px;
 }
