@@ -327,3 +327,9 @@ const audioVolume = document.getElementById("volume-control");
 audioVolume.addEventListener("change", function (e) {
   audio.volume = this.value / 10;
 });
+
+const musicIcon = document.querySelector(".music__wrap");
+const musicIconBtn = document.querySelector(".icon6");
+musicIconBtn.addEventListener("click", () => {
+  musicIcon.classList.toggle("show");
+});

@@ -1,0 +1,6 @@
+.search__wrap {
+  display: none;
+}
+.search__wrap.show {
+  display: block;
+}

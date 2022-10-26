@@ -1,4 +1,8 @@
 .music__wrap {
+  display: none;
+}
+.music__wrap.show {
+  display: block;
 }
 .music__inner {
   width: 450px;
