@@ -1,9 +1,7 @@
-# github  
-https://damin0842.github.io/codingclass/
-   
-# dothome
-http://gdami.dothome.co.kr/codingclass/index.html
-   
+# class
+https://damin0842.github.io/codingclass/   
+https://gdami.netlify.app   
+http://gdami.dothome.co.kr/codingclass/index.html   
    
 ## 자바 스크립트   
 https://damin0842.github.io/codingclass/javascript/index.html
@@ -19,6 +17,10 @@ https://damin0842.github.io/codingclass/site/site1/index.html
 
 ## SITE2   
 https://damin0842.github.io/codingclass/site/site2/index.html
+
+## SITE3   
+http://sabbun.dothome.co.kr/sabbun/main/main.php   
+http://gdami.dothome.co.kr/sabbun/main/main.php   
 
 ## 게임 이펙트   
 https://damin0842.github.io/codingclass/javascript/effect/gameEffect01.html
@@ -73,5 +75,9 @@ https://damin0842.github.io/codingclass/animation/svg.html
 https://damin0842.github.io/codingclass/animation/css.html
 
 ## MYSQL   
+<<<<<<< HEAD
 https://damin0842.github.io/codingclass/sql/index.html git
 
+=======
+https://damin0842.github.io/codingclass/sql/index.html   
+>>>>>>> c2e450c73adebccbc686fd8d4b7f4e0fb6907741
