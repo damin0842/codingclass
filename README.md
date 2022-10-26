@@ -75,5 +75,3 @@ https://damin0842.github.io/codingclass/animation/css.html
 ## MYSQL   
 https://damin0842.github.io/codingclass/sql/index.html git
 
-   
-asdasfasdasdasd
