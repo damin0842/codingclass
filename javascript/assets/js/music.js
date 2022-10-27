@@ -325,7 +325,8 @@ window.addEventListener("load", () => {
 const audioVolume = document.getElementById("volume-control");
 
 audioVolume.addEventListener("change", function (e) {
-  audio.volume = this.value / 10;
+  musicAudio.volume = this.value / 10;
+  console.log(musicAudio.volume);
 });
 
 const musicIcon = document.querySelector(".music__wrap");

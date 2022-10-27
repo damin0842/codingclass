@@ -1,123 +1,122 @@
-
 @font-face {
-    font-family: 'LABDigital';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf') format("truetype");
-    font-display: swap;
+  font-family: "LABDigital";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf")
+      format("truetype");
+  font-display: swap;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'LABDigital';
-    cursor: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "LABDigital";
+  cursor: none;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #header {
-    position: fixed;
-    width: 100%;
-    background: #011d3f;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-
+  position: fixed;
+  width: 100%;
+  background: #011d3f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 #header h1 {
-    font-size: 20px;
-    color: #fff;
-    padding: 5px;
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
 }
 
 #header .time {
-    color: #fff;
+  color: #fff;
 }
 
 .icon1 {
-    position: absolute;
-    top: 100px;
-    left: 100px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
 .icon2 {
-    position: absolute;
-    top: 100px;
-    left: 200px;
+  position: absolute;
+  top: 100px;
+  left: 200px;
 }
 .icon3 {
-    position: absolute;
-    top: 100px;
-    left: 300px;
+  position: absolute;
+  top: 100px;
+  left: 300px;
 }
 .icon4 {
-    position: absolute;
-    top: 100px;
-    left: 400px;
+  position: absolute;
+  top: 100px;
+  left: 400px;
 }
 .icon5 {
-    position: absolute;
-    top: 100px;
-    left: 500px;
+  position: absolute;
+  top: 100px;
+  left: 500px;
 }
 .icon6 {
-    position: absolute;
-    top: 100px;
-    left: 600px;
+  position: absolute;
+  top: 100px;
+  left: 600px;
 }
-
 
 .icon img {
-    width: 50px;
+  width: 50px;
 }
 
-
 .icon span {
-    display: block;
-    background: #000;
-    color: #fff;
-    font-size: 14px;
-    padding: 2px;
-    white-space: nowrap;
-    text-align: center;
-
+  display: block;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 2px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #011d3f;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    color: #fff;
-    text-align: center;
-
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #011d3f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  color: #fff;
+  text-align: center;
 }
 
-#footer .agent {}
+#footer .agent {
+}
 
 .mouse__cursor {
-    position: absolute;
-    left: 0;
-    top: 0;
-    user-select: none;
-    pointer-events: none;
-    z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  user-select: none;
+  pointer-events: none;
+  z-index: 100;
 }
-.mouse__cursor img{
-    width: 100%;
+.mouse__cursor img {
+  width: 100%;
 }
