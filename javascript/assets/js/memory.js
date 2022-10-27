@@ -47,6 +47,7 @@ function matchCards(img1, img2) {
   if (img1 == img2) {
     matchedCard++;
     //일치하는 경우
+
     soundMatch.play();
 
     if (matchedCard == 8) {
