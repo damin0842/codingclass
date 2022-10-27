@@ -1,3 +1,5 @@
+https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181
+
 # class
 https://damin0842.github.io/codingclass/   
 https://gdami.netlify.app   
