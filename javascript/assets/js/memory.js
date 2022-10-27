@@ -100,8 +100,15 @@ function shuffledCard() {
     imgTag.src = `../assets/img/img${arr[index]}.svg`;
   });
 }
-shuffledCard();
 // 카드 클릭
 memoryCards.forEach((card) => {
   card.addEventListener("click", flipCard);
+});
+
+// 메모리 아이콘 클릭
+const memoryIcon = document.querySelector(".memory__wrap");
+const memoryIconBtn = document.querySelector(".icon2");
+memoryIconBtn.addEventListener("click", () => {
+  memoryIcon.classList.toggle("show");
+  shuffledCard();
 });

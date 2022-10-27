@@ -1,4 +1,8 @@
 .memory__wrap {
+  display: none;
+}
+.memory__wrap.show {
+  display: block;
 }
 .memory__inner {
   width: 700px;
@@ -52,7 +56,7 @@
   transform: rotateY(0);
 }
 .memory__card .cards li.shakeX {
-  animation: shakeX 1s 1;
+  animation: shakeX 0.5s 1;
 }
 .memory__card .cards li.shakeY {
   animation: shakeY 1s 1;
@@ -69,10 +73,10 @@
     box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #08f,
       inset 0 0 2rem #08f, 0 0 4rem #08f, inset 0 0 4rem #08f;
   }
-  20%,
+  /* 20%,
   55% {
     box-shadow: none;
-  }
+  } */
 }
 
 @keyframes shakeX {
