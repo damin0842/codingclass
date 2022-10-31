@@ -13,11 +13,13 @@ let sound = [
   "../assets/audio/match.mp3",
   "../assets/audio/unmatch.mp3",
   "../assets/audio/up.mp3",
+  "../assets/audio/Jeremy_Black.mp3",
 ];
 
-let soundMatch = new Audio(sound[0]);
-let soundUnMatch = new Audio(sound[1]);
+let soundMatch = new Audio(sound[1]);
+let soundUnMatch = new Audio(sound[0]);
 let soundUnSuccess = new Audio(sound[2]);
+let soundBG = new Audio(sound[3]);
 
 // 카드 뒤집기
 function flipCard(e) {
@@ -81,6 +83,7 @@ function shuffledCard() {
   cardOne = cardTwo = "";
   disableDeck = false;
   matchedCard = 0;
+  soundBG.play();
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
