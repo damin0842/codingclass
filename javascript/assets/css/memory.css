@@ -25,6 +25,9 @@
   padding: 10px;
   z-index: 1;
 }
+.memory__box.hide {
+  display: none;
+}
 .memory__box ul {
   margin-bottom: 50px;
 }

@@ -53,9 +53,9 @@ function matchCards(img1, img2) {
     soundMatch.play();
 
     if (matchedCard == 8) {
-      alert("게임오버");
+      alert("클리어");
       soundBG.pause();
-      shuffledCard();
+      memoryBox.classList.remove("hide");
     }
 
     cardOne.removeEventListener("click", flipCard);
@@ -115,5 +115,11 @@ const memoryIcon = document.querySelector(".memory__wrap");
 const memoryIconBtn = document.querySelector(".icon2");
 memoryIconBtn.addEventListener("click", () => {
   memoryIcon.classList.toggle("show");
+});
+
+const memoryBox = document.querySelector(".memory__box");
+const startBtn = document.querySelector(".memory__box .start");
+startBtn.addEventListener("click", () => {
+  memoryBox.classList.toggle("hide");
   shuffledCard();
 });
