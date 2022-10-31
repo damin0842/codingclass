@@ -7,11 +7,11 @@
     <title>사이트 만들기1</title>
     <style>
       body {
-          -ms-overflow-style: none;
-        }
-        ::-webkit-scrollbar {
-          display: none;
-        }
+        -ms-overflow-style: none;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
     </style>
     <!-- SEO -->
     <meta name="author" content="webstoryboy" />
@@ -51,7 +51,7 @@
 
     <!-- skip -->
     <header id="headerType" class="header__wrap nexon">
-      <div class="header__inner">
+      <div class="header__inner container">
         <div class="header__logo">
           <a href="">web<em>site</em></a>
         </div>
@@ -78,7 +78,7 @@
     <main id="main">
       <section id="sliderType" class="slider__wrap">
         <h2 class="blind">슬라이드 영역</h2>
-        <div class="slider__inner">
+        <div class="slider__inner container">
           <!-- Swiper -->
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -170,7 +170,8 @@
               그 동안 배웠던 내용들을 포폴에 잘 표현해 놓는게 실력이다.
             </p>
             <a class="image__btn yellow" href="#" title="자세히 보기"
-              >자세히 보기</a>
+              >자세히 보기</a
+            >
           </article>
         </div>
       </section>
@@ -305,7 +306,7 @@
       <!-- cardType -->
       <section id="bannerType" class="banner__wrap nexon">
         <h2 class="blind">배너 영역</h2>
-        <div class="banner__inner">
+        <div class="banner__inner container">
           <h3 class="title">유튜버 찾아보기</h3>
           <p class="desc">
             더 다양한 강의는 유튜브를 통해 제공하고 있습니다
@@ -458,41 +459,39 @@
       const btnmenu = document.querySelector(".header__menu");
       const btnmenulist = btnmenu.querySelectorAll("ul li a");
 
-      btnstart.style.display= "none";
+      btnstart.style.display = "none";
 
       btnstop.addEventListener("click", () => {
         swiper.autoplay.stop();
-        btnstart.style.display= "block";
-        btnstop.style.display= "none";
-
+        btnstart.style.display = "block";
+        btnstop.style.display = "none";
       });
       btnstart.addEventListener("click", () => {
         swiper.autoplay.start();
-        btnstart.style.display= "none";
-        btnstop.style.display= "block";
-
+        btnstart.style.display = "none";
+        btnstop.style.display = "block";
       });
-      btnham.addEventListener("click",()=>{
+      btnham.addEventListener("click", () => {
         btnham.classList.toggle("active");
-      })
+      });
 
-      btnham.addEventListener("click",()=>{
+      btnham.addEventListener("click", () => {
         btnmenu.classList.toggle("overlay");
         document.body.classList.toggle("fixed");
-      })
+      });
 
-      btnmenulist.forEach((list)=>{
-        list.addEventListener("click",()=>{
+      btnmenulist.forEach((list) => {
+        list.addEventListener("click", () => {
           document.body.classList.remove("fixed");
           btnmenu.classList.remove("overlay");
           btnham.classList.remove("active");
-        })
+        });
       });
 
       //크기가 커지면 클래스 리무브
       window.addEventListener("resize", () => {
         let width = window.innerWidth;
-        if(width > 1300){
+        if (width > 1300) {
           document.body.classList.remove("fixed");
           btnmenu.classList.remove("overlay");
           btnham.classList.remove("active");
