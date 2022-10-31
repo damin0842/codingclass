@@ -54,6 +54,7 @@ function matchCards(img1, img2) {
 
     if (matchedCard == 8) {
       alert("게임오버");
+      soundBG.pause();
       shuffledCard();
     }
 
