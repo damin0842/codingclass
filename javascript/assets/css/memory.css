@@ -15,6 +15,24 @@
   border-radius: 20px;
   animation: flicker 1.5s infinite alternate;
 }
+.memory__box {
+  position: absolute;
+  font-size: 4vw;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  z-index: 1;
+}
+.memory__box ul {
+  margin-bottom: 50px;
+}
+.memory__box > .start {
+  text-align: center;
+  background-color: #08f;
+  cursor: pointer;
+}
 .memory__card {
   padding: 30px;
 }
