@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax_Apple</title>
+    <link
+      href="https://webfontworld.github.io/earlyfont/EF_Macho.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "EF_Macho";
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .fixed {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .scrollTop {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        line-height: 40px;
+        z-index: 1000;
+        font-weight: 800;
+      }
+      /* layout */
+      #contents {
+      }
+      #section1 {
+        height: 10500px;
+      }
+      #section2 {
+      }
+      #section3 {
+      }
+      #section4 {
+      }
+      #section5 {
+      }
+      #section6 {
+      }
+      /* sec1 */
+      .sec1_text1 {
+        font-size: 8vw;
+        white-space: nowrap;
+      }
+      .sec1_text2 {
+        font-size: 8vw;
+        white-space: nowrap;
+      }
+      .sec1_text3 {
+        width: 100%;
+        height: 100vh;
+        background: url(https://images.unsplash.com/photo-1667228339040-38a7dbb224f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+        background-size: cover;
+        background-position: 100%;
+      }
+      .sec1_text4 {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+        background: #1695ff;
+        color: #fff;
+        text-align: center;
+        line-height: 50vw;
+        font-size: 8vw;
+      }
+
+      .sec1_text5 {
+        width: 100%;
+        height: 100vh;
+        background: #1695ff;
+      }
+      .sec1_text5 .stepbox {
+        width: 800px;
+        height: 600px;
+        background: url(../../animation/img/gunslinger2.jpg);
+        border-radius: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: ani 1s steps(24, start) infinite;
+      }
+      .sec1_text5 .stepbox.start {
+        animation-play-state: running;
+      }
+      .sec1_text5 .stepbox.stop {
+        animation-play-state: paused;
+      }
+      @keyframes ani {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -19200px 0;
+        }
+      }
+
+      .sec1_text6 > div {
+        white-space: nowrap;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 4vw;
+        color: #fff;
+      }
+
+      .sec1_text7 > h1 {
+        font-size: 20px;
+        min-width: 11px;
+        white-space: nowrap;
+        margin: 0;
+        position: fixed;
+        color: transparent;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .sec1_text7 > h1::before {
+        content: "감사합니다.";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        overflow: hidden;
+        border-right: 1px solid black;
+        animation: typing 5s steps(31) infinite;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0%;
+        }
+        50% {
+          width: 100%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrollTop">0</div>
+    <div id="contents">
+      <section id="section1">
+        <div class="sec1">
+          <div
+            class="sec1_text1 fixed"
+            data-0="top:50%; opacity:1;"
+            data-550="top:30%; opacity:0;"
+          >
+            안녕하세요!
+          </div>
+          <div
+            class="sec1_text2 fixed"
+            data-500="top:70%; opacity:0; transform:translate(-50%, -50%) scale(1);"
+            data-1000="top:50%; opacity:1; transform:translate(-50%, -50%) scale(1);"
+            data-1500="top:50%; opacity:1; transform:translate(-50%, -50%) scale(0);"
+            data-4500="top:50%; opacity:0; transform:translate(-50%, -50%) scale(0);"
+          >
+            프론트앤드 개발자 <br />
+            Jin da-min입니다.
+          </div>
+          <div
+            class="sec1_text3 fixed"
+            data-1300="width:0%; transform: translate(-50%, -50%) rotate(180deg); "
+            data-2300="width:100%; transform: translate(-50%, -50%) rotate(0);"
+          ></div>
+          <div
+            class="sec1_text4 fixed"
+            data-2000=" transform: translate(-50%, -50%) scale(0) rotate(-720deg);"
+            data-3000=" transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+            data-4300=" transform: translate(-50%, -50%) scale(4) rotate(720deg);"
+            data-5300=" transform: translate(-50%, -50%) scale(0) rotate(720deg);"
+          >
+            HELLO🐱‍🏍
+          </div>
+          <div
+            class="sec1_text5 fixed"
+            data-3000="opacity:0;"
+            data-4300="opacity:1;"
+            data-8000="opacity:1;"
+            data-10000="opacity:0;"
+          >
+            <div
+              class="stepbox"
+              data-3000="opacity:0; transform: translate(-200%, -50%);"
+              data-4300="opacity:1; transform: translate(-200%, -50%);"
+              data-9000="opacity:1; transform: translate(150%, -50%);"
+            ></div>
+          </div>
+          <div
+            class="sec1_text6 fixed"
+            data-4000="opacity:0;"
+            data-5000="opacity:1;"
+          >
+            <div
+              data-5000="transform: translate(270%) scale(1); top:-300px;"
+              data-8600="transform: translate(-230%) scale(2); top:-300px;"
+            >
+              어떤 일이라도 노력하고 즐기면 그 결과는 빛을 발한다고 생각합니다.
+              어려움도 있었지만 배우는 즐거움이 컸으며, 노력으로 극복하고자
+              하였습니다.
+            </div>
+            <div
+              data-5000="transform: translate(240%) scale(1);"
+              data-8800="transform: translate(-310%) scale(6);"
+            >
+              꾸준함과 성실함은 저의 강점입니다. 처음 해보는 일엔 적응이
+              느리지만 성실함으로 극복해 주변으로부터 줄곧 좋은 평가를
+              받아왔습니다.
+            </div>
+            <div
+              data-5000="transform: translate(330%) scale(1); top:300px;"
+              data-9000="transform: translate(-270%) scale(2); top:300px;"
+            >
+              개발 역시 현재는 미약할지 모르나 계속해서 저를 다듬어 좋은
+              개발자가 되도록 노력하겠습니다. 앞으로도 배움을 놓지 않는 개발자가
+              되겠습니다.
+            </div>
+          </div>
+
+          <div
+            class="sec1_text7 fixed"
+            data-8000="transform: translate(-50%, -50%) scale(0);"
+            data-9000="transform: translate(-50%, -50%) scale(1);"
+            data-10000="transform: translate(-50%, -50%) scale(3);"
+          >
+            <h1>감사합니다.</h1>
+          </div>
+        </div>
+      </section>
+      <!-- //section1 -->
+
+      <section id="section2">
+        <div class="sec2">
+          <div class="sec2_text1 fixed"></div>
+        </div>
+      </section>
+      <!-- //section2 -->
+      <section id="section3"></section>
+      <!-- //section3 -->
+      <section id="section4"></section>
+      <!-- //section4 -->
+      <section id="section5"></section>
+      <!-- //section5 -->
+      <section id="section6"></section>
+      <!-- //section6 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    ;
+    <script>
+      let s = skrollr.init();
+      //재귀함수
+
+      function scroll() {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+        document.querySelector(".sec1_text1").style.marginLeft =
+          scrollTop + "px";
+
+        requestAnimationFrame(scroll);
+      }
+      scroll();
+    </script>
+  </body>
+</html>

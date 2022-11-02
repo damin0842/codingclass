@@ -1738,7 +1738,7 @@ const searchList = document.querySelector(".search__list");
 const searchScoreTotal = document.querySelector(".search__info .num");
 const searchRestart = document.querySelector(".search__result .restart");
 
-let timeReamining = 5, //남은 시간
+let timeReamining = 120, //남은 시간
   timeInterval = "",
   score = 0, //점수
   answers = {}; //새로운 정답

@@ -15,6 +15,22 @@
   border-radius: 20px;
   animation: flicker 1.5s infinite alternate;
 }
+.memory__score {
+  top: 5px;
+  right: 40px;
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0;
+}
+.memory__time {
+  top: 5px;
+  left: 40px;
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0;
+}
 .memory__box {
   position: absolute;
   font-size: 40px;
@@ -24,6 +40,7 @@
   color: #fff;
   padding: 10px;
   z-index: 1;
+  border-radius: 20px;
 }
 .memory__box.hide {
   display: none;
@@ -33,8 +50,10 @@
 }
 .memory__box > .start {
   text-align: center;
-  background-color: #08f;
   cursor: pointer;
+}
+.start:hover {
+  background-color: #08f;
 }
 .memory__card {
   padding: 30px;

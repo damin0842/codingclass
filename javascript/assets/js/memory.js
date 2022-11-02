@@ -4,10 +4,15 @@
 
 const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
+const memoryScoreBoard = document.querySelector(".memory__score");
+const memoryTimeBoard = document.querySelector(".memory__time");
 
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0;
+let unMatchedCard = 0;
+let memoryScore = 0;
+let memoryTime = 5;
 
 let sound = [
   "../assets/audio/match.mp3",
@@ -20,6 +25,10 @@ let soundMatch = new Audio(sound[1]);
 let soundUnMatch = new Audio(sound[0]);
 let soundUnSuccess = new Audio(sound[2]);
 let soundBG = new Audio(sound[3]);
+
+function scoreResult() {
+  memoryScoreBoard.innerHTML = "Score " + memoryScore;
+}
 
 // 카드 뒤집기
 function flipCard(e) {
@@ -48,6 +57,8 @@ function flipCard(e) {
 function matchCards(img1, img2) {
   if (img1 == img2) {
     matchedCard++;
+    memoryScore += 12.5;
+    scoreResult();
     //일치하는 경우
 
     soundMatch.play();
@@ -64,17 +75,21 @@ function matchCards(img1, img2) {
     disableDeck = false;
   } else {
     //일치하지 않는 경우(틀린음악. 이미지가 좌우로 흔들림)
+    unMatchedCard++;
+    memoryScore -= 12.5;
+    scoreResult();
+
     setTimeout(() => {
       cardOne.classList.add("shakeX");
       cardTwo.classList.add("shakeX");
-    }, 300);
+    }, 500);
 
     setTimeout(() => {
       cardOne.classList.remove("shakeX", "flip");
       cardTwo.classList.remove("shakeX", "flip");
       cardOne = cardTwo = "";
       disableDeck = false;
-    }, 1000);
+    }, 1500);
     soundUnMatch.play();
   }
 }
@@ -84,7 +99,11 @@ function shuffledCard() {
   cardOne = cardTwo = "";
   disableDeck = false;
   matchedCard = 0;
+
+  unMatchedCard = 0;
+  memoryScore = 0;
   soundBG.play();
+  scoreResult();
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -104,6 +123,22 @@ function shuffledCard() {
     let imgTag = card.querySelector(".back img");
     imgTag.src = `../assets/img/img${arr[index]}.svg`;
   });
+
+  memoryTime = 40;
+  const timelimit = setInterval(() => {
+    memoryTime--;
+    memoryTimeBoard.innerHTML = "Time " + memoryTime;
+    if (memoryTime == 0) {
+      alert("게임오버");
+      memoryBox.classList.remove("hide");
+      clearInterval(timelimit);
+    }
+  }, 1000);
+}
+if (memoryTime == 0) {
+  alert("게임오버");
+  shuffledCard();
+  memoryBox.classList.remove("hide");
 }
 // 카드 클릭
 memoryCards.forEach((card) => {
@@ -115,6 +150,7 @@ const memoryIcon = document.querySelector(".memory__wrap");
 const memoryIconBtn = document.querySelector(".icon2");
 memoryIconBtn.addEventListener("click", () => {
   memoryIcon.classList.toggle("show");
+  //memoryBox.classList.remove("hide");
 });
 
 const memoryBox = document.querySelector(".memory__box");
@@ -123,3 +159,8 @@ startBtn.addEventListener("click", () => {
   memoryBox.classList.toggle("hide");
   shuffledCard();
 });
+
+// function timeStop() {
+//   clearInterval(timelimit);
+// }
+// timeStop();
