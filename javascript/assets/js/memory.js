@@ -12,7 +12,7 @@ let disableDeck = false;
 let matchedCard = 0;
 let unMatchedCard = 0;
 let memoryScore = 0;
-let memoryTime = 5;
+let memoryTime = 40;
 
 let sound = [
   "../assets/audio/match.mp3",
@@ -64,9 +64,7 @@ function matchCards(img1, img2) {
     soundMatch.play();
 
     if (matchedCard == 8) {
-      alert("클리어");
-      soundBG.pause();
-      memoryBox.classList.remove("hide");
+      gameOver();
     }
 
     cardOne.removeEventListener("click", flipCard);
@@ -98,12 +96,6 @@ function matchCards(img1, img2) {
 function shuffledCard() {
   cardOne = cardTwo = "";
   disableDeck = false;
-  matchedCard = 0;
-
-  unMatchedCard = 0;
-  memoryScore = 0;
-  soundBG.play();
-  scoreResult();
 
   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
@@ -129,16 +121,9 @@ function shuffledCard() {
     memoryTime--;
     memoryTimeBoard.innerHTML = "Time " + memoryTime;
     if (memoryTime == 0) {
-      alert("게임오버");
-      memoryBox.classList.remove("hide");
-      clearInterval(timelimit);
+      gameOver();
     }
   }, 1000);
-}
-if (memoryTime == 0) {
-  alert("게임오버");
-  shuffledCard();
-  memoryBox.classList.remove("hide");
 }
 // 카드 클릭
 memoryCards.forEach((card) => {
@@ -155,12 +140,25 @@ memoryIconBtn.addEventListener("click", () => {
 
 const memoryBox = document.querySelector(".memory__box");
 const startBtn = document.querySelector(".memory__box .start");
+
 startBtn.addEventListener("click", () => {
   memoryBox.classList.toggle("hide");
   shuffledCard();
+  soundBG.play();
+  matchedCard = 0;
+  unMatchedCard = 0;
+  memoryScore = 0;
+  clearInterval(timelimit);
+  scoreResult();
 });
 
-// function timeStop() {
-//   clearInterval(timelimit);
-// }
-// timeStop();
+function gameOver() {
+  memoryBox.classList.remove("hide");
+  alert("게임오버");
+  clearInterval(timelimit);
+  soundBG.pause();
+  matchedCard = 0;
+  unMatchedCard = 0;
+  memoryScore = 0;
+  scoreResult();
+}
