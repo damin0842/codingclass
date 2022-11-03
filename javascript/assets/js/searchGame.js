@@ -1,8 +1,4 @@
-const searchIcon = document.querySelector(".search__wrap");
-const searchIconBtn = document.querySelector(".icon5");
-searchIconBtn.addEventListener("click", () => {
-  searchIcon.classList.toggle("show");
-});
+
 
 const cssProperty = [
   {
@@ -1737,9 +1733,28 @@ const searchTime = document.querySelector(".time span");
 const searchList = document.querySelector(".search__list");
 const searchScoreTotal = document.querySelector(".search__info .num");
 const searchRestart = document.querySelector(".search__result .restart");
+const searchWrap = document.querySelector(".search__wrap");
+
+
+//서치 아이콘 클릭
+const searchIconBtn = document.querySelector(".icon5");
+searchIconBtn.addEventListener("click", () => {
+  searchWrap.classList.toggle("show");
+// 시작 버튼 만들기
+searchStart.style.display = "block";
+  searchResultWrap.classList.remove("show");
+  searchAudioBtn.classList.remove("playing");
+  searchAudio.pause();
+  searchAudio.currentTime = 0;
+  clearInterval(searchInterval);
+  timeReamining = 120;
+  score = 0;
+  searchScoreNow.innerText = "0";
+});
+
 
 let timeReamining = 120, //남은 시간
-  timeInterval = "",
+  searchInterval = "",
   score = 0, //점수
   answers = {}; //새로운 정답
 function updateList() {
@@ -1757,7 +1772,7 @@ function startQuiz() {
   searchAnswers.innerHTML = "";
   searchMissAnswers.innerHTML = "";
   // 시간 설정
-  timeInterval = setInterval(reduceTime, 1000);
+  searchInterval = setInterval(reduceTime, 1000);
   // 뮤직 추가하기
   searchAudioBtn.classList.add("playing");
   audio();
@@ -1834,14 +1849,14 @@ function endQuiz() {
   // alert("게임이 끝났습니다.!!!");
   // 시작 버튼 만들기
   searchStart.style.display = "block";
-  searchStart.style.pointerEvents = "none";
+  //searchStart.style.pointerEvents = "none";
   // 오답 보여주기
   missAnswers();
   // 음악 끄기
   searchAudio.pause();
   searchAudioBtn.classList.remove("playing");
   // 시간 정지
-  clearInterval(timeInterval);
+  clearInterval(searchInterval);
   // 메세지 출력
   searchResultWrap.classList.add("show");
   let point = Math.round((score / cssProperty.length) * 100);

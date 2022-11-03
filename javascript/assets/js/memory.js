@@ -13,7 +13,7 @@ let matchedCard = 0;
 let unMatchedCard = 0;
 let memoryScore = 0;
 let memoryTime = 40;
-let timeInterval = "";
+let memoryinterval = "";
 let sound = [
   "../assets/audio/match.mp3",
   "../assets/audio/unmatch.mp3",
@@ -76,6 +76,7 @@ function matchCards(img1, img2) {
 
     cardOne.removeEventListener("click", flipCard);
     cardTwo.removeEventListener("click", flipCard);
+    
     cardOne = cardTwo = "";
     disableDeck = false;
   } else {
@@ -137,7 +138,10 @@ const memoryIconBtn = document.querySelector(".icon2");
 memoryIconBtn.addEventListener("click", () => {
   memoryIcon.classList.toggle("show");
   memoryBox.classList.remove("hide");
-  clearInterval(timeInterval);
+  clearInterval(memoryinterval);
+  soundBG.pause();
+  soundBG.currentTime = 0;
+
 });
 
 const memoryBox = document.querySelector(".memory__box");
@@ -150,9 +154,9 @@ startBtn.addEventListener("click", () => {
   matchedCard = 0;
   unMatchedCard = 0;
   memoryScore = 0;
-  clearInterval(timeInterval);
+  clearInterval(memoryinterval);
   scoreResult();
-  timeInterval = setInterval(reduceTime, 1000);
+  memoryinterval = setInterval(reduceTime, 1000);
   memoryTime = 40;
 
   // 카드 클릭
@@ -164,8 +168,9 @@ startBtn.addEventListener("click", () => {
 function gameOver() {
   memoryBox.classList.remove("hide");
   alert(memoryScore + "점입니다.");
-  clearInterval(timeInterval);
+  clearInterval(memoryinterval);
   soundBG.pause();
+  soundBG.currentTime = 0;
   matchedCard = 0;
   unMatchedCard = 0;
   memoryScore = 0;

@@ -197,7 +197,7 @@
               />
             </svg>
           </span>
-          <span class="stop">
+          <!-- <span class="stop">
             <svg
               width="24"
               height="24"
@@ -226,7 +226,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </span>
+          </span> -->
           <audio
             id="audio"
             src="../assets/audio/music_audio02.mp3"
@@ -492,6 +492,44 @@
         printTime();
         printAgent();
       };
+
+
+
+
+
+
+
+
+      //z-index 변화
+      const BoxList = document.querySelectorAll(".game_box > div");
+      BoxList.forEach((el, index) => {
+        console.log(el);
+        console.log(index);
+
+        el.style.zIndex = index;
+        el.addEventListener("click", function () {
+          let maxNum = Math.max(...zIndexArray);
+          let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
+          console.log(index);
+          console.log(maxNum, maxIndex);
+          zIndexArray = zIndexArray.map((arr) => {
+            if (arr > zIndexArray[index]) {
+              return arr - 1;
+            } else {
+              return arr;
+            }
+          });
+          zIndexArray[index] = maxNum;
+          array.forEach((el, index) => {
+            el.style.zIndex = zIndexArray[index];
+          });
+        });
+      });
+      let array = [...BoxList];
+      let zIndexArray = array.map((arr) => Number(arr.style.zIndex));
+
+
+
     </script>
   </body>
 </html>
