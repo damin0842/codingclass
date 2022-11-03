@@ -333,4 +333,5 @@ const musicIcon = document.querySelector(".music__wrap");
 const musicIconBtn = document.querySelector(".icon6");
 musicIconBtn.addEventListener("click", () => {
   musicIcon.classList.toggle("show");
+  pauseMusic();
 });
