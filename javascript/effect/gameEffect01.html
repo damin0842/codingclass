@@ -244,6 +244,11 @@
 
       <div class="memory__wrap">
         <div class="memory__inner">
+          <div class="memory__result">
+            <div class="svg__wrap">
+              <div class="result"></div>
+            </div>
+          </div>
           <div class="memory__box">
             <ul>
               <li>1. 한 번에 모두 맞추면 100점입니다.</li>
@@ -251,6 +256,7 @@
               <li>3. 4개 틀리면 게임오버입니다.</li>
               <li>4. 제한 시간은 40초입니다.</li>
             </ul>
+            <br><br><br><br><br><br><br><br><br>
             <div class="start">시작</div>
           </div>
           <div class="memory__card">
@@ -388,6 +394,7 @@
             </ul>
           </div>
         </div>
+
       </div>
       <!-- 메모리게임 -->
     </div>
@@ -502,12 +509,15 @@
 
       //z-index 변화
       const BoxList = document.querySelectorAll(".game_box > div");
+
+      
       BoxList.forEach((el, index) => {
         console.log(el);
         console.log(index);
 
         el.style.zIndex = index;
         el.addEventListener("click", function () {
+        
           let maxNum = Math.max(...zIndexArray);
           let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
           console.log(index);
@@ -528,7 +538,7 @@
       let array = [...BoxList];
       let zIndexArray = array.map((arr) => Number(arr.style.zIndex));
 
-
+     
 
     </script>
   </body>

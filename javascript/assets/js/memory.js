@@ -6,7 +6,8 @@ const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
 const memoryScoreBoard = document.querySelector(".memory__score");
 const memoryTimeBoard = document.querySelector(".memory__time");
-
+const memoryResult = document.querySelector(".memory__result .result");
+const memoryResultWrap = document.querySelector(".memory__result");
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0;
@@ -141,6 +142,7 @@ memoryIconBtn.addEventListener("click", () => {
   clearInterval(memoryinterval);
   soundBG.pause();
   soundBG.currentTime = 0;
+  memoryResultWrap.classList.remove("show");
 
 });
 
@@ -158,7 +160,7 @@ startBtn.addEventListener("click", () => {
   scoreResult();
   memoryinterval = setInterval(reduceTime, 1000);
   memoryTime = 40;
-
+  memoryResultWrap.classList.remove("show");
   // 카드 클릭
   memoryCards.forEach((card) => {
     card.addEventListener("click", flipCard);
@@ -167,7 +169,10 @@ startBtn.addEventListener("click", () => {
 
 function gameOver() {
   memoryBox.classList.remove("hide");
-  alert(memoryScore + "점입니다.");
+  memoryResultWrap.classList.add("show");
+  memoryResult.innerHTML = `게임이 끝났습니다. <br> 당신의 점수는 ${memoryScore} 점입니다.`;
+
+ // alert(memoryScore + "점입니다.");
   clearInterval(memoryinterval);
   soundBG.pause();
   soundBG.currentTime = 0;

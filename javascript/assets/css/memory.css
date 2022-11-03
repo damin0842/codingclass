@@ -15,6 +15,31 @@
   border-radius: 20px;
   animation: flicker 1.5s infinite alternate;
 }
+.memory__result {
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  transform: scale3d(0, 0, 0);
+  width: 20vw;
+  height: 20vw;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 6px solid #946bc5;
+}
+.memory__result.show {
+  display: flex;
+  animation: rubberBand 1s 0.6s ease forwards;
+}
+.memory__result .result {
+  margin-top: 30px;
+  font-size: 1.4vw;
+  line-height: 1.4;
+}
+
 .memory__score {
   top: 5px;
   right: 40px;
@@ -30,6 +55,7 @@
   color: #fff;
   font-size: 20px;
   margin-top: 0;
+  z-index: 1;
 }
 .memory__box {
   position: absolute;
