@@ -83,6 +83,9 @@ function matchCards(img1, img2) {
     unMatchedCard++;
     memoryScore -= 12.5;
     scoreResult();
+    if (unMatchedCard == 4) {
+      gameOver();
+    }
 
     setTimeout(() => {
       cardOne.classList.add("shakeX");
@@ -122,8 +125,6 @@ function shuffledCard() {
     let imgTag = card.querySelector(".back img");
     imgTag.src = `../assets/img/img${arr[index]}.svg`;
   });
-
-  memoryTime = 40;
 }
 // 카드 클릭
 memoryCards.forEach((card) => {
@@ -135,7 +136,8 @@ const memoryIcon = document.querySelector(".memory__wrap");
 const memoryIconBtn = document.querySelector(".icon2");
 memoryIconBtn.addEventListener("click", () => {
   memoryIcon.classList.toggle("show");
-  //memoryBox.classList.remove("hide");
+  memoryBox.classList.remove("hide");
+  clearInterval(timeInterval);
 });
 
 const memoryBox = document.querySelector(".memory__box");
@@ -151,6 +153,12 @@ startBtn.addEventListener("click", () => {
   clearInterval(timeInterval);
   scoreResult();
   timeInterval = setInterval(reduceTime, 1000);
+  memoryTime = 40;
+
+  // 카드 클릭
+  memoryCards.forEach((card) => {
+    card.addEventListener("click", flipCard);
+  });
 });
 
 function gameOver() {
