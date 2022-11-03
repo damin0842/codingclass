@@ -154,7 +154,7 @@ startBtn.addEventListener("click", () => {
 
 function gameOver() {
   memoryBox.classList.remove("hide");
-  alert("게임오버");
+  alert(memoryScore + "점입니다.");
   clearInterval(timelimit);
   soundBG.pause();
   matchedCard = 0;
