@@ -6,15 +6,14 @@ const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
 const memoryScoreBoard = document.querySelector(".memory__score");
 const memoryTimeBoard = document.querySelector(".memory__time");
-const memoryResult = document.querySelector(".memory__result .result");
-const memoryResultWrap = document.querySelector(".memory__result");
+
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0;
 let unMatchedCard = 0;
 let memoryScore = 0;
 let memoryTime = 40;
-let memoryinterval = "";
+let timeInterval = "";
 let sound = [
   "../assets/audio/match.mp3",
   "../assets/audio/unmatch.mp3",
@@ -27,13 +26,6 @@ let soundUnMatch = new Audio(sound[0]);
 let soundUnSuccess = new Audio(sound[2]);
 let soundBG = new Audio(sound[3]);
 
-function reduceTime() {
-  memoryTime--;
-  memoryTimeBoard.innerHTML = "Time " + memoryTime;
-  if (memoryTime == 0) {
-    gameOver();
-  }
-}
 function scoreResult() {
   memoryScoreBoard.innerHTML = "Score " + memoryScore;
 }
@@ -77,7 +69,6 @@ function matchCards(img1, img2) {
 
     cardOne.removeEventListener("click", flipCard);
     cardTwo.removeEventListener("click", flipCard);
-    
     cardOne = cardTwo = "";
     disableDeck = false;
   } else {
@@ -139,11 +130,8 @@ const memoryIconBtn = document.querySelector(".icon2");
 memoryIconBtn.addEventListener("click", () => {
   memoryIcon.classList.toggle("show");
   memoryBox.classList.remove("hide");
-  clearInterval(memoryinterval);
-  soundBG.pause();
-  soundBG.currentTime = 0;
-  memoryResultWrap.classList.remove("show");
-
+  clearInterval(timeInterval);
+  memoryTime = 40;
 });
 
 const memoryBox = document.querySelector(".memory__box");
@@ -156,11 +144,20 @@ startBtn.addEventListener("click", () => {
   matchedCard = 0;
   unMatchedCard = 0;
   memoryScore = 0;
-  clearInterval(memoryinterval);
-  scoreResult();
-  memoryinterval = setInterval(reduceTime, 1000);
   memoryTime = 40;
-  memoryResultWrap.classList.remove("show");
+  clearInterval(timeInterval);
+  scoreResult();
+
+  function reduceTime() {
+    memoryTime--;
+    memoryTimeBoard.innerHTML = "Time " + memoryTime;
+    if (memoryTime == 0) {
+      gameOver();
+    }
+  }
+
+  timeInterval = setInterval(reduceTime, 1000);
+
   // 카드 클릭
   memoryCards.forEach((card) => {
     card.addEventListener("click", flipCard);
@@ -169,13 +166,9 @@ startBtn.addEventListener("click", () => {
 
 function gameOver() {
   memoryBox.classList.remove("hide");
-  memoryResultWrap.classList.add("show");
-  memoryResult.innerHTML = `게임이 끝났습니다. <br> 당신의 점수는 ${memoryScore} 점입니다.`;
-
- // alert(memoryScore + "점입니다.");
-  clearInterval(memoryinterval);
+  alert(memoryScore + "점입니다.");
+  clearInterval(timeInterval);
   soundBG.pause();
-  soundBG.currentTime = 0;
   matchedCard = 0;
   unMatchedCard = 0;
   memoryScore = 0;
