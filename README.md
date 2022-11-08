@@ -1,6 +1,8 @@
 # Planning   
-https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181
-https://gdami.netlify.app
+노션
+https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181   
+자기소개
+https://gdami.netlify.app   
 
 ## React Class
 리액트 사이트1
