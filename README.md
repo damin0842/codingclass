@@ -1,10 +1,20 @@
 # Planning   
-https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181
-
-# class
-https://damin0842.github.io/codingclass/   
+노션
+https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181   
+자기소개
 https://gdami.netlify.app   
-http://gdami.dothome.co.kr/codingclass/index.html   
+
+## React Class
+리액트 사이트1
+https://kaleidoscopic-jalebi-bcc8cc.netlify.app/   
+리액트 API
+https://spiffy-parfait-c860b1.netlify.app/
+   
+## VUE Class
+뷰 사이트1
+https://vueclass01.web.app/   
+뷰 API
+https://vueapi01.web.app/
    
 ## 자바 스크립트   
 https://damin0842.github.io/codingclass/javascript/index.html
@@ -78,9 +88,5 @@ https://damin0842.github.io/codingclass/animation/svg.html
 https://damin0842.github.io/codingclass/animation/css.html
 
 ## MYSQL   
-<<<<<<< HEAD
-https://damin0842.github.io/codingclass/sql/index.html git
+https://damin0842.github.io/codingclass/sql/index.html
 
-=======
-https://damin0842.github.io/codingclass/sql/index.html   
->>>>>>> c2e450c73adebccbc686fd8d4b7f4e0fb6907741
