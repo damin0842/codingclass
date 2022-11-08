@@ -2,7 +2,7 @@
 https://elastic-technician-a35.notion.site/Planning-6bbb879e6933465ba5565de44c7b0181
 https://gdami.netlify.app
 
-## React class
+## React Class
 리액트 사이트1
 https://kaleidoscopic-jalebi-bcc8cc.netlify.app/   
 리액트 API
