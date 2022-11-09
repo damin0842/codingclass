@@ -248,6 +248,10 @@ const tetrisIconBtn = document.querySelector(".icon1");
 tetrisIconBtn.addEventListener("click", () => {
   tetrisIcon.classList.toggle("show");
   clearInterval(downInterval);
-    
+
 });
+
+//게임 시작
+
+//게임 종료
 
