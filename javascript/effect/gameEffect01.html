@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../assets/css/music.css" />
     <link rel="stylesheet" href="../assets/css/searchGame.css" />
     <link rel="stylesheet" href="../assets/css/memory.css" />
+    <link rel="stylesheet" href="../assets/css/tetris.css" />
     <link
       href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
       rel="stylesheet"
@@ -72,6 +73,7 @@
     <!-- footer -->
 
     <div class="game_box">
+      
       <div class="music__wrap">
         <div class="music__inner">
           <div class="music__header">
@@ -396,6 +398,19 @@
         </div>
       </div>
       <!-- 메모리게임 -->
+
+      <div class="tetris__wrap">
+        <div class="tetris__inner">
+          <div class="tetris__start"></div>
+          <div class="tetris__restart"></div>
+          <div class="tetris__score"></div>
+          <div class="tetris__play">
+            <div class="playground">
+              <ul></ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- <script src="../assets/js/highlight.min.js"></script>
@@ -406,6 +421,8 @@
     <script src="../assets/js/music.js"></script>
     <script src="../assets/js/memory.js"></script>
     <script src="../assets/js/searchGame.js"></script>
+    <script src="../assets/js/tetris.js"></script>
+
     <script>
       const cursor = document.querySelector(".mouse__cursor");
 
@@ -503,15 +520,15 @@
       const BoxList = document.querySelectorAll(".game_box > div");
 
       BoxList.forEach((el, index) => {
-        console.log(el);
-        console.log(index);
+        // console.log(el);
+        // console.log(index);
 
         el.style.zIndex = index;
         el.addEventListener("mousedown", function () {
           let maxNum = Math.max(...zIndexArray);
           let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
-          console.log(index);
-          console.log(maxNum, maxIndex);
+          // console.log(index);
+          // console.log(maxNum, maxIndex);
           zIndexArray = zIndexArray.map((arr) => {
             if (arr > zIndexArray[index]) {
               return arr - 1;
