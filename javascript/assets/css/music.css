@@ -1,5 +1,7 @@
 .music__wrap {
   display: none;
+    top: 0;
+    left: 0;
 }
 .music__wrap.show {
   display: block;

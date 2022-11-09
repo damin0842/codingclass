@@ -103,7 +103,7 @@ function renderBlocks(moveType = ""){
     const {type,direction,top,left} = tempMovingItem;
     
     
-    const ㅇ = document.querySelectorAll(".moving");
+    const movingBlocks = document.querySelectorAll(".moving");
         movingBlocks.forEach((moving)=>{
             moving.classList.remove(type, "moving");
         })
@@ -138,11 +138,11 @@ function renderBlocks(moveType = ""){
     movingItem.top = top;
     movingItem.direction = direction;
 }
-
+const firstLi = document.querySelectorAll(".playground > ul > li")
 //블록 감지하기
 function seizeBlock(){
     const movingBlocks = document.querySelectorAll(".moving");
-    ㅇ.forEach(moving =>{
+    movingBlocks.forEach(moving =>{
         moving.classList.remove("moving");
         moving.classList.add("seized"); 
     })
@@ -168,7 +168,6 @@ function checkMatch(){
     });
     generateNewBlock();
 }
-
 //점수넣기
 function getScore(){
     const TGscoreboard =  document.querySelector(".tetris__score");
@@ -176,8 +175,6 @@ function getScore(){
     TGscoreboard.innerHTML = `Score ${TGscore}`;
 }
 
-//
-const firstLi = document.querySelectorAll("")
 
 // 새로운 블록 만들기
 function generateNewBlock(){
@@ -244,3 +241,13 @@ document.addEventListener("keydown", e=>{
 })
 
 init();
+
+//아이콘 열기
+const tetrisIcon = document.querySelector(".tetris__wrap");
+const tetrisIconBtn = document.querySelector(".icon1");
+tetrisIconBtn.addEventListener("click", () => {
+  tetrisIcon.classList.toggle("show");
+  clearInterval(downInterval);
+    
+});
+
