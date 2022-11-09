@@ -23,11 +23,11 @@ li {
 .search__wrap {
   max-width: 700px;
   margin: 0 auto;
-  border: 3px solid var(--htmlColor);
   border-radius: 20px;
-  background-color: #f1f3f6;
+  background-color: #ffffff77;
   padding: 30px;
   text-align: center;
+  animation: flicker 1.5s infinite alternate;
 }
 .search__wrap > span {
   font-size: 20px;

@@ -7,6 +7,8 @@
   display: block;
 }
 .music__inner {
+  animation: flicker 1.5s infinite alternate;
+
   width: 450px;
   background: #000;
   position: absolute;

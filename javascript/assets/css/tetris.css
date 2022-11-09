@@ -15,26 +15,35 @@
     top: 50%;
     transform: translate(-50%,-50%);
     background: rgba(58, 182, 240, 0.4);
-  animation: flicker 1.5s infinite alternate;
-
+    animation: flicker 1.5s infinite alternate;
 }
 .tetris__box{
     position: absolute;
     width: 479px;
     height: 834px; 
     background-color: #000;
-    border: 3px solid #08f;
+    color: #fff;
+    font-size: 40px;
 }
-
+.tetris__box.hide {
+    display: none;
+  }
 .tetris__start{
     text-align: center;
     cursor: pointer;
     color: white;
 }
+.tetris__start.hide{
+   display: none;
+}
 .tetris__start:hover{
     background-color: #08f;
 }
-.tetris__restart{}
+.tetris__restart{
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
 .tetris__play{}
 .tetris__score{
     height: 30px;
@@ -42,7 +51,7 @@
     align-items: center;
     text-align: center;
     font-size: 30px;
-    background: #12b3e4;
+    background: #000;
 }
 .playground{
     
