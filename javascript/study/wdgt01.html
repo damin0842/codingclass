@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just 쇼핑몰</title>
+</head>
+<body>
+    <header class="header__wrap">
+        <div class="header__inner container">
+            <h2>JUST 쇼핑몰</h2>
+            <div>
+                <ul>탑
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <ul>아우터
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <ul>팬츠
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <ul>악세사리
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="slider__wrap">
+        <div class="slider__inner">
+            <div class="slider slider1"></div>
+            <div class="slider slider2"></div>
+            <div class="slider slider3"></div>
+        </div>
+    </div>
+
+    <div class="banner__wrap">
+        <div class="banner__inner container">
+            <div class="banner banner1">
+                <h3>공지사항</h3>
+                <h3>갤러리</h3>
+                <p>공지사항내용공지사항내용공지사... <span>공지사항날짜</span></p>
+                <p>공지사항내용공지사항내용공지사... <span>공지사항날짜</span></p>
+                <p>공지사항내용공지사항내용공지사... <span>공지사항날짜</span></p>
+                <p>공지사항내용공지사항내용공지사... <span>공지사항날짜</span></p>
+            </div>
+            <div class="banner banner2">
+                <h2>배너</h2>
+            </div>
+            <div class="banner banner3">
+                <h2>바로가기</h2>
+            </div>
+        </div>
+    </div>
+    <footer class="footer__wrap">
+        <div class="footer__inner container">
+            <h2>JUST 쇼핑몰</h2>
+            <div class="copy">Copyright All rights reserved JUST 쇼핑몰</div>
+            <div class="sns">
+                <img src="https://webstudybasic.pe.kr/landing/source/A-1/images/facebook.webp" alt="">
+                <img src="https://webstudybasic.pe.kr/landing/source/A-1/images/instagram.webp" alt="">
+               <img src="https://webstudybasic.pe.kr/landing/source/A-1/images/twitter.webp" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>   
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    .container{
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .header__inner{
+        height: 100px;
+        display: flex;
+    }
+    .header__inner > h2 {
+        font-weight: bold;
+        line-height: 3;
+        margin-left: 20px;
+        color: rgba(167, 59, 59, 0.918);
+        width: 30%;
+        font-size: 30px;
+        width: 50%;
+    }
+    .header__inner > div {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__inner > div {
+        height: 100px;
+    }
+    .header__inner > div > ul {
+        line-height: 2.5;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+    }
+    .header__inner > div > ul:hover{
+        background-color: rgba(167, 59, 59, 0.918);
+        color: #fff;
+    }
+    .header__inner > div > ul > li{
+        display: none;
+        list-style: none;
+    }
+    
+    .slider__inner{
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        width: 1200px;
+        height: 300px;
+    }
+    .slider{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: all 1s ease-in-out;
+
+    }
+    .slider1{
+        opacity: 1;
+        background-image: url(slide01.png);
+    }
+    .slider2{
+        opacity: 0;
+
+        background-image: url(slide02.png);
+
+    }
+    .slider3{
+        opacity: 0;
+
+        background-image: url(slide03.png);
+        
+    }
+    .banner__inner{
+        display: flex;
+        height: 200px;
+    }
+    .banner{
+        background-size: cover;
+        background-position: center;
+        width: 400px;
+        height: 200px;
+    }
+    .banner1{
+        background-color: rgb(248, 248, 248);
+    }
+    .banner1 h3{
+        display: inline-block;
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .banner1 p{
+        margin: 0px 0px 10px 10px;
+    }
+    .banner1 p > span{
+        float: right;
+        margin-right: 10px;
+    }
+    .banner2{
+        position: relative;
+        background-image: url(https://webstudybasic.pe.kr/landing/source/A-1/images/banner.png);
+    }
+    .banner2 > h2{
+        line-height: 2;
+        height: 40px;
+        font-size: 20px;
+        background-color: #fff;
+        width: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+        align-items: center;
+
+    }
+    .banner3{
+        position: relative;
+        background-image: url(wdgt01_banner02.png)
+    }
+    .banner3 > h2{
+        line-height: 2;
+        align-items: center;
+        font-size: 20px;
+        background-color: #fff;
+        height: 40px;
+        width: 110px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+    }
+    .footer__inner{
+        display: flex;
+        line-height: 4;
+        align-items: center;
+        height: 100px;
+        background-color: #eee;
+    }
+    .footer__inner > h2{
+        color: #999;
+        font-size: 30px;
+        margin-left: 20px;
+        width: 50%;
+    }
+    .footer__inner > .copy{
+        width: 70%;
+    }
+    .footer__inner > .sns{
+        width: 15%;
+        display: flex;
+    }
+    .footer__inner > .sns > img{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+    }
+</style>
+
+<script>
+    const sliderWrap = document.querySelector(".slider__wrap")
+    const sliderInner = sliderWrap.querySelector(".slider__inner")
+    const slider = sliderWrap.querySelectorAll(".slider")
+
+    let currnetindex = 0;
+    let slidercount = slider.length;
+
+    
+    
+    setInterval(() => {
+    console.log(currnetindex)
+
+        let nextindex = (currnetindex +1) % slidercount;
+        slider[currnetindex].style.opacity = 0;
+        slider[nextindex].style.opacity = 1;
+        currnetindex = nextindex;
+
+        console.log(nextindex)
+    }, 2000);
+
+
+
+</script>

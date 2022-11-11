@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://webfontworld.github.io/earlyfont/EF_Macho.css"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+    font-family: 'Tungsten';
+    src: local('Tungsten Narrow Black'), local('Tungsten-Narrow-Black'),
+        url('../assets/fonts/TungstenNarrow-Black.woff2') format('woff2'),
+        url('../assets/fonts/TungstenNarrow-Black.woff') format('woff'),
+        url('../assets/fonts/TungstenNarrow-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      html{
+        font-family: 'tungsten-narrow-black';
+        font-style: normal;
+        font-size: 24px;
+        letter-spacing: .015em;
+        line-height: 1em;
+      }
+      .fixed {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .scrollTop {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        text-align: center;
+        line-height: 40px;
+        z-index: 1000;
+        font-weight: 800;
+      }
+        body{
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            background-color: #000;
+            position: relative; 
+        }
+        .sec1_text1{
+          width: 100%;
+          height: 100vh;
+          text-align: center;
+          font-size: 0;
+
+        }
+        .sec1_text1 span{
+          font-size: 22.5vw;
+          line-height: 0.8;
+          color: #d33d00;
+          text-transform: uppercase;
+          font-family: "Tungsten";
+          
+        }
+        header{
+          text-transform: uppercase;
+    color: var(--main-color);
+    display: -webkit-box!important;
+    display: flex!important;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-left: 1.03093vw;
+    padding-right: 1.03093vw;
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    z-index: 100;
+    font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <div class="scrollTop">0</div>
+    <div id="contents">
+        <section id="section1">
+          <div class="sec1">
+            <div
+              class="sec1_text1 fixed"
+              data-0="top:50%; opacity:1;"
+              data-550="top:30%; opacity:0;"
+            >
+              <span>s</span>
+              <span>i</span>
+              <span>x</span>
+              <span>m</span>
+              <span>o</span>
+              <span>r</span>
+              <span>e</span>
+              <span>v</span>
+              <span>o</span>
+              <span>d</span>
+              <span>k</span>
+              <span>a</span>
+            </div> 
+            <div
+              class="sec1_text2 fixed"
+              data-500="top:70%; opacity:0; transform:translate(-50%, -50%) scale(1);"
+              data-1000="top:50%; opacity:1; transform:translate(-50%, -50%) scale(1);"
+              data-1500="top:50%; opacity:1; transform:translate(-50%, -50%) scale(0);"
+              data-4500="top:50%; opacity:0; transform:translate(-50%, -50%) scale(0);"
+            >
+              프론트앤드 개발자
+              Jin da-min입니다.
+            </div>
+          </div>
+        </section>
+      </div>
+    
+</body>
+</html>
