@@ -132,6 +132,7 @@ memoryIconBtn.addEventListener("click", () => {
   memoryBox.classList.remove("hide");
   clearInterval(timeInterval);
   memoryTime = 40;
+  soundBG.pause();
 });
 
 const memoryBox = document.querySelector(".memory__box");

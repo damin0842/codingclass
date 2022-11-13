@@ -36,6 +36,9 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
+      #section1 {
+        height: 10500px;
+      }
       .scrollTop {
         position: fixed;
         left: 10px;
@@ -51,7 +54,6 @@
         body{
             -webkit-overflow-scrolling: touch;
             overflow-y: auto;
-            background-color: #000;
             position: relative; 
         }
         .sec1_text1{
@@ -62,7 +64,7 @@
 
         }
         .sec1_text1 span{
-          font-size: 22.5vw;
+          font-size: 23.5vw;
           line-height: 0.8;
           color: #d33d00;
           text-transform: uppercase;
@@ -87,6 +89,10 @@
     z-index: 100;
     font-size: 24px;
         }
+        .sec1_text2 {
+        font-size: 8vw;
+        white-space: nowrap;
+      }
     </style>
 </head>
 <body>
@@ -127,6 +133,24 @@
           </div>
         </section>
       </div>
-    
+      <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+      ;
+      <script>
+        let s = skrollr.init();
+        //재귀함수
+  
+        function scroll() {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+  
+          document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+  
+          document.querySelector(".sec1_text1").style.marginLeft =
+            scrollTop + "px";
+  
+          requestAnimationFrame(scroll);
+        }
+        scroll();
+      </script>
 </body>
 </html>
