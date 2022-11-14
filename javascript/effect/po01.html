@@ -90,8 +90,41 @@
     font-size: 24px;
         }
         .sec1_text2 {
-        font-size: 8vw;
+          font-size: 0;
+        line-height: 0.8;
         white-space: nowrap;
+        font-family: 'tungsten';
+        font-weight: 700;
+        text-align: left;
+
+      }
+      .sec1_text2 span:nth-child(1){
+        font-size: 6.25vw;
+        text-align: left;
+        color: white;
+      }
+      .sec1_text2 span:nth-child(2){
+        font-size: 6.25vw;
+
+        color: white;
+      }
+      .sec1_text2 span:nth-child(3){
+        font-size: 6.25vw;
+
+        color: #d33d00;
+      }
+      .main__video{
+        width: 100%;
+        z-index: -1;
+      }
+      .sec1_video{
+        margin: 0 auto;
+        width: 10%;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        overflow: hidden;
+        
       }
     </style>
 </head>
@@ -104,8 +137,7 @@
           <div class="sec1">
             <div
               class="sec1_text1 fixed"
-              data-0="top:50%; opacity:1;"
-              data-550="top:30%; opacity:0;"
+            
             >
               <span>s</span>
               <span>i</span>
@@ -119,22 +151,27 @@
               <span>d</span>
               <span>k</span>
               <span>a</span>
+
             </div> 
-            <div
-              class="sec1_text2 fixed"
-              data-500="top:70%; opacity:0; transform:translate(-50%, -50%) scale(1);"
-              data-1000="top:50%; opacity:1; transform:translate(-50%, -50%) scale(1);"
-              data-1500="top:50%; opacity:1; transform:translate(-50%, -50%) scale(0);"
-              data-4500="top:50%; opacity:0; transform:translate(-50%, -50%) scale(0);"
-            >
-              프론트앤드 개발자
-              Jin da-min입니다.
+            <div class="sec1_text2 fixed">
+              <span>FAMOUS</span>
+              <span>FOR</span>
+              <span>NOTHING.</span>
+            </div>
+
+            <div class="sec1_video"
+            data-500="width(10%);"
+            data-1500="width(100%);">
+              <video autoplay loop="loop" class="main__video fixed"
+              >
+                <source src="../assets/video/smv_intro_cc35.mp4">
+              </video>
             </div>
           </div>
         </section>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
-      ;
+      
       <script>
         let s = skrollr.init();
         //재귀함수
@@ -145,8 +182,8 @@
   
           document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
   
-          document.querySelector(".sec1_text1").style.marginLeft =
-            scrollTop + "px";
+          // document.querySelector(".sec1_text1").style.marginLeft =
+          //   scrollTop + "px";
   
           requestAnimationFrame(scroll);
         }
