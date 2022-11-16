@@ -19,7 +19,9 @@ li {
 .search__wrap.show {
   display: block;
 }
-
+.search__wrap.zIndex{
+  z-index: 4 !important;
+}
 .search__wrap {
   position: absolute;
   width: 750px;

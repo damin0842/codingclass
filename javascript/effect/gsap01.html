@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #contents > section{
+            min-height: 90vh;
+        }
+        #section1 {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);}
+        #section2 {background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);}
+        #section3 {background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);}
+        #section4 {background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);}
+        #section5 {background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);}
+        #section6 {background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);}
+        .square{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+        }
+        .square2{
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+        }
+        .square.red{
+            background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+        }
+        .panel{
+            height: 100vh;
+            background-color: beige;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(89, 42, 165);
+        }
+        .box-red{
+            background-color: red;
+        }
+        nav{
+            position:sticky;
+            top: 0;
+            transition: all 600ms ease-in-out;
+            background-color: tan;
+            color: #009efd;
+        }
+        li{
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .not-active{
+            background: #fff;
+            color: #9890e3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>about</li>
+            <li>work</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+    <div class="pannel">
+        Creates a new standalone ScrollTrigger instance. 
+        You don't need to put ScrollTriggers directly into animations 
+        (though that's probably the most common use case). With a standalone ScrollTrigger, 
+        you can tap into the rich callback system to do almost anything.
+
+    </div>
+    <!-- <div class="box"></div>
+
+    
+    <div class="panel"></div> -->
+   
+    <!-- <main id="contents">
+        <section id="section1"></section>
+        <section id="section2">
+            <div class="square"></div>
+            <div class="square2"></div>
+
+        </section>
+        <section id="section3"></section>
+        <section id="section4"></section>
+        <section id="section5"></section>
+        <section id="section6"></section>
+    </main> -->
+<script>
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+        trigger: ".panel",
+        start: "top 6%",
+        markers: true,
+        toggleClass:{targets:"nav", className:"not-active"},
+        onEnter: ()=> console.log("onEnter"),
+        onLeave: ()=> console.log("onLeave"),
+        onEnterBack: ()=> console.log("onEnterBack"),
+        onLeaveBack: ()=> console.log("onLeaveBack"),
+
+    })
+</script>
+
+<!-- <script>
+    //타임라인 거는법
+    const tl = gsap.timeline({
+        repeat:2, yoyo:true,
+        scrollTrigger : {
+            trigger: ".square",
+            markers: true,
+            start: "top 80%",
+            end: "top 30%",
+            scrub:1,
+        }
+    })
+
+    tl.to(".square",{
+        x:1000,
+        duration:2,
+        skewY:1,
+        borderRadius:0,
+        rotation:0,
+    })
+    .to(".square",{
+        y:500,
+        duration:2,
+        skewY:3,
+        delay:2,
+        borderRadius:100,
+        rotation:100,
+        ease:"elastic",
+    },"-1")
+
+    .to(".square",{
+        x:0,
+        duration:2,
+        skewY:1,
+        delay:3,
+        borderRadius:0,
+        rotation:300,
+        ease:"elastic",
+    },"-2")
+
+    .to(".square",{
+        y:0,
+        duration:2,
+        delay:4,
+        rotation:0,
+    })
+</script> -->
+
+<!-- <script>
+    const tl = gsap.timeline( {repeat:2, yoyo:true});
+    tl.to(".square",{
+        x:1000,
+        duration:2,
+        skewY:1,
+        borderRadius:0,
+        rotation:0,
+    })
+    .to(".square",{
+        y:500,
+        duration:2,
+        skewY:3,
+        delay:2,
+        borderRadius:100,
+        rotation:100,
+        ease:"elastic",
+    },"-1")
+
+    .to(".square",{
+        x:0,
+        duration:2,
+        skewY:1,
+        delay:3,
+        borderRadius:0,
+        rotation:300,
+        ease:"elastic",
+    },"-2")
+
+    .to(".square",{
+        y:0,
+        duration:2,
+        delay:4,
+        rotation:0,
+    })
+</script> -->
+
+
+
+<!-- <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".square",{
+        x:1000,
+        duration: 3,
+        scrollTrigger:{
+            trigger: ".square",
+            start: "top 70%",
+            end: "top 30%",
+            
+            markers: {
+                startColor: "blue",
+                endColor: "purple",
+                fontSize: "30px"
+            },
+            
+            toggleClass: "red",
+            toggleActions: "restart none none none",
+           
+         
+        },
+    });
+</script> -->
+<!-- <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".square",{
+        x:1000,
+        duration: 3,
+        scrollTrigger:{
+            trigger: ".square",
+            start: "top 70%",
+            end: ()=>`+=${document.querySelector(".square").offsetHeight}`,
+            markers: true,
+            toggleClass: "red"
+
+            scrub:4,
+            //스크롤 할때마다 움직이기
+            
+            pin:true,
+            pinSpacing: 400,
+            //고정
+            
+            
+            
+            toggleActions: "restart pause resume reset"
+            //        onEnter onLeave onEnterBack onLeaveBack
+            // play, pause, resume, reset, restart, complete, revers, none
+        }
+    });
+</script> -->
+
+</body>
+
+
+
+</html>

@@ -42,28 +42,25 @@
 
     <main id="main">
       <div class="icon__box">
-        <div class="icon1 icon">
-          <img src="../assets/img/svg-apple.svg" alt="" />
-          <span>테트리스 게임</span>
-        </div>
-        <div class="icon2 icon">
-          <img src="../assets/img/svg-donut.svg" alt="" />
-          <span>메모리 게임</span>
-        </div>
-        <div class="icon3 icon">
-          <img src="../assets/img/svg-carrot.svg" alt="" />
-        </div>
-        <div class="icon4 icon">
-          <img src="../assets/img/svg-cheeseburger.svg" alt="" />
+        <div class="icon6 icon">
+          <img src="../assets/img/svg-cookie.svg" alt="" />
+          <span>뮤직 듣기</span>
         </div>
         <div class="icon5 icon">
           <img src="../assets/img/svg-cherries.svg" alt="" />
           <span>서치 게임</span>
         </div>
-        <div class="icon6 icon">
-          <img src="../assets/img/svg-cookie.svg" alt="" />
-          <span>뮤직 듣기</span>
+        <div class="icon2 icon">
+          <img src="../assets/img/svg-donut.svg" alt="" />
+          <span>메모리 게임</span>
         </div>
+        <div class="icon1 icon">
+          <img src="../assets/img/svg-apple.svg" alt="" />
+          <span>테트리스 게임</span>
+        </div>
+
+
+
       </div>
     </main>
     <!-- //main -->
@@ -527,17 +524,12 @@
 
       //z-index 변화
       const BoxList = document.querySelectorAll(".game_box > div");
-
       BoxList.forEach((el, index) => {
-        // console.log(el);
-        // console.log(index);
-
         el.style.zIndex = index;
         el.addEventListener("mousedown", function () {
           let maxNum = Math.max(...zIndexArray);
           let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
-          // console.log(index);
-          // console.log(maxNum, maxIndex);
+        
           zIndexArray = zIndexArray.map((arr) => {
             if (arr > zIndexArray[index]) {
               return arr - 1;
@@ -551,8 +543,54 @@
           });
         });
       });
+
+      
+
+
+
+
+      // z - index
+      const icon = document.querySelectorAll(".icon__box .icon");
+
+      icon.forEach((elements, i) => {
+        console.log(elements)
+        elements.addEventListener("click", () => {
+        BoxList.forEach((el, index) => {
+            el.style.zIndex = index;
+            function zInCli() {
+              let maxNum = Math.max(...zIndexArray);
+              let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
+            
+              zIndexArray = zIndexArray.map((arr) => {
+                if (arr > zIndexArray[index]) {
+                  return arr - 1;
+                } else {
+                  return arr;
+                }
+              });
+              zIndexArray[index] = maxNum;
+              array.forEach((el, index) => {
+                el.style.zIndex = zIndexArray[index];
+              });
+            };
+          });
+        })
+      });
+
       let array = [...BoxList];
       let zIndexArray = array.map((arr) => Number(arr.style.zIndex));
+
+        // icon.forEach((el, i) => {
+        //     el.addEventListener("click", () => {
+        //         BoxList.forEach((e,index) => {
+        //           console.log(e)
+        //             e.classList.remove("zIndex");
+        //             BoxList[i].classList.add("zIndex");
+        //         })
+        //     })
+        // })
+
+        
     </script>
   </body>
 </html>

@@ -6,6 +6,10 @@
 .music__wrap.show {
   display: block;
 }
+.music__wrap.zIndex {
+  z-index: 4 !important;
+
+}
 .music__inner {
   animation: flicker 1.5s infinite alternate;
 

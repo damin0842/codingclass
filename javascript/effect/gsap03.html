@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .horizontalWrap{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }        
+        .horizontalSection{
+            overscroll-behavior: none;
+            width: 500%;
+            display: flex;
+            flex-wrap: nowrap;
+
+        }
+        .section{
+            width: 100%;
+            height: 100vh;
+
+        }
+        .section1{
+            background-image: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+        }
+        .section2{
+            background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+        }
+        .section3{
+            background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+        }
+        .section4{
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+        }
+        .section5{
+            background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="horizontalWrap">
+        <div class="horizontalSection">
+            <section class="section section1"></section>
+            <section class="section section2"></section>
+            <section class="section section3"></section>
+            <section class="section section4"></section>
+            <section class="section section5"></section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const sections = gsap.utils.toArray(".section");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1),
+            ease: "none",
+            scrollTrigger:{
+                trigger: ".horizontalWrap",
+                pin: true,
+                scrub: 1,
+                end: "+=1000",
+                snap: 1/ (sections.length-1),
+                markers: true,
+            }
+        });
+
+    </script>
+</body>
+</html>

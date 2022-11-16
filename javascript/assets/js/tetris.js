@@ -441,7 +441,7 @@ function THgameOver() {
 function allLiRemove() {
   let allLi = playground.childNodes;
   allLi.forEach((e) => {
-    console.log(e);
+    //console.log(e);
     e.remove();
     prependNewLine();
   });

@@ -7,6 +7,11 @@
 .tetris__wrap.show {
     display: block;
   }
+  
+.tetris__wrap.zIndex{
+    z-index: 4 !important;
+
+}
 .tetris__inner{
     width: 479px;
     height: 830px;
