@@ -550,45 +550,17 @@
 
 
       // z - index
-      const icon = document.querySelectorAll(".icon__box .icon");
+      // const icon = document.querySelectorAll(".icon__box .icon");
 
-      icon.forEach((elements, i) => {
-        console.log(elements)
-        elements.addEventListener("click", () => {
-        BoxList.forEach((el, index) => {
-            el.style.zIndex = index;
-            function zInCli() {
-              let maxNum = Math.max(...zIndexArray);
-              let maxIndex = zIndexArray.findIndex((arr) => arr === maxNum);
-            
-              zIndexArray = zIndexArray.map((arr) => {
-                if (arr > zIndexArray[index]) {
-                  return arr - 1;
-                } else {
-                  return arr;
-                }
-              });
-              zIndexArray[index] = maxNum;
-              array.forEach((el, index) => {
-                el.style.zIndex = zIndexArray[index];
-              });
-            };
-          });
-        })
-      });
-
-      let array = [...BoxList];
-      let zIndexArray = array.map((arr) => Number(arr.style.zIndex));
-
-        // icon.forEach((el, i) => {
-        //     el.addEventListener("click", () => {
-        //         BoxList.forEach((e,index) => {
-        //           console.log(e)
-        //             e.classList.remove("zIndex");
-        //             BoxList[i].classList.add("zIndex");
-        //         })
-        //     })
-        // })
+      //   icon.forEach((el, i) => {
+      //       el.addEventListener("click", () => {
+      //           BoxList.forEach((e,index) => {
+      //             console.log(e)
+      //               e.classList.remove("zIndex");
+      //               BoxList[i].classList.add("zIndex");
+      //           })
+      //       })
+      //   })
 
         
     </script>

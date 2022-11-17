@@ -20,7 +20,7 @@ li {
   display: block;
 }
 .search__wrap.zIndex{
-  z-index: 4 !important;
+  z-index: 3 !important;
 }
 .search__wrap {
   position: absolute;

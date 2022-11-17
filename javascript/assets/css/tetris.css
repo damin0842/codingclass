@@ -9,7 +9,7 @@
   }
   
 .tetris__wrap.zIndex{
-    z-index: 4 !important;
+    z-index: 3 !important;
 
 }
 .tetris__inner{

@@ -7,7 +7,7 @@
   display: block;
 }
 .music__wrap.zIndex {
-  z-index: 4 !important;
+  z-index: 3 !important;
 
 }
 .music__inner {
