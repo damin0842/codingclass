@@ -126,6 +126,7 @@
                 this.mesh.rotation.y += 0.01;
             }
             _render() {
+                
                 this._update();
                 this.renderer.render(this.scene, this.camera);
                 requestAnimationFrame(this._render.bind(this))
