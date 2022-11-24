@@ -163,10 +163,21 @@
     .text3_link{
       position: absolute;
       font-size: 10vw;
-      background: rgba(0, 0, 0, 0.397);
       top: 5VH;
       color: #fff;
       line-height: 0.8;
+    }
+    .text3_link >div{
+      width: 100vw;
+      display: flex;
+    }
+    .text3_link > div:hover{
+      color: #d33d00;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .text3_link >div p{
+      font-family: 'GmarketSans';
+      font-size: 1vw;
     }
   </style>
 </head>
@@ -241,7 +252,10 @@
             <div>REACT</div>
             <div>VUE</div>
             <div>MYSQL</div>
-            <div>PHP</div>
+            <div>
+              PHP
+              <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p>
+            </div>
             <div>GAME</div>
             <div>THREE</div>
             <div>API</div>
