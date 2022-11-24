@@ -134,18 +134,24 @@
       width: 100vw;
       height: 100vh;
     }
-
-    .sec1_text2 img {
+    .sec1_text2 > div{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .sec1_text2 div img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: absolute;
     }
 
-    h1 {
+    .sec1_text2 > div h2 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,200%);
+      position: absolute;
       font-size: 10px;
       color: #fff;
-      opacity: 0;
 
     }
 
@@ -159,6 +165,7 @@
     .sec1_text3 img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
     .text3_link{
       position: absolute;
@@ -170,15 +177,33 @@
     .text3_link >div{
       width: 100vw;
       display: flex;
+      position: relative;
+
     }
-    .text3_link > div:hover{
-      color: #d33d00;
+    .text3_link >div:hover{
       background-color: rgba(0, 0, 0, 0.5);
     }
-    .text3_link >div p{
-      font-family: 'GmarketSans';
-      font-size: 1vw;
+    .text3_link > div h2{
+      font-size: 10vw;
+      text-indent: 1vw;    
     }
+    .text3_link > div:hover h2{
+      color: #d33d00;
+    }
+    .text3_link >div p{
+      transition: all 0.2s ease;
+      opacity: 0;
+      font-family: 'GmarketSans';
+      font-weight: 300;
+      font-size: 1.6vw;
+      position: absolute;
+      bottom: 1vw;
+      right: 1vw; 
+    }
+    .text3_link > div:hover p{
+     opacity: 1;
+    }
+
   </style>
 </head>
 
@@ -216,52 +241,63 @@
         </div>
         <div class="sec1_video fixed" data-0="width:0vw;" data-3000="width:100vw; opacity:1" data-4000="opacity:0">
           <video id="vid" muted="muted" autoplay="autoplay" loop="loop">
-            <source src="../assets/video/smv_intro_cc35.mp4" />
+            <source src="../assets/video/video3.mp4" />
           </video>
         </div>
 
         <div class="sec1_text2 fixed" data-4000="opacity:0" data-5000="opacity:1">
-          <img src="../assets/img/po_sec1tv.jpg" alt="" data-7000="transform: scale(1); top:0vh; left:0vw;"
-            data-10000="transform: scale(7); top: -200vh; left:-4vw;"
-            data-12000="transform: scale(11); top:0vh; left:-4vw;">
+          <div
+          data-6000="transform: scale(1); top:0vh; left:0vw;"
+          data-9000="transform: scale(6); top: -175vh; left:-4vw;"
+          data-9500="transform: scale(6); top: -175vh; left:-4vw;"
+          data-11000="transform: scale(11); top: 200vh; left:-4vw;"
+          >
+                <img src="../assets/img/po_sec1tv.jpg" alt=""
+
+                  
+                >
+            <h2>
+              어떤 일이라도 노력하고 즐기면 그 결과는 <br>
+              빛을 발한다고 생각합니다. <br>
+              어려움도 있었지만 배우는 즐거움이 컸으며, <br>
+              노력으로 극복하고자 하였습니다. <br>
+              꾸준함과 성실함은 저의 강점입니다. <br>
+              처음 해보는 일엔 적응이 느리지만 <br>
+              성실함으로 극복해 주변으로부터 줄곧 <br>
+              좋은 평가를 받아왔습니다. 개발 역시 <br>
+              현재는 미약할지 모르나 계속해서 저를 <br>
+              다듬어 좋은 개발자가 되도록 노력하겠습니다. <br>
+              앞으로도 배움을 놓지 않는 개발자가 되겠습니다.
+            </h2>
+          </div>
         </div>
 
-        <div class="sec1_text7 fixed" data-7000="transform: translate(-50%, 300%);"
-          data-10000="transform: translate(-50%, -50%);">
-          <h1>
-            어떤 일이라도 노력하고 즐기면 그 결과는 <br>
-            빛을 발한다고 생각합니다. <br>
-            어려움도 있었지만 배우는 즐거움이 컸으며, <br>
-            노력으로 극복하고자 하였습니다. <br>
-            꾸준함과 성실함은 저의 강점입니다. <br>
-            처음 해보는 일엔 적응이 느리지만 <br>
-            성실함으로 극복해 주변으로부터 줄곧 <br>
-            좋은 평가를 받아왔습니다. 개발 역시 <br>
-            현재는 미약할지 모르나 계속해서 저를 <br>
-            다듬어 좋은 개발자가 되도록 노력하겠습니다. <br>
-            앞으로도 배움을 놓지 않는 개발자가 되겠습니다.
-          </h1>
-        </div>
+       
+          
+      
         <div class="sec1_text3 fixed" data-10000="opacity:0; width:100vw;" data-12000="opacity:1; width:100vw; transform: translate(-50%, -25%);" data-13500="transform: translate(-50%, -75%);">
           <img src="../assets/img/po_sec1bg1.png" alt="" data-7000="transform: scale(1);"
             data-10000="transform: scale(1);">
           <div class="text3_link">
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JAVASCRIPT</div>
-            <div>REACT</div>
-            <div>VUE</div>
-            <div>MYSQL</div>
             <div>
-              PHP
+              <h2>HTML</h2>
               <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p>
             </div>
-            <div>GAME</div>
-            <div>THREE</div>
-            <div>API</div>
-            <div>SVG</div>
-            <div>CANVAS</div>
-            <div>SITE</div>
+            <div><h2>CSS</h2> <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>JAVASCRIPT</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>REACT</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>VUE</h2> <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>MYSQL</h2> <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div>
+              <h2>PHP</h2>
+              <p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p>
+            </div>
+            <div><h2>GAME</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>THREE</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>API</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>SVG</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>CANVAS</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
+            <div><h2>SITE</h2><p>2022 | 05 | 04 | PHP 블로그 제작  |  게시판과 로그인 및 블로그 제작이 가능합니다.</p></div>
           </div>
         </div>
 
