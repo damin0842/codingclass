@@ -176,6 +176,7 @@
       object-fit: cover;
     }
     .text3_link{
+      transition: all 0.5s ease-in-out;
       position: absolute;
       font-size: 10vw;
       top: 5VH;
@@ -193,13 +194,14 @@
     }
     .text3_link > div h2{
       font-size: 10vw;
-      text-indent: 1vw;    
+      text-indent: 1vw;
+      cursor: pointer;
     }
     .text3_link > div:hover h2{
       color: #d33d00;
     }
     .text3_link >div p{
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
       opacity: 0;
       font-family: 'GmarketSans';
       font-weight: 300;
@@ -216,7 +218,7 @@
 </head>
 
 <body>
-  <header data-3000="margin-top: calc(13vw);" data-3500="margin-top: calc(2vw);">
+  <header data-3000="margin-top: calc(13vw);" data-3500="margin-top: calc(0.5vh);">
     <div class="header__link">
       <a href="#" style="color: #d33d00; text-decoration: line-through;">home</a>
       <a href="#">introduce</a>
